@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: expected '=' not found.
-    image club in = "images/bgs/club in.png"
-               ^
+File "game/script.rpy", line 3576: end of line expected.
+    hide Julia with moveout left
+                            ^
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Thu Jan  4 13:21:45 2024
+Thu Feb 15 11:44:22 2024

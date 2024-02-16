@@ -1,27 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'images/bgs/club night.png'>:
-  File "game/script.rpy", line 1995, in script
-    pause 1.0
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-IOError: Couldn't find file 'images/bgs/club night.png'.
+While loading <'Image' u'images/sprites/Johnny/JP_13.png'>:
+  File "game/script.rpy", line 3550, in script
+    Julia "I don’t want to touch a dead body!"
+IOError: Couldn't find file 'images/sprites/Johnny/JP_13.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1995, in script
-    pause 1.0
-  File "renpy/ast.py", line 1969, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 1957, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-  File "renpy/exports.py", line 1525, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
+  File "game/script.rpy", line 3550, in script
+    Julia "I don’t want to touch a dead body!"
+  File "renpy/ast.py", line 715, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1393, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1205, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 871, in do_display
+    **display_args)
+  File "renpy/character.py", line 621, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "renpy/ui.py", line 298, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "renpy/display/core.py", line 3101, in interact
@@ -60,9 +58,9 @@ Full traceback:
     surf = image.load()
   File "renpy/display/im.py", line 688, in load
     raise e
-IOError: Couldn't find file 'images/bgs/club night.png'.
+IOError: Couldn't find file 'images/sprites/Johnny/JP_13.png'.
 
 Windows-10-10.0.18362
 Ren'Py 7.4.4.1439
-The Graves Case 0.1
-Fri Jan  5 17:29:12 2024
+The Graves Case 0.2
+Thu Feb 15 11:57:51 2024
