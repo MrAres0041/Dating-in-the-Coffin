@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 3576: end of line expected.
-    hide Julia with moveout left
-                            ^
+The label main_route5 is defined twice, at
+  File "game/script.rpy", line 2694 and
+  File "game/script.rpy", line 4989.
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Thu Feb 15 11:44:22 2024
+Fri Apr  5 13:29:03 2024

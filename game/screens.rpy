@@ -364,19 +364,19 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     ##use navigation
     hbox:
-        xalign 0.5
+        xalign 0.48
         yalign 0.95
-        spacing 40
+        spacing 30
 
 
 
         textbutton _("Start") action Start()
         textbutton _("Load") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Volunteers") action ShowMenu("about")
+        textbutton _("Buy me a Coffee!") action OpenURL("https://www.buymeacoffee.com/arespower1u")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("My Twitter") action OpenURL("https://twitter.com/AresFrustrado")
 
         if renpy.variant("pc"):
             textbutton _("Quit") action Quit(confirm=not main_menu)

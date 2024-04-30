@@ -112,14 +112,13 @@ image Forest1 = "images/bgs/Forest1.png"
 image Forest2 = "images/bgs/Forest2.png"
 image Forest3 = "images/bgs/Forest3.png"
 image Forest4 = "images/bgs/Forest4.png"
+image Forest5 = "images/bgs/Forest5.png"
 image LabOut = "images/bgs/LabOut.png"
 image Lab1 = "images/bgs/Lab1.png"
-image CarsonEntrance = "images/bgs/Carson.png"
 image car0 = "images/bgs/car0.png"
 image car1 = "images/bgs/car1.png"
 image car2 = "images/bgs/car2.png"
 image car3 = "images/bgs/car3.png"
-image JvC = "images/bgs/Johnny vs Carson.png"
 image city1 = "images/bgs/ciity1.png"
 image Jul = "images/bgs/Jul.png"
 image HouseOut = "images/bgs/HouseOut.png"
@@ -128,7 +127,11 @@ image FrontDoor = "images/bgs/FrontDoor.png"
 image OpenFrontDoor = "images/bgs/OpenFrontDoor.png"
 image HouseIn1 = "images/bgs/HouseIn1.png"
 image HouseIn2 = "images/bgs/HouseIn2.png"
-
+image V_Patch = "images/bgs/vegetable_patch.png"
+image Ash1 = "images/bgs/Ash1.png"
+image Ash2 = "images/bgs/Ash2.png"
+image end2 = "images/bgs/TGC2.png"
+image seriously = "images/bgs/Serious.png"
 
 
 
@@ -140,15 +143,20 @@ image start2 = "images/bgs/First Encounter.png"
 
 # Polaroids
 
-image Pol1 = "images/polaroids/Pol1.png"
-image Pol2 = "images/polaroids/Pol2.png"
-image Pol3 = "images/polaroids/Pol3.png"
+
 image Pol4 = "images/polaroids/Pol4.png"
 image Pol5 = "images/polaroids/Pol5.png"
 image Pol6 = "images/polaroids/Pol6.png"
 image Pol7 = "images/polaroids/Pol7.png"
 image Pol8 = "images/polaroids/Pol8.png"
 image Pol9 = "images/polaroids/Pol9.png"
+image Pol10 = "images/polaroids/Pol10.png"
+image Pol11 = "images/polaroids/Pol11.png"
+image Pol12 = "images/polaroids/Pol12.png"
+image JvC1 = "images/polaroids/C2.png"
+image JvC2 = "images/polaroids/C3.png"
+image JvC3 = "images/polaroids/C4.png"
+
 
 
 # Items
@@ -158,6 +166,8 @@ image sodas = "images/objects/soda.png"
 image notepad = "images/objects/notepad.png"
 image keys = "images/objects/keys.png"
 image HF = "images/objects/HF.png"
+image photo = "images/objects/photo.png"
+image bones = "images/objects/bones.png"
 
 
 # Characters
@@ -173,6 +183,8 @@ define UnCarson = Character("???", what_prefix='{i}"', what_suffix='"', color="#
 define Carson = Character("Carson", what_prefix='{i}"', what_suffix='"', color="#ffff66", callback=V7)
 define UnJulia = Character("???", what_prefix='{i}"', what_suffix='"', color="#ffff99", callback=V8)
 define Julia = Character("Julia", what_prefix='{i}"', what_suffix='"', color="#ffff99", callback=V8)
+define Who = Character("???", what_prefix='{i}"', what_suffix='"', color="#404040")
+
 
 
 # Sprites
@@ -234,6 +246,11 @@ image Ashley mad3 = "images/sprites/Ashley/A_13.png"
 image Ashley mocking1 = "images/sprites/Ashley/A_14.png"
 image Ashley worried1 = "images/sprites/Ashley/A_15.png"
 image Ashley worried2 = "images/sprites/Ashley/A_16.png"
+image Ashley excited = "images/sprites/Ashley/A_17.png"
+image Ashley tired = "images/sprites/Ashley/A_18.png"
+image Ashley worried3 = "images/sprites/Ashley/A_19.png"
+
+
 
 image Andrew sigh = "images/sprites/Andrew/An_1.png"
 #image Andrew sigh R = "images/sprites/Andrew/An_1R.png"
@@ -260,6 +277,7 @@ image Andrew sigh2 = "images/sprites/Andrew/An_13.png"
 image Andrew angry2 = "images/sprites/Andrew/An_14.png"
 image Andrew = "images/sprites/Andrew/An_15.png"
 image Andrew what = "images/sprites/Andrew/An_16.png"
+image Andrew confused2 = "images/sprites/Andrew/An_17.png"
 
 image Julia chat1 = "images/sprites/Julia/J1.png"
 image Julia = "images/sprites/Julia/J2.png"
@@ -309,6 +327,8 @@ image Lars 5 = "images/sprites/Others/L5.png"
 image Lars 5 right = "images/sprites/Others/L5_R.png"
 image Lars 6 = "images/sprites/Others/L6.png"
 image Lars 6 right = "images/sprites/Others/L6_R.png"
+image Lars 7 = "images/sprites/Others/L7.png"
+
 
 image Carson 1 = "images/sprites/Others/C1.png"
 image Carson 2 = "images/sprites/Others/C2.png"
@@ -325,11 +345,7 @@ label splashscreen:
     show advertising with fade
     pause 2.0
     scene black with fade
-    scene advertising2 with dissolve
     pause 2.0
-    scene black with fade
-    pause 3.0
-    hide advertising with dissolve
     show main with fade
     return
 
@@ -357,14 +373,16 @@ label start:
     pause 1.5
     "All started with a stolen car."
     "A gray Seat Málaga with one of the rear lights broken,{w} patent number [[REDACTED]."
+    "Nothing special at first instance."
+    "People get their vehicles stolen every day,{w} and usually those corrupt pigs from the department always find excuses to keep them for themselves."
+    "This off course, in case they find them in the first place..."
     scene office with fade
-    "Nothing special at first instance.{w} People get their vehicles stolen every day and those corrupt pigs of the department always find excuses to keep them for themselves."
-    "This,{w} in case they find them in the first place, off course..."
-    "That’s why, instead of going straight to the police as would be logical anywhere else,{w} they better call someone special…{w} Someone…"
+    "That’s why,{w} instead of going straight to the police as would be logical anywhere else,{w} people prefers to call someone special…"
+    "Someone…"
     show Johnny P
     play sound "audio/sfx/Whip.wav"
     pause 1.0
-    "...like me."
+    "...like me~"
     play sound "audio/sfx/Whip.wav"
     hide Johnny P
     show Johnny P2
@@ -372,13 +390,13 @@ label start:
     play sound "audio/sfx/Whip.wav"
     hide Johnny P2
     show Johnny smile2
-    "A strong...{w} intelligent...{w} seductive man."
-    "A more than capable detective who’s also..."
+    "A strong,{w} intelligent,{w} and seductive man who's more than capable of solving their problems."
+    "And also..."
     hide Johnny smile2
     show Johnny sigh
     stop music
     play sound "audio/sfx/scratch.wav"
-    items "Broke as fuck..."
+    items "Is broke as fuck..."
     stop sound
     scene black with fade
     "B-But let's not entertain ourselves with trivialities."
@@ -393,31 +411,33 @@ label start:
     hide shovel
     pause 0.5
     play sound "audio/sfx/car turning on.wav"
-    pause 0.5
+    pause 1.5
     play music "audio/music/Bananarama - Cruel Summer sing.wav" fadein 1.0
-    "Gotta admit one thing,{w} things have gotten easier lately."
-    "A lot of calls,{w} a lot of works,{w} a lot of things that keep me going."
-    "Bad for the people,{w} but good for me."
-    "And to be honest,{w} that’s all that I care about for now."
-    "I’ve been living in that old, rotten cabin since… the incident with my parents."
+    items "Gotta admit one thing,{w} things have gotten easier lately."
+    scene car0 with fade
+    "A lot of calls,{w} a lot of work,{w} a lot of things that keep me going."
+    "Bad for the people?{w} Yeah,{w} but good for me."
+    "A double win I would say."
+    "I’ve been living in that old, rotten cabin for…{w} a while."
     "I totally need to get out of that bloody mouse hole."
-    "Still,{w} not everything is bad in there."
     scene drive with fade
     pause 1.0
-    "Looking through the window, I met with the silhouette of the city drawing over the horizon."
-    "The rumble of the cars and the echo of people yelling at each other’s started to filled my ears."
-    "The disgusting,{w} putrid smell of men and their filth is something that torments me every time I put a step on this circus."
-    "I saw their faces..."
-    "Those fake expressions pretending a mediocre happiness with smiles as empty as their heads."
-    Johnny "Repulsive…"
-    pause 1.0
+    "Looking through the window, I met with the silhouette of the city drawn over the horizon."
+    "The rumble of the cars and the echo of people yelling at each other’s started to fill my ears."
+    "Its disgusting,{w} putrid smell is something that torments me every time I put a step on this circus."
+    "And the faces...{w} The ones from those who mask their truths under smiles as empty as their heads."
+    scene black with fade
+    Johnny "Uh...{w} Repulsive…"
     "But that’s ok."
+    pause 1.0
     "It shouldn't even bother me."
     "After all... I'm not like them."
-    "I'm smarter,{w} more attractive,{w} and way happier then all of them."
-    Johnny "I'm better... Better than those."
-    "Once I get enough money for a new apartment,{w} I’ll be as far away as I can be from this hell-hole."
-    "And so I'll be able to live the life I deserve."
+    "I'm smarter,{w} more attractive,{w} and above all, much more honest than any of them."
+    pause 0.5
+    Johnny "Just smile and wave, Paddle...{w} Just smile and wave."
+    scene car0 with fade
+    "Once I get enough money for a new apartment,{w} I’ll be as far away as possible from this hell-hole."
+    "And so,{w} I'll be able to live the life I deserve."
     scene black with fade
     pause 0.3
     Johnny "Sadly… {w} this case surely won't be the one to make my dream come true..."
@@ -427,6 +447,7 @@ label start:
     "I parked right in the crime zone."
     play music "audio/music/Delay.wav" fadein 2.0
     play sound "audio/sfx/car door.wav"
+    pause 1.5
     show Johnny R at left
     with moveinleft
     "The vision of a seedy motel received me with its dungy pestilence as I stood out of the car."
@@ -442,7 +463,7 @@ label start:
     hide Johnny
     show Johnny serious1 R at left
     Johnny "A location like this usually has a good number of amblers.{w} It wouldn’t be hard to find someone who could have seen something."
-    "With this in mind, I started moving."
+    "With this in mind, I began to work."
     play sound "audio/sfx/Steps stone.wav"
     hide Johnny smile1 R
     show Johnny R at left
@@ -458,22 +479,24 @@ label start:
     with moveinleft
     scene eat food with fade
     "At my left was a restaurant followed by an ugly clothes shopping."
-    "Taking into account that the theft happened between the night and early morning, it would be strange if someone would have seen something in there."
-    "In the best scenario, the owners would be weirdos who have their alarms set for everything that happens in the neighborhood. "
-    "(It happens way more often than you would expect)"
-    "That’s left as an option for now."
+    "Taking into consideration the crime happened between the night and early morning,{w} it would be strange if someone had been present at that very moment."
+    "In the best scenario,{w} the owners would be weirdos who have their alarms set for everything that happens in the neighborhood."
+    "It happens way more often than you would expect..."
+    Johnny "That’s left as an option for now."
     scene park with fade
     "At my right was the entrance to a public park."
     "A very frequented place."
-    "Horny teenagers,{w} lurking perverts,{w} and lots of vagabonds {w}(the worst of them)."
-    "There’s always someone watching on these kinds of sites, so it was a clear choice."
-    "However, what I found in there wasn’t exactly what I was thinking...{w} nor expecting at all."
+    "Horny teenagers,{w} lurking perverts,{w} and lots of vagabonds {w}(usually a combination of both)."
+    "There’s always somebody watching on these kinds of sites, so it was a clear choice."
+    stop music fadeout 1.0
+    scene black with fade
+    "However..."
+    "What I found in there wasn’t exactly what I was expecting at all...{w} not at all, actually."
     scene crime1 with fade
     "Behind a very remarkable police tape,{w} hide by the bushes and surrounded by men in blue uniforms,{w} was the cold and fetid corpse of a poor bastard."
-    "A cloud of flies flew around the white blanket covering it.{w} They tried kept looking around in a vague attempt to penetrate the thin fabric."
-    "It wasn't by any means something recent."
+    "A cloud of flies flew around the white blanket covering it.{w} They moved wildly in a vague attempt to find a minimum opening in the fabric."
+    "It wasn't by any means something recent..."
     scene black with fade
-    stop music fadeout 1.0
     pause 1.0
     play music "audio/music/Magnum Force.wav" fadein 1.0
     "And off course,{w} this called my attention."
@@ -481,55 +504,64 @@ label start:
     play sound "audio/sfx/Steps grass.wav"
     show Johnny at right
     with moveinright
-    "Naturally, I edged the marking border to have a clearer view of the inside."
-    "However, my intentions would be immediately stopped by the annoyed gaze of one of the man in charge."
+    "Naturally, I approached the place with the intention of gathering some context."
+    "But off course...{w} my intentions would be stopped by the arrival of a character in uniform."
+    hide Johnny
+    show Johnny confused at right
     Officer "Hey!!!"
     show Officer serious at left
     with moveinleft
+    pause 1.0
     hide Johnny
     show Johnny sigh at right
-    Johnny "Always a problem…"
-    Officer "Far away from here, opportunist."
+    Johnny "Always...{w} Always a problem…"
+    Officer "Problems is what you're looking for, opportunist."
+    hide Officer
+    show Officer at left
+    Officer "Get out."
     Officer "This is a closed area,{w} and even more for people of your kind."
+    hide Officer
+    show Officer serious at left
     hide Johnny
     show Johnny serious1 at right
-    Johnny "Of... my {b}kind{/b}?"
-    "I know it wasn't, but still took that as a compliment."
+    Johnny "Of... my {b}kind{/b}?{w} I'll take that as a compliment..."
     hide Johnny
     show Johnny chat1 at right
     Johnny "Let me explain this to you, officer.{w} I'm not here to cause any trouble."
     hide Officer
-    show Officer at left
-    "I gave him one of my presentation cards."
+    show Officer nervous1 at left
     hide Johnny
     show Johnny P at right
     play sound "audio/sfx/whip.wav"
+    pause 1.0
     Johnny "Jonathan Paddle, PI."
     hide Johnny
     show Johnny P2 at right
     play sound "audio/sfx/whip.wav"
+    pause 1.0
     Johnny "If there’s a problem,{w} better call me~"
     hide Johnny
     show Johnny confused at right
     hide Officer
     show Officer sigh1 at left
-    Officer "Yeah, I know you well, freak…"
+    Officer "Yeah, yeah...{w} I know you well, freak…"
     hide Officer
-    show Officer indifferent at left
+    show Officer serious at left
     Officer"You're the one who covered the agency's signs with those stupid advertising pamphlets."
-    hide Johnny
-    show Johnny smile1 at right
     "Ups... thought nobody saw me..."
     hide Johnny
-    show Johnny chat1 at right
-    Johnny "Ehem… yeah.{w} No hard vibes anyway, right?"
+    show Johnny smile1 at right
+    Johnny "Ehem…{w} yeah...{w} No hard vibes anyway, right?"
     hide Johnny
     show Johnny at right
     hide Officer
-    show Officer serious at left
-    Officer "Whatever…{w} Just get out of here."
-    Officer "We're already too busy to deal with any more troubles."
-    "My alerts went off when I heard that statement."
+    show Officer indifferent at left
+    Officer "Whatever…{w} Just go away, please."
+    hide Officer
+    show Officer nervous2 at left
+    Officer "We're too busy already to deal with the delusions of an 80s fan."
+    hide Officer
+    show Officer chat at left
     hide Johnny
     show Johnny serious1 at right
     Johnny "Busy?{w} Doing what?{w} It's not like people never get killed in this city."
@@ -540,177 +572,147 @@ label start:
     hide Johnny
     show Johnny smug2 at right
     hide Officer
-    show Officer sigh1 at left
-    "Judging by his breathing, I could assume that he didn't find my little joke to be amusing."
+    show Officer sigh2 at left
+    "Judging by his expression, we could assume that he didn't find my little joke to be amusing."
+    hide Johnny
+    show Johnny smug1 at right
     Officer "Whatever we're doing here is none of your business."
     Officer "I have a better idea,{w} why don't you go investigate the {b}who cares about your opinion{/b} case?"
     hide Johnny
     show Johnny chat1 at right
-    Johnny "There’s no need to get angry, officer.{w} I’m just doing my job the same way you’re doing yours."
-    Johnny "The difference is,{w} I {b}do{/b} like mine."
-    hide Johnny
-    show Johnny smug1 at right
+    hide Officer
+    show Officer chat at left
+    Johnny "Nah,{w} I looked into that last week."
     hide Officer
     show Officer sigh2 at left
-    "I heard a resigned sigh coming from him, to which I couldn't help but smile mischievously."
-    "Sadly, as much as I would like to keep messing with him, that wasn't the reason to be there."
+    hide Johnny
+    show Johnny smile1 at right
+    Johnny "It was your mom~"
     hide Johnny
     show Johnny chat1 at right
-    Johnny "All right, now if you don’t mind,{w} I’ll just take a quick look and—{nw}"
+    Johnny "But that's aside the point anyway."
+    hide Johnny
+    show Johnny smile2 at right
+    hide Officer
+    show Officer serious at left
+    Johnny "The thing is, I’m just trying to do my job the same way you’re doing yours."
+    Johnny "So why don't you step aside for me?"
     hide Johnny
     show Johnny at right
     hide Officer
-    show Officer sigh1 at left
-    Officer "Are you deaf?{w} I said this is a closed area."
-    Officer "You can’t be here,{w} which is the part you don't understand?"
-    hide Johnny
-    show Johnny serious1 at right
-    Johnny "Yes, I heard that before,{w} but I’m standing in the allowed zone.{w} I don't see why I wouldn't be able to stay."
-    Officer "Because I’m saying that you {b}CAN’T{/b} be here."
+    show Officer indifferent at left
+    Officer "Becuase my job is not letting you do yours."
     hide Officer
     show Officer at left
-    Officer "We have strict orders to not letting anyone come closer.{w} Especially a fucking Larry Zito wanna be like you."
-    Officer "Now piss off, or I'll put you in a cage with the weirdos we caught last night."
-
+    Officer "Is it that hard to understand?{w} Do I need to explain it with sticks and a blackboard?"
+    hide Johnny
+    show Johnny chat1 at right
+    hide Officer
+    show Officer serious at left
+    Johnny "Look, pal.{w} I'm trying to be reasonable here."
+    stop music fadeout 1.5
+    hide Johnny
+    show Johnny serious1 at right
+    Johnny "I’m standing in the allowed zone.{w} So I can't see the reason why I wouldn't be able to stay."
+    hide Officer
+    show Officer sigh1 at left
+    Officer "The reason is because I say so."
+    hide Officer
+    show Officer sigh2 at left
+    Officer "You {b}CAN’T{/b} be here."
+    hide Officer
+    show Officer at left
+    Officer "We have strict orders to not let anyone come closer.{w} Especially a fucking Larry Zito wanna be like you."
+    hide Officer
+    show Officer serious at left
     ################################### Police choice
 
     menu:
         "He was pretty serious about this so... I decided to answer with—"
 
-        "Disdain":
-            jump Disdain1
         "Demureness":
             jump Demureness1
         "Indifference":
             jump Indifference1
 
 
-    label Disdain1:
-        $ PoliDisdain = True
-        stop music fadeout 2.0
-        hide Johnny
-        show Johnny angry1 at right
-        Johnny "So…{w} the bigger men have spoken, didn’t?{w} Yeah… I know how it is."
-        hide Johnny
-        show Johnny serious1 at right
-        play music "audio/music/Ennio Morricone - The Thing.wav" fadein 2.0
-        "I looked at the excuse of a man up and down."
-        scene black with fade
-        "His body language said everything I needed to know."
-        play sound "audio/sfx/paper.wav"
-        show Pol3 with dissolve
-        "An awkward posture..."
-        play sound "audio/sfx/paper.wav"
-        show Pol2 with dissolve
-        "A neglected physique..."
-        play sound "audio/sfx/paper.wav"
-        show Pol1 with dissolve
-        "Eyes filled with doubt,{w} unable to even keep his gaze locked on mine."
-        "The pestilence of the mediocrity was strong on him,{w} enough to make my lungs sting and my blood boil."
-        "But what’s the point on even bother for someone like this?"
-        "Someone weak…{w} Someone who can’t even stand for himself."
-        "He probably just wanted to go back home,{w} to get enough money to live just another fucking month and that’s it."
-        "It’s even…{w} sad,{w} if you stop to think about it."
-        "Being someone so pathetic,{w} with such lack of ambition."
-        scene crime2 with fade
-        show Officer sigh1 at left
-        show Johnny serious1 at right
-        Officer "Excuse me?{w} What did you just—{nw}"
-        Johnny "It’s always the same with the people like you."
-        Johnny "One is here,{w} trying to do their best,{w} making a living to follow a dream,{w} and you just want to to sit down on that nasty couch of yours and jerk off with the cheap pornography you bought at the Chinese"
-        hide Officer
-        show Officer scared at left
-        Officer "W-What did you just said?"
-        hide Johnny
-        show Johnny angry1 at right
-        Officer "What could you know about me, freak?"
-        Officer "You are just a parasite that lives from the misery of the people."
-        "A...{w} {b}parasite{/b},{w} huh? "
-        Johnny "Maybe…{w} yeah, that could be."
-        hide Officer
-        show Officer sigh2 at left
-        Johnny "I'm a lot of things, I would say..."
-        hide Johnny
-        show Johnny chat1 at right
-        Johnny "Still, why don't you tell me?"
-        Johnny "Who was this time?{w} The Fat Tony?{w} Vito Corleone?{w} Antonio Montana?{w} Some poor wanna be with full pockets?"
-        scene black with fade
-        "Of course, that response was the last straw."
-        play sound "audio/sfx/Safery.wav"
-        pause 0.5
-        "I heard him releasing the safety of his gun moments before the barrel was pointed at me."
-        "Again, the calls of the anger appeared on his face,{w} but they were just lies compared to the reflection on his eyes."
-        "I saw nerves,{w} doubt,{w} the fear of a small man who hides behind of a gun bigger than himself."
-        Officer "Get out..."
-        Officer "Run the fuck out of here or I'll send you straight to the obituary."
-        "Maybe I would have taken that threat seriously if his voice hadn't wavered."
-        pause 0.3
-        Johnny "Oh, I’ll go... you don’t need to worry about that."
-        Johnny "Just…{w} I hope you look at me with the same eagerness next time we see."
-        pause 1.0
-        play sound "audio/sfx/Steps grass.wav"
-        Johnny "Have a nice day, officer~"
-        stop music fadeout 2.0
-        scene black with fade
-        jump main_route
-
     label Demureness1:
         $ PoliDemureness = True
 
-        "Ignoring the warnings of the little man in blue, I took a look at the corpse over his shoulder."
+        "Ignoring the warnings of the little man in blue, I decided to take a look at the corpse over his shoulder."
+        "He wasn't that tall anyway..."
+        play music "audio/music/The Thing - The Norwegian Camp.wav"
         scene black with fade
         "There was very little I could get with a view like this."
         "However, something particular caught my sight."
         play sound "audio/sfx/paper.wav"
         show Pol4 with fade
-        "His shoes looked like normal ones at naked eyes, but their soles were completely plane."
-        "In principle,{w} this is not incriminating evidence."
-        "I mean, a lot of people have their shoes with plane sole,{w} but they also come very handy on cases where the victimizer don’t want to leave any clues of the crime."
-        "To keep it simple,{w} there's a small chance that this person did't come with good intentions."
-        "Things like shoe size and sole shape are often a big help when it comes to locating people."
-        "But of course they're not a reliable clue."
-        "A small help, however..."
+        pause 0.5
+        "The soles of his shoes..."
+        "They seemed pretty innocent at first glance,{w} however, their completely flat design gave me something to consider."
+        "A lot of people have their shoes with plane sole,{w} but they're also very popular around people who don’t want to leave any clues."
+        "To keep it simple,{w} I think there's a chance this person did't come with good intentions."
+        "This is just a theory, but..."
         hide Pol4
-        stop music fadeout 2.0
-        Officer "HEEEEEEY!!! {w} ASSHOLE!!!"
-        "Off course, my thoughts were stopped by the cop yelling at my ear..."
-        scene crime2
+        Officer "HEEEEEEY!!! {w} WHAT DO YOU THINK YOU'RE DOING?!"
+        scene crime2 with fade
+        show Officer at left
+        show Johnny at right
+        Officer "Didn’t you hear me? "
         show Officer sigh2 at left
-        show Johnny serious1 at right
-        Officer "You didn’t hear me? I said you better piss of before I send you to resolve the case of the fallen soup in the bathroom."
-        Officer "I'm not repeating it..."
-        Officer "GET OUT."
-        "His tone was so annoying..."
-        "Just the voice of a poor thing who tried desperately to sound intimidating."
-        play music "audio/music/Ennio Morricone - The Thing.wav" fadein 2.0
-        pause 0.5
-        hide Johnny
-        show Johnny angry1 at right
-        pause 0.5
+        extend "I said you can't stay here!"
+        Officer "This is my last warning.{w} Get out of here or I send you to resolve the case of the fallen soup in the bathroom."
         hide Officer
-        show Officer scared at left
-        "The moment I turned to look over him, he shivered like a scared little sheep."
+        show Officer serious at left
+        hide Johnny
+        show Johnny serious2 at right
+        "His voice was so annoying...{w} Just a poor little thing who tried desperately to sound intimidating."
+        hide Johnny
+        show Johnny confused at right
+        "But among his complaints,{w} I noticed something quite peculiar."
+        "He was wearing shoes..."
+        "Aslong as I know, officers should wear their full uniform...{w} that including boots."
+        hide Johnny
+        show Johnny serious1 at right
+        Johnny "Those are pretty good, fella..."
+        hide Officer
+        show Officer nervous1 at left
+        extend" They must be a gift, right?"
+        "I noticed a change in his behavior.{w} He shivered like a scared little sheep the moment I mentioned that."
         "He thought I wouldn’t notice…"
         hide Officer
         show Officer serious at left
-        "...but I did.{w} Oh hell I did..."
-        "There was no need to lower myself to his level."
-        hide Johnny smug1
+        "...but I did.{w} Oh, hell I did..."
+        hide Johnny
+        show Johnny at right
+        hide Officer
+        show Officer chat at left
+        Officer "L-Let me give you a little advice, Mr. Detective...{w} Stay on your business."
+        hide Johnny
+        show Johnny smug1 at right
+        hide Officer
+        show Officer at left
+        Johnny "Heh...{w} I’ll have that on mind."
+        hide Johnny
         show Johnny chat1 at right
-        Johnny "I’ll have that on mind.{w} We’ll be in contact soon enough, officer."
+        Johnny "In that case, we’ll be in contact soon enough, officer."
         hide Johnny chat1
         show Johnny smug1 R at right
         pause 0.2
         hide Johnny
         show Johnny smug1 R at offscreenright
         with moveinleft
-        pause 0.5
-        hide Officer scared
-        show Officer at left
-        Officer "Yeah, that’s it!"
         hide Officer
-        show Officer indifferent at left
-        Officer "You better move on... {w} Fucking... weird..."
+        show Officer serious at left
+        pause 2.0
+        Officer "Uh..."
+        hide Officer
+        show Officer nervous2 at left
+        Officer "For your own good, we better not..."
+        pause 1.0
+        hide Officer
+        show Officer nervous1 at left
+        Officer "..."
         stop music fadeout 2.0
         scene black with fade
 
@@ -718,7 +720,6 @@ label start:
 
     label Indifference1:
         $ PoliIndifference = True
-        stop music fadeout 2.0
         pause 2.0
         play music "audio/music/Ennio Morricone - The Thing.wav" fadein 2.0
         hide Johnny
@@ -729,39 +730,52 @@ label start:
         scene black with fade
         "It was disgusting,{w} repulsive to even think about it."
         "But why even bother?{w} What power do mud people like him really have?"
+        show Officer indifferent with dissolve
+        "Even at that moment,{w} just by the touching our gazes,{w} I could feel his heart racing."
+        play sound "audio/sfx/static.wav" fadein 1.5
+        pause 2.0
+        "He was feeling nervous,{w} self-conscious,{w} probably {b}unsafe{/b}."
+        "But why?{w} Why would anyone on his position feel intimidated?"
+        "Being armed,{w} close to his colleagues,{w} in broad daylight..."
+        "There was no way I could hurt him..."
         hide Officer
-        show Officer nervous1 with dissolve
-        "Even at that moment, just by the touching our gazes,{w} I could feel his heart racing."
-        "He felt nervous,{w} self-conscious,{w} {b}unsafe{/b}."
-        "But why?{w} Why someone on his position would let himself to be intimidated by others?"
-        "The answer is simple...{w} Because he's small.{w} He just pretends to be brave,{w} tries to look strong just to keep his appearance."
-        "But deep down... {w} Well, statements are unnecessary"
-        hide Officer nervous1
         show Officer nervous2
-        "Questions started to sprout on his mind."
+        extend " right?"
+        "But that's the thing, you know?"
+        "Deep down...{w} he was small,{w} just a little man pretending to be brave and strong."
+        hide Officer
+        show Officer nervous1
+        "His nervousness increased the moment the questions began to multiply."
         "“What is he doing?”{w} “Why does he keep staring at me?”"
-        "“What should I do?”{w} “Is he gonna hurt me?”{w} “I don’t wanna get hurt, should I yell at him?”{w} “Maybe threaten him?”{w} “Hurt him?”{w} “Perhaps…”"
-        "“Perhaps {b}shoot{/b} him?”"
+        "“What should I do?”{w} “Is he gonna hurt me?”{w} “I don’t wanna get hurt, should I yell”{w} “Maybe threaten him?”{w} “Hurt him?”{w} “Perhaps…”"
+        pause 1.5
+        "“Perhaps {b}shoot{/b} at him?”"
         hide Officer nervous1 with fade
-        "My thoughts were confirmed as I see his hand moving slowly towards the gun on his belt,{w} and a little grin started to creep on my face as a result of that."
-        "Now his pupils dilated,{w} small beads of sweat began to emanate from his skin, and his pulse faltered as his fingers wound around the weapon."
+        stop music fadeout 1.5
+        "My thoughts were confirmed as I saw his hand slowly moving towards the gun on his belt."
+        "A small grin started to creep on my face, and he clumsily failed a couple of times when trying to take it."
+        play music "audio/sfx/static.wav" fadein 1.0
+        "His pupils dilated,{w} small beads of sweat rolled down his skin,{w} and his pulse faltered as his fingers wrapped around the pistol."
         "But before he could even pull it out…"
         stop music
         scene crime2
-        show Officer nervous2 at left
+        show Officer scared at left
         show Johnny chat1 at right
-        Johnny "All right."
-        Johnny "Until we see each other’s again,{w} officer~"
-        hide Johnny chat1
-        show Johnny serious3 at right
+        Johnny "All right.{w} I think I'm going then."
+        hide Johnny
+        show Johnny smug1 at right
+        hide Officer
+        show Officer nervous1 at left
         "I spoke."
+        Johnny "Until we see each other’s again,{w} officer~"
+        pause 1.0
         scene black with fade
         "And so I did."
         "I moved on, leaving the little man alone with his thoughts."
         play sound "audio/sfx/Steps grass.wav"
-        "And as I walked away, I heard an almost inaudible sigh of tranquility.{w} The sound of his soul reentering his body."
-        "And then,{w} the distant voice of that poor man prayed..."
-        Officer "For fuck sake…{w} What were those eyes?"
+        items "And as I walked away, I heard an almost inaudible sigh of tranquility.{w} The sound of his soul reentering his body."
+        items "And then,{w} the distant voice of that poor guy prayed..."
+        Officer "For fuck sake…{w} I need a moment..."
 
         jump main_route
 
@@ -779,18 +793,17 @@ label main_route:
     show Johnny at center
     with moveinright
     "That was fishy..."
-    "The cartels could to be moving around this, but it’s too clean to be one of their scenes."
-    "Usually when they leave a body in sight it is to send a message, but they used to be... {b}less complete{/b},{w} at least in most cases."
-    "It’s likely to be an amateur work."
+    "That seemed like the work of one of the mafias, perhaps some cartel.{w} However, the scene was too clean or too dirty to be one of them."
+    hide Johnny
+    show Johnny serious2 R at center
+    if "PoliDemureness" in locals():
+        "I could say the killer was an amateur,{w} but that {b}supposed officer{/b} was clearly compromised."
+    else:
+        "I could say the killer was an amateur,{w} but the police was clearly compromised."
+    "Someone big placed his hands on this, but who and why?"
     hide Johnny
     show Johnny serious1 at center
-    "But then again, my question would be if this is somehow related with the stolen car."
-    "Could have been a reckoning between gangs."
-    "A guy jumps out of the bushes,{w} attacks,{w} the other dude falls death and the attacker escapes."
-    hide Johnny
-    show Johnny sigh at center
-    "Still, that has very little sense…{w} Why stealing someone’s car being an easier way to get caught?"
-    "Why not using your own car instead or searching for a escape route?"
+    "And most importantly, is this somehow related with the stolen car?"
     "There’s also the possibility for them to be separate events,{w} which would make this an incredible and unfortunate coincidence."
     "The place...{w} the circumstance...{w} the time between events...{w} everything is so strange."
     scene black with fade
@@ -800,7 +813,7 @@ label main_route:
     scene malaga
     play sound "audio/sfx/static.wav" loop volume 0.6
     pause 1.5
-    "At a speed above the allowed, a gray Seat Málaga with one of the rear lights broken crossed the street."
+    items "At a speed above the allowed,{w} a gray Seat Málaga with one of the rear lights broken crossed the street."
     stop sound fadeout 2.0
     scene black with fade
     "For a moment, I thought I imagined it."
@@ -808,6 +821,7 @@ label main_route:
     scene motel2 with fade
     show Johnny sigh at center
     "It took me a few moments to process what I’ve just seen,{w} and when I came back to reality there was only one thing I could think about."
+    pause 1.5
     hide Johnny
     show Johnny smug1 at center
     Johnny "Let’s drive!"
@@ -816,136 +830,170 @@ label main_route:
     play sound "audio/sfx/car turning on.wav"
     pause 0.5
     scene driving with fade
-    "I followed the silhouette of the car, keeping a safe distance to avoid being noticed."
+    items "I followed the silhouette of the car, keeping a safe distance to avoid being noticed."
     "The driver clearly wasn’t an expert.{w} Reckless maneuvers,{w} overly-accelerated speed,{w} little control over the vehicle,{w} seemed to be the profile of someone nervous or upset."
-    "I like that kind of people.{w} They usually oppose some resistance."
-    "It make things more interesting (at least for me)."
+    "I like that kind of people.{w} They usually make things more interesting."
     scene black with fade
     "However, those who came out of that car were quite far from what I had in mind."
-    pause 3.0
+    pause 2.0
     scene passion with fade
+    "We were driving for a while until our little trip got to an end."
     "The sun was starting to set when they stopped in front of a nightclub."
     "In my case, I parked on the opposite side of the road and dedicated myself to observe."
+    play sound "audio/sfx/car door.wav"
+    pause 1.7
     "Two young adults emerged from the vehicle."
     play sound "audio/sfx/paper.wav"
-    show pol6 with fade
-    "A guy with green eyes,{w} slender,{w} disheveled,{w} looking like he haven't slept in days."
+    show pol6 with Dissolve(1.0)
+    "A guy with green eyes,{w} slender,{w} disheveled,{w} looking like he haven't slept in days.{w} Quite handsome, if I can add."
     play sound "audio/sfx/paper.wav"
-    show pol5 with fade
+    show pol5 with Dissolve(1.0)
     "And a girl with pink eyes,{w} of relative short stature,{w} confident,{w} with a pretty but also messy hairstyle."
     "A particular duet, but nothing flashy."
-    "They seemed to have a heated argument."
-    "They yell at each other before their expressions changed from the anger to the calm, {w}and as if nothing had happened,{w} they walked straight into the building with two prominent smiles on their faces."
-    Johnny "Possible bipolar disorder…"
+    play sound "audio/sfx/paper.wav"
+    show pol10 with Dissolve(1.0)
+    "They seemed to have an argument moments after placing a foot out of the car."
+    "I saw them yell at each other before their expressions changed from the anger to the calm, {w}and as if nothing had happened,{w} they walked straight into the building with two prominent smiles on their faces."
+    Johnny "Ok...{w} talking about bipolarity."
     play sound "audio/sfx/paper.wav"
     hide pol6 with dissolve
     pause 0.5
     play sound "audio/sfx/paper.wav"
     hide pol5 with dissolve
+    pause 0.5
+    play sound "audio/sfx/paper.wav"
+    hide pol10 with dissolve
     pause 1.0
-    "With my first two suspects on the board, I decided to investigate."
+    "With my first two suspects on the board it was time to work."
     "First of all,{w} checking the car."
     scene black with fade
     play sound "audio/sfx/car door.wav"
     pause 1.5
-    "And for my not so big surprise,{w} the doors weren’t locked."
+    "And for my not-so-big surprise,{w} the doors weren’t locked."
     scene car with fade
-    "The keys weren’t there neither, sadly."
-    "However, I do found a couple of interesting items there..."
-    pause 1.0
+    "Sadly, the keys weren’t there neither.{w} But I do found some of interesting stuff."
+    pause 0.8
     play sound "audio/sfx/item_got.ogg"
     show butcher
-    pause 1.0
+    pause 1.2
     "{i}Jonathan has picked up a butcher blade.{/i}"
-    "Quite good to chop some meat.{w} And I was just needing one of these."
+    "Quite good to chop some meat, just what I was needing."
     hide butcher
     play sound "audio/sfx/item_got.ogg"
     show sodas
-    pause 1.0
+    pause 1.2
     "{i}Jonathan has picked up a couple of empty soda cans.{/i}"
     "Caramelized Apple and Cinnamon…{w} I heard people use this stuff to remove rust from engines."
     "You must have a really strong stomach to drink this thing…"
     hide sodas
     play sound "audio/sfx/item_got.ogg"
     show notepad
-    pause 1.0
+    pause 1.2
     "{i}Jonathan has picked up a folder full of documents...{/i}"
     "{i}...defunction documents.{/i}"
-    "Now this…{w} this was something else."
+    "Now this…{w} this was something."
     play sound "audio/sfx/paper.wav"
     hide notepad with dissolve
-    pause 1.0
+    pause 1.2
+    show Johnny R at center with Dissolve(0.2)
     Johnny "Andrew and Ashley Graves, huh?"
     Johnny "Siblings…"
     Johnny "Day of decease: [[REDACTED]"
+    hide Johnny
+    show Johnny confused R at center
     Johnny "Cause: Fire/Smoke suffocation."
+    hide Johnny
+    show Johnny serious1 R at center
     "This was a couple of weeks ago.{w} If I'm not mistaken, it happened the same day that quarantined apartment was burnt to ashes."
-    "Should I assume some kind of connection?"
-    "It's already quite the event by its own, but with this?"
-    "We can say that..."
+    Johnny "Back from the Graves, very interesting."
+    hide Johnny
+    show Johnny smug1 R at center
+    Johnny "We can say that..."
+    hide Johnny
+    show Johnny smile2 R at center
     stop music
-    extend" {i}it fanned the flames of my interest.{/i}"
+    extend" {i}this fans the flames of my interest.{/i}"
     pause 2.0
-    "..."
-    "Good thing nobody is gonna read this notes."
+    hide Johnny
+    show Johnny smile1 R at center
+    Johnny "..."
+    hide Johnny
+    show Johnny confused R at center
+    Johnny "Good thing nobody heard that..."
     pause 2.0
     play music "audio/music/Cruel Summer ost.wav"
+    hide Johnny
+    show Johnny serious1 R at center
     "Anyway..."
-    "Most likely, these documents are fake.{w} These little siblings tried to fake their deaths."
-    "Why to do such a thing in that way?{w} Why taking an entire apartment with them?{w} And most importantly, why {b}that{/b} apartment in particular?"
-    "I had more questions than answers…{w} and luckily, my two suspects were just a couple of meters of distance."
+    "Most likely, these documents are fake."
+    "Little siblings tried to fake their deaths, I get that."
+    "Now,{w} why doing such thing in that way?{w} Did they take the entire apartment with them?{w} Was there an ulterior motive behind all this?"
+    hide Johnny
+    show Johnny sigh R at center
+    "I had more questions than answers…"
+    "Luckily I had those two just a couple of meters away."
     "The thing is..."
     scene black with fade
-    "This wasn’t just a stolen car case anymore.{w} Which also means that, the danger involved was bigger than I could imagine."
-    "Considering all the factors on board, I had no reasons to keep going.{w} Could have just walked away, presented the information to my client and let him deal with the rest."
+    "This wasn’t just a stolen car case anymore.{w} Which also means that the danger involved was also bigger."
+    "Considering all the factors on board, I had no reasons to keep going."
+    "Could have just walked away,{w} presented the information to my client and let him deal with the rest."
     "Work finished."
     stop music fadeout 1.5
     "But then again…{w} Where would be the fun on that?"
-    play sound "audio/sfx/static.wav" fadein 1.5 loop volume 0.4
-    "I’m gonna be honest,{w} I do wanted to talk with these two {b}grave-walkers{/b}, {w}and it would've been a total waste not to take advantage of the situation."
-    "I mean...{w} they were over there.{w} Why not doing it?"
-    "And besides all that,{w} I would get a nice recommendation if I return the car instead of just bringing some dirty information."
-    Johnny "You always have to pamper your client, no matter how idiotic they are~"
-    stop sound fadeout 1.5
+    play music "audio/sfx/static.wav" fadein 1.5 volume 0.4
+    "And besides that,{w} would also get a nice recommendation if I return the car instead of just bringing some dirty information."
+    Johnny "You always have to pamper your client,{w} no matter how idiotic they are."
+    Johnny "You just low your head and say yes to the money fool."
+    stop music fadeout 1.5
     pause 1.0
     play sound "audio/sfx/car door.wav"
-    "So, I got out of the car, closed the door and fixed my clothes before walking into the club."
+    "With this in mind, I got out of the car, closed the door and fixed my clothes before walking into the club."
+    play sound "audio/sfx/whip.wav"
+    hide Johnny
+    show Johnny P R at center
+    pause 1.0
     Johnny "Show time~"
+    hide Johnny with fade
+    pause 1.5
     play music "audio/music/ALEX - AKUMA.wav"
     scene club_in with fade
-    "The night was falling, so the place was still a little empty."
+    "The place was still a little empty."
     show pol8 with dissolve
     show pol7 with dissolve
-    "The girl was sitting on a table at the bottom of the place while the emo guy was leaning against the railing of the balcony in the second floor."
-    "Usually, women doesn’t give me much troubles."
-    "It’s just a matter of pulling out the {i}Paddle’s style{/i}, and they tell me what I want to hear…{w} or they attack me.{w} One of those options."
+    "The pixie-girl was sitting on a table at the bottom of the place while the emo-boy was leaning against the handrail of the balcony in the second floor."
+    "Usually, women doesn’t give much troubles."
+    "It’s just a matter of pulling out the {i}Paddle’s style{/i}, and they tell me what I want to hear~"
+    "That...{w} or they attack me...{w} One of those options."
     scene club1 with fade
     show Ashley at right
     pause 0.5
     play sound "audio/sfx/Steps stone.wav"
-    "I walked into her with airs of calm."
-    show Johnny R at left with moveinleft
-    "Those eyes felt over me without much interest, {nw}"
+    "So I walked into her with airs of calm."
+    show Johnny smile2 R at left with easeinleft
+    "Those eyes felt over me without much interest."
     hide Ashley
     show Ashley smug1 at right
-    extend "but at the moment I sat on the chair, {nw}"
-    hide Johnny
-    show Johnny smile2 R at left
-    extend"a mocking smirk crept on that face."
+    extend " However, the moment I sat on the chair, {nw}"
+    extend"I was greeted by the smuggest smile I've ever seen in my life."
     hide Ashley
-    show Ashley smug2 at right
-    Ashley "You’re totally not a cop, right?"
+    show Ashley worried2 at right
+    Ashley "You’re totally not a cop, are you?"
     hide Ashley
     show Ashley smug1 at right
     hide Johnny
     show Johnny chat1 R at left
-    Johnny "Actually, I’m not.{w} I applied for the position, but they expelled me from the academy before graduating."
+    Johnny "Actually, I’m not.{w} I applied for the position, but got expelled from the academy before graduating."
     hide Johnny
     show Johnny smile1 R at left
-    Johnny "Sad, I really wanted to use a taser..."
+    Johnny "Sad,{w} I really wanted to use a taser..."
+    hide Johnny
+    show Johnny smile2 R at left
+    hide Ashley
+    show Ashley mad3 at right
+    "She inspected me from top to bottom with very little modesty."
     hide Ashley
     show Ashley think at right
-    "She inspected me from top to bottom with very little modesty just before her eyes lit up on realization."
+    "Eventually, her eyes lit up on realization."
     hide Ashley
     show Ashley smug2 at right
     Ashley "Oh!{w} You're that guy from the ads."
@@ -963,57 +1011,76 @@ label main_route:
     Ashley "…a clown."
     hide Johnny
     show Johnny sigh R at left
-    "Bitch..."
+    "Ouch..."
     hide Johnny
     show Johnny chat1 R at left
     Johnny "Y-Yeah... that one..."
     hide Johnny
     show Johnny P R at left
     play sound "audio/sfx/whip.wav"
+    pause 1.0
     Johnny "Johnny Paddle, P.I."
     hide Johnny P R
     show Johnny P2 R at left
     play sound "audio/sfx/whip.wav"
+    pause 1.0
     hide Ashley
     show Ashley smug1 at right
     Johnny "If there’s a problem…{w} Better call me~"
+    hide Johnny
+    show Johnny smile2 R at left
     hide Ashley
     show Ashley giggle1 at right
-    "I received a playful laugh from her part as an answer.{w} The tone, however, wasn’t natural at all."
+    "I received a playful laugh from her part as an answer."
+    hide Johnny
+    show Johnny R at left
+    extend" However, the tone, wasn’t exactly natural."
     hide Ashley
     hide Johnny
     show Ashley smug1 at right
     show Johnny serious1 R at left
-    "Her face kept on a expression of constant smugness,{w} her eyes remained free of any nerves, regardless of disown my intentions."
-    "It was easy to tell that she was playing.{w} I wasn't consider a threat, not at all.{w} Or at least... she didn't show it."
+    "Her face remained in constant smugness,{w} her eyes free of any nerves, regardless of disown my intentions."
+    "It was easy to tell that she was playing.{w} Maybe because I wasn't consider a threat.{w} Not yet at least."
     hide Ashley
     show Ashley smug3 at right
-    "That's a good thing, but I still couldn’t be completely sure of that..."
-    "No matter how much I tried to see through her, I wasn’t able to distinguish any trace of sincere emotions."
+    "She was a hard one.{w} No matter how much I tried to see through her, I wasn’t able to distinguish any trace of sincere emotions."
     "It felt…{w} particularly strange."
-    "As if her whole figure wasn't but a lie trying to fool me at every moment."
+    hide Johnny
+    show Johnny serious2 R at left
+    "As if her whole figure wasn't but a lie trying to fool anyone at any moment."
     hide Ashley
     show Ashley smug2 at right
+    hide Johnny
+    show Johnny confused R at left
     Ashley "So, a detective talking to a pretty lady on a club.{w} It sounds like something out of those cheap 60's movies when you say it loud."
     hide Ashley
     show Ashley smug1 at right
     hide Johnny
     show Johnny chat1 R at left
-    Johnny "A little, yeah, but I'm still incognito,{w} so don’t tell anybody you saw a handsome detective stealing the tips bottle."
+    Johnny "What can I say?{w} It's not every day you can recreate a cliché scene from classic cinema."
+    hide Johnny
+    show Johnny smug2 R at left
+    Johnny "Just don’t tell anybody you saw a handsome detective stealing the tips bottle, ok?"
     hide Ashley
     show Ashley smug2 at right
     hide Johnny
-    show Johnny serious2 R at left
+    show Johnny smile2 R at left
     Ashley "First of all,{w} those tips are mine, mister."
     hide Ashley
     show Ashley at right
-    Ashley "And second, you’re not fooling anybody with that old costume of yours."
-    Ashley "Why don’t you better tell me why your interest on this sweet-innocent girl in front of you?"
+    Ashley "And second, why don't we skip this whole part?"
+    hide Ashley
+    show Ashley worried2 at right
+    Ashley "Just tell me what do you want from this sweet-innocent girl in front of you?"
+    hide Ashley
+    show Ashley at right
     hide Johnny
     show Johnny serious1 R at left
     "I haven’t seen a sweet and innocent person in years."
-    "And frankly, with the little evidence I had till that moment, I could tell she was a lot of things but sweet nor innocent."
-    "Hot and dangerous maybe,{w} but not sweet or innocent."
+    "And frankly, with the little evidence I had till that moment, I could tell she was a lot of things but sweet or innocent."
+    hide Johnny
+    show Johnny confused R at left
+    "Hot and dangerous maybe,{w} but not sweet and innocent."
     hide Johnny
     show Johnny R at left
     Johnny "I was hired to find the whereabouts of a car stolen a few days ago."
@@ -1023,24 +1090,23 @@ label main_route:
     "She took the information and thought about it for a considerably long moment."
     hide Ashley
     show Ashley smug1 at right
-    "The mischievous smile on her lips confirmed that she indeed knew exactly what I was talking about."
-    "Off course, she wasn't about to tell me that easy."
+    "The mischievous smile on her lips confirmed that she knew exactly what I was talking about."
     hide Ashley
     show Ashley smug3 at right
     hide Johnny
     show Johnny confused R at left
-    Ashley "Nope. Haven’t seen a car like that in my life."
-    "The confidence with which she said those words managed to surprise me...{w} a little."
-    "A good liar…{w} one of the kind I would even say."
+    Ashley "Nope.{w} Haven’t seen a car like that in my life."
+    "The confidence in those words managed to surprise me."
     hide Johnny
     show Johnny smug1 R at left
+    "A good liar…{w} one of the kind I would even say."
     "That made me a little more excited."
-    "However my next few words would be fundamental, so I was forced to swallow those feelings and concentrate..."
+    "However, with that I also knew that had to proceed cautiously with this beautiful lady.{w} So I was forced to swallow those feelings and concentrate."
 
     #################################### Ashley 1 choice
 
     menu:
-        "I continued with..."
+        "Let's try..."
 
         "Sharpness":
             $ AshleyAff -=1
@@ -1056,15 +1122,12 @@ label main_route:
 
     label Sharpness1:
         hide Johnny
-        show Johnny smug2 R at left
+        show Johnny smile2 R at left
         hide Ashley
-        show Ashley smug1 at right
-        "Even trying my best, I couldn’t help to laugh at her smoothness."
+        show Ashley smug2 at right
+        Johnny "Heh, {w} you’re good,{w} gotta give you some points."
         hide Johnny
-        show Johnny chat1 R at left
-        Johnny "You’re good.{w} I give you some points."
-        hide Johnny
-        show Johnny smug2 R at left
+        show Johnny smug1 R at left
         hide Ashley
         show Ashley smug2 at right
         Ashley "Thank you~"
@@ -1095,12 +1158,16 @@ label main_route:
         hide Johnny
         show Johnny chat1 R at left
         Johnny "Indeed.{w} What kind of brother wouldn't ensure the safety of his sister?"
-        Johnny "Much more, if we consider how attractive this one turns to be..."
         hide Johnny
         show Johnny serious3 R at left
+        Johnny "Much more, if we consider how attractive this one turns to be..."
+        hide Johnny
+        show Johnny smile2 R at left
         hide Ashley
         show Ashley giggle1 at right
-        "I received a mocking laugh in return, and her brow went down with a pitiful meaning."
+        Ashley "Hahahahahahaha."
+        hide Ashley
+        show Ashley worried2 at right
         Ashley "Oh, please."
         hide Ashley
         show Ashley smug3 R at right
@@ -1113,102 +1180,156 @@ label main_route:
         hide Johnny
         show Johnny smile2 R at left
         Ashley "Ashley.{w} Ashley Graves."
-        Ashley "But I suppose you already knew it, right?"
+        hide Ashley
+        show Ashley pout1 at right
+        Ashley "But I suppose you already knew it, don't you?"
         hide Ashley
         show Ashley smug1 at right
         hide Johnny
-        show Johnny serious3 R at left
-        Johnny "You got me,{w} but I wanted to hear it from you."
+        show Johnny chat1 R at left
+        Johnny "You got me,{w} but I wanted to hear it from you.{w} Like a proper introduction, you know what I'm talking about."
         hide Ashley
         show Ashley at right
+        hide Johnny
+        show Johnny smile2 R at left
         Johnny "After all...{w} a name like that should be said by lips just as beautiful~"
+        hide Johnny
+        show Johnny smile1 R at left
         hide Ashley
         show Ashley mad at right
-        "This time, the smile on her face was vanished."
+        "That...{w} was a little too much.{w} Her smile vanished to be replaced by an uncomfortable expression."
         hide Johnny
         show Johnny serious1 R at left
-        "Maybe… I overdid with the praises…{w} She clearly wasn't comfortable with it anymore."
-        hide Ashley
-        show Ashley mad at right
-        "So, at the risk of ruining the conversation, I assumed I'd better get straight to the point."
+        "I overdid with the praises… damn it..."
         hide Johnny
-        show Johnny chat1 R at left
-        Johnny "Anyway…{w} Now that we introduced ourselves, would you mind telling me a little about the car outside?"
+        show Johnny serious3 R at left
+        Johnny "A-Anyway…{w} Now that we know each others, would you mind telling me a little about the car outside?"
         Johnny "That’s why I’m here after all."
         hide Johnny
         show Johnny smile2 R at left
         hide Ashley
-        show Ashley think at right
+        show Ashley worried2 at right
         Ashley "And why would I do that?"
-        Johnny "Because it’s better for you two, as simple as that."
+        hide Ashley
+        show Ashley smug1 at right
         hide Johnny
         show Johnny chat1 R at left
-        Johnny "We can say I’m just an employ."
-        Johnny "I was hired to find it, and If I don’t,{w} then there’s a big chance that my client will send someone who will."
+        Johnny "Well, simply because it’s better for you two."
+        hide Ashley
+        show Ashley smug3 at right
         hide Johnny
-        show Johnny smug2 R at left
-        Johnny "Probably someone not as reasonable as me."
+        show Johnny smile2 R at left
+        Johnny "We can say I’m just an employ."
+        Johnny "I was hired to find it,{w} give some information, do paperwork, things like that."
         hide Johnny
         show Johnny serious3 R at left
+        Johnny "Nothing will happen if you don't help me, but..."
         hide Ashley
         show Ashley at right
-        Ashley "Was that…{w} a threat?{w} Because that sounded like a threat..."
         hide Johnny
-        show Johnny smug2 R at left
-        Johnny "I would prefer the term {b}bargain{/b}.{w} In essence is the same, but it sounds way more elegant."
+        show Johnny serious1 R at left
+        stop music fadeout 1.0
+        extend " There’s a big chance my client will send {b}someone else{/b} if you don't collaborate."
+        hide Johnny
+        show Johnny R at left
+        Johnny "Probably not as reasonable as me."
+        hide Johnny
+        show Johnny smile2 R at left
+        pause 1.5
+        Ashley "..."
+        Ashley "Was… "
+        hide Ashley
+        show Ashley mad3 at right
+        extend "Was that a threat?{w} Because it sounded like a threat..."
+        hide Johnny
+        show Johnny chat1 R at left
+        play music "audio/music/I'm a Little Tired After That.wav" fadein 1.0
+        Johnny "I would prefer the term {b}bargain{/b}."
+        hide Ashley
+        show Ashley mad at right
+        hide Johnny
+        show Johnny smile2 R at left
+        Johnny "In essence is the same, but it sounds way more elegant."
         pause 1.0
         hide Johnny
-        show Johnny serious2 R at left
-        Johnny"Look, I’m telling you how things are.{w} I could just walk away and you’ll never see me again, OR…{w} you can give me the keys, I return the vehicle, and nothing ever happened here."
+        show Johnny serious3 R at left
+        Johnny "And don't you think I'm trying to scare you or anything here."
+        hide Johnny
+        show Johnny smug2 R at left
+        hide Ashley
+        show Ashley at right
+        extend "If so I’m your benefactor."
+        Johnny "I could just walk away and you’ll never see me again, OR…{w} you can be a good girl,{w} give me the keys so I can return the vehicle,{w} and everyone's happy."
+        hide Johnny
+        show Johnny smug1 R at left
+        Johnny "I get my fee, and you two return to whatever you're doing~"
+        hide Ashley
+        show Ashley mad3 at right
         hide Johnny
         show Johnny chat1 R at left
         Johnny"Sounds good? I think it sounds pretty good."
+        hide Johnny
+        show Johnny smile2 R at left
         "It did sound good…"
         hide Johnny
-        show Johnny smile1 R at left
+        show Johnny R at left
         hide Ashley
         show Ashley mad2 at right
         extend " but she didn't like it.{w} Not at all I would say."
-        "I could feel the air change around us,{w} the tension raising up as she kept hiding behind that emotion wall."
-        "Still, hard to read, but it was evident that she was pissed now."
+        "I could feel the air change around us.{w} The tension raised up as she kept hiding behind that emotion wall."
+        "Still,{w} hard to read,{w} but it was evident that she was pissed now."
         hide Johnny
         show Johnny serious1 R at left
         hide Ashley
         show Ashley ewww at right
         Ashley "And just when I was starting to like you, detective…"
-        Ashley "Fine,{w} you want that piece of scrap? Is yours. {w} It’s out of gas anyway."
+        Ashley "Fine,{w} you want that piece of scrap? Is yours."
         hide Ashley
         show Ashley mad3 at right
-        Ashley "But unfortunately for you, I don’t have the keys."
+        extend " It’s out of gas anyway."
+        hide Johnny
+        show Johnny confused R at left
+        Ashley "But unfortunately for you,{w} I don’t have the keys."
         Ashley "Go talk with Andy up there…"
         scene black with fade
         "I woke from the chair and looked at her one last time."
         Johnny "Thank you for…{nw}"
-        Ashley "Piss off..."
+        Ashley "Piss off."
         "All right…{w} That could have gone better, I have to admit."
         jump main_route2
 
     label Subtlety1:
         hide Ashley
         show Ashley smug1 at right
-        "I nodded and turned towards the guy at the second floor."
+        "I turned to look at the guy on the second floor."
         hide Johnny
-        show Johnny serious1 R at left
-        Johnny "So, a girl and her brother went to a bar in a stolen car and she doesn’t know anything about it…"
-        Johnny "It even seems like the number of some half-time comedian."
+        show Johnny smile2 R at left
+        Johnny "So,{w} a girl and her brother went to a bar in a stolen car and she doesn’t know anything about it?"
+        hide Johnny
+        show Johnny smug2 R at left
+        Johnny "Sounds like the number of some half-time comedian if you ask me."
+        hide Johnny
+        show Johnny smug1 R at left
         hide Ashley
         show Ashley smug2 at right
         Ashley "It easily could be.{w} And the punchline would be the underpaid detective trying to get a confession out of the girl."
         hide Johnny
         show Johnny smug1 R at left
-        Ashley "I would say that it’s a fun joke but…"
+        Ashley "And I would say that it’s a fun joke, "
         hide Ashley
         show Ashley at right
-        extend " I’m not into comedies."
+        extend "but I'm not into comedies."
         hide Johnny
         show Johnny chat1 R at left
-        Johnny "Yeah, me neither to be honest.{w} Too much chatter to come up with something dumb."
-        Johnny "I’m more of a drama enjoyer, you see?{w} We create a tense environment, make the people go into suspense, and then slowly but surely reveal the plot."
+        Johnny "Oh, me neither.{w} Too much chatter to come up with something dumb."
+        hide Johnny
+        show Johnny serious3 R at left
+        Johnny "I’m more of a drama enjoyer, you see?"
+        hide Johnny
+        show Johnny smug2 R at left
+        hide Ashley
+        show Ashley smug3 at right
+        Johnny "A nice tense environment,{w} people into suspense,{w} and the plot slowly revealing itself."
         hide Johnny
         show Johnny smug1 R at left
         hide Ashley
@@ -1228,42 +1349,59 @@ label main_route:
         Ashley "Hah!"
         hide Ashley
         show Ashley mocking1 at right
-        Ashley "Andrew is worried on main.{w} I swear, that guy hasn’t known tranquility in his whole life."
+        Ashley "Andrew is worried on main.{w} I swear, that guy hasn’t know tranquility in his whole life."
         hide Ashley
         show Ashley smug3 at right
         Ashley "My bad, actually."
         hide Ashley
         show Ashley giggle1 at right
         hide Johnny
-        show Johnny smug2 R at left
-        "I couldn’t avoid to giggle a little after such declaration."
+        show Johnny smile2 R at left
+        "I couldn’t avoid to laugh at such little declaration."
+        stop music fadeout 1.5
         "There was something odd and sinister on those words,{w} a strange ambiguity located between sincerity and jokes."
-        "I couldn't really tell if she was being honest,{w} but rather than scare or disrupt me..."
+        "Couldn't really tell if she was being honest,{w} but rather than scare or disrupt..."
         hide Ashley
         show Ashley smug1 at right
-        extend " I found myself actually wanting to know more about that."
-        "It was… amusing,{w} actually amusing."
+        play music "audio/music/The Thing - What Appears to be Normal.wav"
+        " It made me feel attracted to her game."
         hide Johnny
         show Johnny serious3 R at left
-        Johnny "I got the feeling that you weren't joking.{w} Am I right?"
+        Johnny "I got the feeling that you weren't exactly joking."
+        hide Johnny
+        show Johnny smile2 R at left
+        Johnny "You like to {b}play{/b} with the little man,{w} don't you?"
         hide Ashley
-        show Ashley smug2 at right
-        Ashley "Will it matter for you?"
+        show Ashley smug3 at right
+        pause 1.5
+        Ashley "..."
+        Ashley "I never said that~"
         hide Ashley
         show Ashley smug1 at right
         hide Johnny
         show Johnny chat1 R at left
         Johnny "Touché, touché..."
+        hide Johnny
+        show Johnny smile2 R at left
         Johnny "But still...{w} Throw me a stick."
         hide Johnny
         show Johnny smug1 R at left
-        "She didn't said anything.{w} But her silence...{w} that smile, those guiltless eyes, said enough."
+        pause 1.5
+        "She didn't said anything.{w} But her silence..."
+        hide Ashley
+        show Ashley mocking1 at right
+        extend " that smile, those guiltless eyes, said enough."
+        pause 1.5
+        hide Ashley
+        show Ashley smug1 at right
         hide Johnny
         show Johnny smug2 R at left
         Johnny "I see..."
+        hide Johnny
+        show Johnny smug1 R at left
         hide Ashley
-        show Ashley smug2 at right
-        Ashley "You have good eyes, detective. {w} And I don't like people who can see through me, you know?"
+        show Ashley worried2 at right
+        Ashley "You have good eyes, detective. {w} I don't like people who can see through me, you know?"
         hide Ashley
         show Ashley smug1 at right
         hide Johnny
@@ -1280,12 +1418,22 @@ label main_route:
         Ashley "You may be confusing the signs."
         hide Johnny
         show Johnny smug2 R at left
-        Johnny "Yeah… That’s probable,{w} but maybe it’s a good thing.{w} I don’t get surprised too often."
+        Johnny "Yeah… That’s probable,{w} but maybe it’s a good thing."
+        hide Johnny
+        show Johnny smug1 R at left
+        pause 1.5
         hide Ashley
         show Ashley at right
         hide Johnny
+        show Johnny R at left
+        Johnny "But...{w} Maybe in another oportunity."
+        hide Johnny
         show Johnny chat1 R at left
-        Johnny "Tell you what, if you give me the keys of the car I’ll tell my client that I found them somewhere in the middle of nowhere."
+        Johnny "For now, I'll you this."
+        Johnny "If you give me the keys of the car I’ll tell my client that I found them somewhere in the middle of nowhere."
+        hide Johnny
+        show Johnny smile2 R at left
+        Johnny "No clues,{w} no witnesses,{w} no butts."
         hide Ashley
         show Ashley giggle1 at right
         hide Johnny
@@ -1296,7 +1444,7 @@ label main_route:
         Ashley "Yeah... There’s a little problem with that."
         hide Johnny
         show Johnny smile1 R at left
-        extend " I don’t have the keys."
+        Ashley "I don’t have the keys."
         hide Ashley
         show Ashley mad at right
         Ashley "Andy doesn't trust me enough for that…{w} but whatever."
@@ -1304,10 +1452,10 @@ label main_route:
         show Ashley worried2 at right
         hide Johnny
         show Johnny sigh R at left
-        Ashley "Oh, and it’s out of gas by the way."
+        Ashley "Oh, and it’s also out of gas by the way."
         hide Ashley
         show Ashley smug1 at right
-        "Well, that was disappointing."
+        "Women...{w} all the same."
         hide Johnny
         show Johnny confused R at left
         Johnny "I guess I’ll have to talk with your brother then.{w} Any recommendation?"
@@ -1318,24 +1466,29 @@ label main_route:
         show Ashley smug1 at right
         hide Johnny
         show Johnny smile2 R at left
-        Johnny "Tell him that I'm gonna put him in a cell with a six-foot black guy named Ramón.{w} Got it!"
+        Johnny "Say that I'm gonna put him in a cell with a six-foot black guy named Ramón.{w} Got it!"
         scene black with fade
         "Welp,{w} gotta admit,{w} that ended up better than expected."
         jump main_route2
 
     label Straightness1:
         hide Johnny
-        show Johnny serious1 R at left
-        "Without waiting for a call, I took the documents out of my pocket."
-        Johnny "So…{w} Mr. and Miss Graves."
+        show Johnny R at left
+        play sound "audio/sfx/paper.wav"
+        items "Without waiting for a call, I shown the documents."
+        hide Johnny
+        show Johnny serious3 R at left
+        Johnny "So…{w} Mr. and Miss. Graves."
         hide Ashley
         show Ashley smug1 at right
         Johnny "Deceased on [[REDACTED].{w} And now founded in a crappy nightclub with a stolen vehicle."
+        hide Johnny
+        show Johnny chat1 R at left
         Johnny "That should be quite the story, am I right?"
         hide Ashley
         show Ashley mocking1 at right
         hide Johnny
-        show Johnny confused R at left
+        show Johnny smile2 R at left
         "Ashley giggled as she saw the documents."
         "She didn't seem surprised at all by the fact that I had her death's papers."
         hide Ashley
@@ -1352,8 +1505,8 @@ label main_route:
         hide Johnny
         show Johnny serious1 R at left
         hide Ashley
-        show Ashley smug2 at right
-        Ashley "Good, I like that.{w} It means you know how to get what you want."
+        show Ashley worried2 at right
+        Ashley "Good, I can work with that.{w} It means you know how to get what you want."
         hide Ashley
         show Ashley mocking1 at right
         Ashley "And yes, as you said it's quite the story."
@@ -1364,30 +1517,37 @@ label main_route:
         show Johnny chat1 R at left
         Johnny "Not much, to be honest.{w} I have my own couple of stories about broken families."
         hide Johnny
-        show Johnny smile1 R at left
+        show Johnny smile2 R at left
         Johnny "Still, I want to guess..."
+        hide Johnny
+        show Johnny smug1 R at left
         pause 1.5
         hide Johnny
-        show Johnny serious3 R at left
+        show Johnny chat1 R at left
         Johnny "Parents?"
+        hide Johnny
+        show Johnny smile2 R at left
         hide Ashley
         show Ashley at right
         Ashley "Parents."
+        hide Johnny
+        show Johnny smile1 R at left
         "Yeah, it wasn't that hard."
         hide Ashley
         show Ashley worried2 at right
+        hide Johnny
+        show Johnny smug1 R at left
         Ashley "Will you believe me if I say that it was Andy's idea?{w} He may not look like, but he can be quite impulsive sometimes..."
         hide Ashley
         show Ashley at right
         hide Johnny
         show Johnny chat1 R at left
-        Johnny "Well, now that you mention it,{w} he definitely looks like the kind of guy who would drive the night out with phonk music in the background."
-        pause 0.5
+        Johnny "Well, now that you mention it,{w} he definitely looks like the kind of guy who would drive the night out with electronic music playing in the background."
         hide Johnny
         show Johnny smile2 R at left
         hide Ashley
         show Ashley think at right
-        Ashley "We had... an {b}altercation{/b} with mom and dad..."
+        Ashley "We had...{w} an {b}altercation{/b}{w} with mom and dad..."
         hide Ashley
         show Ashley smug2 at right
         extend " But that's in the past."
@@ -1396,16 +1556,18 @@ label main_route:
         Ashley "Now everything we want is to began our new life {b}far away{/b} from them."
         hide Johnny
         show Johnny smug1 R at left
-        Johnny "You know what, miss Graves?{w} Every word you say makes me like you even more~"
+        Johnny "You know what, miss Graves?{w} Every word you just said is correct by my standards."
         hide Ashley
         show Ashley pout1 at right
-        Ashley "Awwww, you flatter me, detective.{w} Too bad you're here to put us some incommode handcuffs."
+        Ashley "Awwww, you flatter me, detective."
+        hide Ashley
+        show Ashley worried2 at right
+        Ashley "Too bad you're here to put us some ugly handcuffs."
         hide Ashley
         show Ashley think at right
         hide Johnny
         show Johnny chat1 R at left
-        Johnny "And who said such a thing?"
-        extend " I'm not here to put handcuffs on anyone, dear."
+        Johnny "And who said such a thing?{w} I'm not here to put handcuffs on anyone, dear."
         hide Johnny
         show Johnny smug1 R at left
         Johnny "Unless you want me to, of course~"
@@ -1414,10 +1576,15 @@ label main_route:
         Ashley "So… You aren't here for us?{w} Don't tell me you just want the stupid car..."
         hide Johnny
         show Johnny R at left
-        Johnny "Well yes, that assumption is correct, ma'am."
+        Johnny "Well yes, that assumption is correct."
+        hide Johnny
+        show Johnny chat1 R at left
+        hide Ashley
+        show Ashley think at right
+        Johnny "But also wanted to talk a little bit with you two.{w} Just for fun, you understand."
         hide Johnny
         show Johnny smug2 R at left
-        extend " Now, if you want to confess any kind of crime I could…"
+        Johnny " Now,{w} if you really want to confess any kind of crime I could…{nw}"
         hide Ashley
         show Ashley worried2 at right
         Ashley "No, no, no… I think I’m good like this."
@@ -1425,12 +1592,12 @@ label main_route:
         show Ashley at right
         hide Johnny
         show Johnny chat1 R at left
-        Johnny "Great!{w} So, do we have a deal?{w} The car in exchange of silence."
+        Johnny "Great!{w} So, can you give me the keys now?"
         hide Johnny
         show Johnny serious1 R at left
         hide Ashley
         show Ashley smug2 at right
-        Ashley "To be honest, you can take that piece of scrap if you want."
+        Ashley "You can take that piece of scrap if you want."
         hide Ashley
         show Ashley smug3 at right
         Ashley "We almost ran out of gasoline{nw}"
@@ -1440,19 +1607,18 @@ label main_route:
         hide Ashley
         show Ashley at right
         hide Johnny
-        show Johnny chat1 R at left
-        Johnny "So you're gonna give it to me for good.{w} What a collaborator, wish all of my jobs were like this."
+        show Johnny smile2 R at left
+        Johnny "What a collaborator,{w} wish all of my jobs were like this."
         hide Ashley
         show Ashley smug2 at right
         hide Johnny
         show Johnny smile1 R at left
-        Ashley "Not so fast, detective.{w} If you really want the keys you’ll have to go ask Andrew for them."
+        Ashley "Not so fast, detective.{w} Andrew is the one who holds the keys"
+        hide Johnny
+        show Johnny confused R at left
         hide Ashley
         show Ashley mocking1 at right
-        Ashley "Maybe I should've mention it before."
-        hide Ashley
-        show Ashley worried2 at right
-        Ashley "He's the one who have them."
+        Ashley "Maybe I should've mentioned that before."
         hide Ashley
         show Ashley smug1 at right
         hide Johnny
@@ -1460,31 +1626,35 @@ label main_route:
         Johnny "Always... {w} Always a problem..."
         hide Ashley
         show Ashley giggle1 at right
-        play sound "audio/sfx/blingy_sp.ogg"
-        Ashley "Hahahaha~"
+        Ashley "Hahahaha"
+        hide Johnny
+        show Johnny confused R at left
         hide Ashley
         show Ashley smug3 at right
-        Ashley "Whatever,{w} just try not to scare him too much."
+        Ashley "Anyway,{w} just try not to scare him too much."
         hide Ashley
         show Ashley smug1 at right
         hide Johnny
-        show Johnny confused R at left
+        show Johnny smile2 R at left
         Ashley "May even cry a little,{w} he likes to do that sometimes."
         hide Johnny
-        show Johnny smile1 R at left
-        Johnny "As fun as that sounds, I think I’ll try to make things quick."
-        show Johnny smile2 R at left
+        show Johnny serious3 R at left
+        Johnny "As fun as that sounds, I think I’ll try to make things easy."
+        hide Johnny
+        show Johnny chat1 R at left
         Johnny "But thanks anyway, miss Graves.{w} And of course…"
+        hide Johnny
+        show Johnny smug1 R at left
         "I slid one of my business cards on the table."
         play sound "audio/sfx/whip.wav"
         hide Johnny
         show Johnny P2 R at left
-        pause 0.5
+        pause 1.0
         Johnny "If there’s a problem…"
         play sound "audio/sfx/whip.wav"
         hide Johnny
         show Johnny P R at left
-        pause 0.5
+        pause 1.0
         extend " better call me~"
         hide Ashley
         show Ashley giggle1 at right
@@ -1503,28 +1673,29 @@ label main_route2:
     stop music fadeout 2.0
     pause 2.0
     play music "audio/music/See You After Babe (HTML Remix).wav" fadein 1.0
-    "After this encounter, I made my way into the stairway to find the guy leaning against the railing."
+    "After this encounter,{w} I made my way into the stairway to find the guy leaning against the handrail."
     scene club2 with fade
     show Andrew confused at left
-    "His gaze passed over me discreetly, perhaps trying not to be noticed."
+    "His gaze passed over me discreetly,{w} trying to get a sneaky-peeky look."
     pause 0.5
     play sound "audio/sfx/Steps stone.wav"
     show Johnny at right
-    with moveinright
-    "I took my place aside him and, trying to get a good first impression, {nw}"
+    with easeinright
+    items "I took my place at his aside and,{w} naturally..."
     hide Johnny
     show Johnny smile2 at right
-    extend " I gift a friendly smile."
+    play sound "audio/sfx/blingy_sp.ogg"
+    pause 0.7
+    extend " gift a little smile."
     hide Andrew
     show Andrew worried1 at left
-    "And his answer wasn't but a dense silence."
-    "He didn't even try to look at me until, just kept himself isolated hoping that I would eventually get away from there."
+    "His answer wasn't but a dense silence."
+    "He didn't even try to look back,{w} just kept himself isolated hoping that I would eventually get away from there."
     hide Johnny
     show Johnny smug1 at right
     "But of course, I wasn't going anywhere."
-    hide Andrew
-    show Andrew sigh at left
-    "He snorted and addressed me with a tired tone after a while."
+    pause 2.0
+    "And,{w} eventually..."
     hide Andrew
     show Andrew serious1 at left
     Andrew "What is it?"
@@ -1541,13 +1712,18 @@ label main_route2:
     Andrew "Pleasure?{w} That’s not the word I would use..."
     hide Andrew
     show Andrew chat1 at left
-    Andrew "Look, whatever she told you it’s probably a lie."
+    Andrew "Look, whatever she told you, it’s probably a lie."
+    hide Johnny
+    show Johnny smile2 at right
     hide Andrew
     show Andrew sigh at left
-    Andrew "She’s very good at it and...{w} to be honest she's kinda insane…"
+    Andrew "She’s very good at it and,{w} honestly?{w} Kinda insane…"
     hide Andrew
     show Andrew angry1 at left
-    Andrew "...and adopted.{w} Specially adopted."
+    Andrew "...and adopted."
+    hide Andrew
+    show Andrew sigh at left
+    extend " Specially adopted."
     hide Johnny
     show Johnny chat1 at right
     hide Andrew
@@ -1557,173 +1733,198 @@ label main_route2:
     show Johnny smile2 at right
     "I extended a presentation card."
     Johnny "If there’s a problem…"
-    play sound "audio/sfx/whip.wav"
     hide Johnny
     show Johnny P at right
     extend " better—{nw}"
-    play sound "audio/sfx/scratch.wav"
+    hide Johnny
+    show Johnny confused at right
     Andrew "Quit that, I know you."
     hide Johnny
     show Johnny smile1 at right
-    extend " You’re the clown from those posters."
+    extend " You’re the clown from the posters."
     hide Johnny
     show Johnny sigh at right
-    "Yeah, I don’t think she's adopted."
-    Johnny "You’re not funny, man.{w} Where’s your spirit?"
+    "Yeah, they're definitely siblings."
+    hide Johnny
+    show Johnny confused at right
+    Johnny "You’re not funny, man.{w} Where’s the spirit?"
     hide Andrew
-    show Andrew sigh2 at left
-    Andrew "Dead, just like your 80s detective role."
+    show Andrew chat1 at left
+    Andrew "Dead,{w} just like your 80's detective role."
     hide Andrew
     show Andrew angry2 at left
     hide Johnny
     show Johnny smile1 at right
-    Andrew "Now would you mind to fuck off?{w} We have no business with you, and I really need a moment alone..."
+    Andrew "Now would you mind to let me the fuck alone?"
+    hide Andrew
+    show Andrew at left
+    extend " We have no business with you, and I really need a moment of peace..."
     hide Johnny
     show Johnny serious1 at right
     hide Andrew
     show Andrew angry1 at left
-    Johnny "I'm afraid I can't do that, brother."
     "He turned out to be way less chatty than his sister."
-    "His expressions, however, turned to be quite clearer than hers.{w} He was anxious,{w} the tickle on his hand left that on sight.{w} His sight escaped the eye contact, and his right leg moved with a certain nervous tic."
+    Johnny "Nah,{w} I'm afraid I can't do that, brother."
     hide Andrew
     show Andrew nervous1 at left
     "I had a feeling that,{w} at the slightest chance,{w} he would try to run away in an attempt to escape."
+    pause 2.0
 
     ################################### Andrew choice
 
-    menu:
-        "It was better to think my next move."
 
-        "Straightness":
-            $ DualAff +=1
-            jump Straightness2
-
-        "Sharpness":
-            $ AndrewAff -=1
+    if DualAff > 0:
+        jump Straightness2
+    else:
+        if AshleyAff > 0:
             jump Sharpness2
-
-        "Subtlety":
-            $ AndrewAff +=1
+        else:
             jump Subtlety2
 
     label Straightness2:
         pause 0.5
-        Johnny "Look, I’m not against you nor your sis, all right?"
-        "I took one step backwards just to give him some space."
         hide Johnny
         show Johnny chat1 at right
-        Johnny "You can relax. {w} Breathe deeply, enjoy the music, take a second to flavor the moment."
-        hide Andrew
-        show Andrew nervous2 at left
-        hide Johnny
-        show Johnny smile2 at right
-        Johnny "I understand that you may think I'm just trying to get a confession,{w} or that may be looking for more reasons to screw you up,{w} but the reality couldn't be further from that."
-        hide Andrew
-        show Andrew confused at left
-        "His expression softened a little."
-        "For an instant, I thought I may had passed through him."
-        hide Johnny
-        show Johnny serious1 at right
-        hide Andrew
-        show Andrew angry1 at left
-        "But sadly, he frowned and closed himself before I could even be sure of that."
-        Johnny "The point is that I just want the car back, ok?{w} That’s what I’m here for."
-        hide Johnny
-        show Johnny chat1 at right
-        Johnny "The fact that you or the goth girl had rob a bank, killed a guy or maybe sold some meth isn’t my business at all."
-        hide Johnny
-        show Johnny smug1 at right
-        "Like I wouldn't have skeletons in my closet anyway..."
-        hide Andrew
-        show Andrew chat1 at left
-        Andrew "Oh, yeah? You don’t care?{w} Well, that’s exactly what a cop would say."
-        hide Johnny
-        show Johnny chat1 at right
-        Johnny "And to be honest with you,{w} I was on the academy for a season."
-        hide Andrew
-        show Andrew confused at left
-        hide Johnny
-        show Johnny angry1 at right
-        Johnny "They didn’t appreciate my…{w} talents..."
-        hide Andrew
-        show Andrew facepalm at left
-        "The poor guy sigh and looked down at the lower floor."
-        hide Andrew
-        show Andrew confused at left
-        hide Johnny
-        show Johnny serious2 at right
-        "For moments, his eyes locked over his sister while she kept trying to steal from the flask of tips."
-        hide Johnny
-        show Johnny smile2 at right
-        "I found that pretty funny, got to admit,{w} but he didn’t react at all."
-        hide Johnny
-        show Johnny serious2 at right
-        "It was as if he had been lost in thought, and for an instant, forgotten about the rest of the world."
-        "Quite ominous...{w} I even thought about giving him a slap on the nape."
-        hide Andrew
-        show Andrew chat1 at left
-        Andrew "Let’s say that, for a moment, I believe you."
-        Andrew "What would you do if I give up the keys?"
+        Johnny "Why so tense, brother?{w} I have nothing against you,{w} really, I'm not..."
         hide Andrew
         show Andrew at left
-        hide Johnny
-        show Johnny chat1 at right
-        Johnny "I’ll go down,{w} ask for something to drink,{w} and then, when you have found it appropriate and walked away,{w} I’ll take the car and bring it back to its respective owner."
-        hide Johnny
-        show Johnny serious1 at right
-        Johnny "No question, no cops, and no more stories."
-        Johnny "It ends there."
-        hide Andrew
-        show Andrew confused at left
-        Andrew "And if I don’t?"
-        hide Johnny
-        show Johnny at right
-        Johnny "Well, let's just say that you will have a guy neither as kind nor handsome as me looking for your soft and beautiful booty."
         hide Johnny
         show Johnny smug2 at right
+        Johnny "You can relax,{w} take a deep breath,{w} enjoy the music,{w} flavor the moment."
+        Johnny "There's nothing to be afraid of."
+        hide Johnny
+        show Johnny smile2 at right
         hide Andrew
-        show Andrew nervous2 at left
-        Johnny "And also... a ten-foot-tall guy named Larry waiting for it in a nice cell."
+        show Andrew sigh at left
+        Andrew "Oh please..."
+        hide Andrew
+        show Andrew angry1 at left
+        Andrew "Don't give me the whole speech,{w} just jump straight to the point."
+        hide Andrew
+        show Andrew facepalm at left
         hide Johnny
         show Johnny serious3 at right
-        Johnny "I would consider that last thingy if I was you."
+        Johnny "I would, but also love the sound of my voice~"
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "I understand you may think I'm just trying to get a confession or some reasons to screw you up,{w} but the reality couldn't be further from that."
+        hide Andrew
+        show Andrew at left
+        hide Johnny
+        show Johnny smug1 at right
+        Johnny "The reason I'm here with you today, "
+        hide Johnny
+        show Johnny smile2 at right
+        hide Andrew
+        show Andrew confused at left
+        extend "isn't but that piece of scrap you stole called a car."
+        "The expression on his face softened a little."
+        hide Andrew
+        show Andrew worried1 at left
+        "For an instant,{w} I really thought I had passed through him..."
+        hide Johnny
+        show Johnny confused at right
+        hide Andrew
+        show Andrew angry1 at left
+        extend " But sadly, that spark of confidence didn't last longer."
         hide Andrew
         show Andrew chat1 at left
-        Andrew "That sounded like something you’ve experienced before…"
+        Andrew "Let me tell you something.{w} Your facade isn't fooling anyone here."
+        Andrew "I've been living with a liar long enough to recognize another."
+        hide Andrew
+        show Andrew angry2 at left
+        hide Johnny
+        show Johnny serious1 at right
+        Andrew "Even the guy on the bar can tell you're full of bullshit."
+        hide Andrew
+        show Andrew at left
+        Andrew "I told you,{w} we have no business."
+        Andrew "So why don't you take your nice words and put them in...{nw}"
+        stop music
+        hide Andrew
+        show Andrew nervous1 at left
+        hide Johnny
+        show Johnny angry1 at right
+        Johnny "Slow.{w} Down.{w} Now..."
+        scene black
+        pause 1.5
+        play music "audio/sfx/static.wav" fadein 1.0
+        pause 1.5
+        "I had to take a moment to relax..."
+        pause 2.0
+        "I began to feel a little agitated,{w} my heart beating at high speed as those words repeated in my mind."
+        pause 2.0
+        "A liar..."
+        pause 1.5
+        "Me...{w} a liar..."
+        pause 2.0
+        "A disgusting...{w} fucking... liar{nw}"
+        stop music
+        scene club2
+        hide Andrew
+        show Andrew nervous2 at left
+        hide Johnny
+        show Johnny smile2 at right
+        Johnny "As I was saying,{w} the fact that you or the goth girl had rob a bank, killed a guy or maybe sold some meth doesn't concern me at all."
+        hide Andrew
+        show Andrew nervous1 at left
+        pause 1.5
+        Andrew "I...{w} understand...{w} I think..."
+        hide Andrew
+        show Andrew nervous2 at left
+        "For moments,{w} his eyes locked over the lady on the first floor,{w} still trying to steal from the flask of tips."
+        hide Johnny
+        show Johnny serious3 at right
+        "It was pretty funny, got to admit."
+        hide Johnny
+        show Johnny smile2 at right
+        pause 2.0
+        hide Andrew
+        show Andrew nervous1 at left
+        Andrew "L-Let’s say that,{w} for an instant,{w} I believe you."
+        Andrew "What would you do if I give up the keys?"
+        pause 1.5
         hide Andrew
         show Andrew at left
         hide Johnny
         show Johnny chat1 at right
-        Johnny "Not by myself, thankfully.{w} But let's just say that...{w} there’s a few people who want this bubble butt on their walls nowadays."
+        Johnny "I’ll go down,{w} ask for a drink,{w} and when you two have found it appropriate and walked away,{w} I’ll take the car and bring it back to its respective owner."
         hide Johnny
-        show Johnny at right
+        show Johnny smug2 at right
+        Johnny "No question,{w} no cops,{w} and no stories."
+        Johnny "It ends there."
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "What do you say?"
+        hide Johnny
+        show Johnny smile2 at right
         hide Andrew
-        show Andrew facepalm at left
-        "He sigh while considering his little options."
-        "He doesn’t seemed like he’ll run away now, but neither was about to buy me any drinks for sure."
+        show Andrew confused at left
+        pause 2.0
         hide Andrew
-        show Andrew angry1 at left
-        "Still, I don't think I could have solved it better."
-        hide Andrew
-        show Andrew at left
-        Andrew "Fine…{w} here you go."
-        Andrew "Just leave us alone now, please…"
+        show Andrew nervous1 at left
+        Andrew "F-Fine…"
+        Andrew "Here you go.{w} Just leave us alone now…"
         show keys at center
         play sound "audio/sfx/item_got.ogg"
+        pause 1.0
         "{i}Jonathan has picked up the car-keys! (finally){/i}"
         hide keys with dissolve
         pause 0.5
         hide Johnny
         show Johnny chat1 at right
-        Johnny "Without problems, brother.{w} You just took a weight off your shoulders."
+        Johnny "Without a problem, brother."
         scene black with fade
+        Johnny "You just took a weight off your shoulders."
         jump main_route3
 
     label Sharpness2:
         pause 0.5
         hide Johnny
         show Johnny serious2 at right
-        Johnny "Listen,{w} you don’t need to be scared, man. Really..."
+        Johnny "Listen,{w} there's no need to be scared, man.{w} I don't really care about what you or the hot babe down there did."
+        hide Johnny
+        show Johnny confused at right
         hide Andrew
         show Andrew confused at left
         Johnny "Do you have any idea how many criminals I met on my daily basis?{w} Do you know how I call them?"
@@ -1732,40 +1933,50 @@ label main_route2:
         Johnny "{b}Potential clients{/b}."
         hide Johnny
         show Johnny smile2 at right
-        Johnny "There’s no need to put my nose where I don’t mind. That's part of the job."
+        Johnny "There’s no need to put my nose where I don’t mind.{w} That's part of the fun."
         hide Andrew
         show Andrew chat1 at left
-        Andrew "Being a jackass is also part the job?{w} Because you just sounded like one."
+        Andrew "Being a jackass is also part the fun?{w} Because you're making sound like it."
         hide Andrew
         show Andrew at left
         hide Johnny
-        show Johnny smile2 at right
-        Johnny "And you're absolutely right,{w} it's all about that."
+        show Johnny chat1 at right
+        Johnny "A little, actually.{w} Have you tried before?{w} It's quite de-stressing."
         hide Johnny
         show Johnny serious3 at right
-        Johnny "BUT, that’s also a good thing for you, fancy pants~"
+        hide Andrew
+        show Andrew facepalm at left
+        Johnny "I think you would like it, fancy pants~"
+        hide Johnny
+        show Johnny smile2 at right
         hide Andrew
         show Andrew sigh at left
         Andrew "Dear god..."
         hide Andrew
+        show Andrew at left
+        Andrew "No, I don't want to try it."
+        hide Andrew
+        show Andrew chat1 at left
+        Andrew "Why do you even care to begin with?"
+        hide Andrew
         show Andrew angry2 at left
-        Andrew "Why does everything always have to happen to me?"
+        hide Johnny
+        show Johnny smile1 at right
+        Andrew "Why am I always chased by idiots?"
         hide Johnny
         show Johnny chat1 at right
         Johnny "By the way,{w} you should stop smoking."
         hide Andrew
         show Andrew what at left
-        Johnny "I gotta tell you, you’ll cough your lungs out when trying to run."
+        extend " You’ll cough your lungs out when trying to run."
         hide Andrew
         show Andrew at left
         hide Johnny
-        show Johnny smug2 at right
-        "His eyes locked on me with a tired-wrathful expression."
-        "I could even feel his need to tear my eyes out,{w} but he wouldn’t have any success even if tried."
-        hide Johnny
         show Johnny smug1 at right
-        "So I just smiled at him for a while."
-        "He looked kinda adorable when angry."
+        "His eyes locked on me with a tired-wrathful expression.{w} I could even feel the need to tear my eyes out."
+        hide Johnny
+        show Johnny serious3 at right
+        "He looked kinda cute like that."
         Andrew "Are you here to arrest us or just wanna get into our lives?"
         hide Johnny
         show Johnny smile1 at right
@@ -1778,7 +1989,7 @@ label main_route2:
         hide Andrew
         show Andrew superangry at left
         hide Johnny
-        show Johnny smug2 at right
+        show Johnny smug1 at right
         Andrew "STOP IT."
         hide Andrew
         show Andrew at left
@@ -1787,7 +1998,7 @@ label main_route2:
         Johnny "All right all right, I’m just messing a little."
         Johnny "You sister told me you have the car-keys.{w} If you give them to me, I’ll {b}smoke{/b} out of here and leave you in peace with your cancer cue."
         hide Johnny
-        show Johnny smug1 at right
+        show Johnny serious3 at right
         hide Andrew
         show Andrew facepalm at left
         Andrew "Cancer cue he says…{w} uuuuuhhh…"
@@ -1800,6 +2011,7 @@ label main_route2:
         extend " ideas…"
         show keys at center
         play sound "audio/sfx/item_got.ogg"
+        pause 1.0
         "{i}Jonathan has picked up the car-keys! (finally){/i}"
         hide keys with dissolve
         pause 0.5
@@ -1808,65 +2020,76 @@ label main_route2:
         Johnny "Oh yeah,{w} she indeed has a good pair of ideas on her own."
         hide Andrew
         show Andrew angry1 at left
-        extend "Would even ask for them I were a little less professional."
+        Johnny "Would even ask for them if I were a little less professional."
         hide Johnny
-        show Johnny serious3 at right
+        show Johnny smile2 at right
         hide Andrew
         show Andrew angry2 at left
         Andrew "Whatever, dude..."
-        hide Johnny
-        show Johnny chat1 at right
-        hide Andrew
-        show Andrew at left
-        Johnny "Anyway! It’s a pleasure to do business with you, Mr. Graves!"
-        Johnny "I'll see you when you get a van and start cooking some meth in a plain—{nw}"
-        hide Andrew
-        show Andrew superangry at left
-        Andrew "JUST FUCK OFF!"
         scene black with fade
+        Johnny "Anyway!{w} It was a pleasure to make business with you, Mr. Graves!"
+        Johnny "I'll see you when you get a van and start cooking some meth in a plain—{nw}"
+        stop music
+        Andrew "JUST FUCK OFF!"
         pause 0.5
-        "Personal Note:{w} Finish Breaking Bad."
         jump main_route3
 
     label Subtlety2:
-        Johnny "You have some serious problems, don’t you?"
-        hide Andrew
-        show Andrew at left
-        "I got to caught his attention with that question."
-        hide Andrew
-        show Andrew confused at left
-        "His face changed momentarily before letting out a deep sigh."
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "You have the look of someone with a ton of problems."
+        hide Johnny
+        show Johnny smile2 at right
         hide Andrew
         show Andrew sigh at left
-        Andrew "As if you care, man…"
+        "A deep sigh came out him as a confirmation."
+        hide Andrew
+        show Andrew at left
+        Andrew "As if you care, man."
         hide Andrew
         show Andrew angry1 at left
-        Andrew "Those are personal problems, none of your business."
+        extend " These are personal problems,{w} none of your business."
         hide Andrew
         show Andrew confused at left
-        Johnny "True, but that doesn’t mean we can’t talk about it."
         hide Johnny
-        show Johnny confused at right
+        show Johnny chat1 at right
+        Johnny "True, very true!"
+        Johnny "But what's better than telling your problems to a stranger?"
+        hide Andrew
+        show Andrew angry1 at left
+        hide Johnny
+        show Johnny smug2 at right
+        Johnny "Isn't that what you're needing right now?{w} Fella?"
+        hide Johnny
+        show Johnny smug1 at right
+        pause 2.0
+        hide Johnny
+        show Johnny at right
         Johnny "You sister is...{w} weird."
         hide Johnny
         show Johnny chat1 at right
         hide Andrew
-        show Andrew angry1 at left
+        show Andrew at left
         extend " In the good way, off course."
-        Johnny "She’s a closed book, I could barely read what she was doing."
+        hide Johnny
+        show Johnny smug2 at right
+        Johnny "She’s a closed book,{w} could barely read what she was doing."
         hide Andrew
         show Andrew at left
         hide Johnny
         show Johnny serious1 at right
         Johnny "But you?{w} Bud, you’re nothing like that..."
         hide Andrew
-        show Andrew chat1 at left
-        stop music fadeout 1.0
-        Andrew "She’s not a closed book, she’s just…"
+        show Andrew angry1 at left
+        stop music fadeout 1.5
+        pause 2.0
         hide Andrew
         show Andrew angry2 at left
+        Andrew "Ashley is not a closed book!{w} She’s just…"
+        hide Andrew
+        show Andrew angry1 at left
+        pause 2.0
         Andrew "She’s just {b}her{/b} being herself…"
-        play sound "audio/sfx/static.wav" fadein 1.0 loop
         extend " It’s always about it.{w} Her ideas, her {b}feelings{/b}, her way to… to be, as a whole"
         hide Andrew
         show Andrew facepalm at left
@@ -1882,11 +2105,15 @@ label main_route2:
         hide Andrew
         show Andrew at left
         "The mere mention of that caused a reaction in him."
-        hide Johnny
-        show Johnny serious1 at right
+        scene black with fade
         "His brow furrowed tightly, and I could see the vein in his throat throbbing as if were going to burst."
-        "His fist clenched in place with clear intentions. I could tell he was trying his best to not punch me on the face,{w} moment that I realized that comment touched a sensitive fiber."
-        hide Johnny
+        hide Andrew
+        show Andrew at center with fade
+        "In that moment,{w} I realized that comment touched a sensitive fiber."
+        "His fist clenched in place with clear intentions. I could see the urge to attack in his eyes,{w} his starting to take control."
+        scene black with fade
+        scene club2 with fade
+        show Andrew at left
         show Johnny angry1 at right
         Johnny "Calm.{w} Down.{w} Brother."
         "I expressed a calm, yet serious tone,{w} indicating that if he decided to take actions...{w} I would too."
@@ -1904,7 +2131,6 @@ label main_route2:
         hide Johnny
         show Johnny serious1 at right
         Andrew "It wasn’t a joke for me, you penguin dressed asshole!"
-        "He exploded, releasing his nerves within the words."
         hide Andrew
         show Andrew chat1 at left
         Andrew "She’s always doing whatever the hell she wants!"
@@ -1919,11 +2145,11 @@ label main_route2:
         hide Johnny
         show Johnny confused at right
         Andrew "Whatever, dude…"
-        Andrew "I don't even know why I'm telling you this."
+        Andrew "I shouldn't even be telling you this..."
+        pause 2.0
         hide Johnny
-        show Johnny serious2 at right
-        Johnny "She treats you as a rug, I get that."
-        play music "audio/music/Passion.wav"
+        show Johnny serious1 at right
+        Johnny "She treats you as a rug,{w} I get that."
         hide Andrew
         show Andrew sigh2 at left
         "He didn’t answered but his expression said more than a thousand words."
@@ -1931,60 +2157,101 @@ label main_route2:
         show Andrew angry1 at left
         hide Johnny
         show Johnny chat1 at right
-        Johnny "I see… I can relate to that."
-        Johnny "Yes… being the bigger brother is a whole thing."
+        Johnny "I see…"
+        hide Johnny
+        show Johnny smile2 at right
+        Johnny "Yes…{w} being the bigger brother is a whole thing."
         Johnny "You take all the responsibilities and rarely get any appreciations for it."
         hide Johnny
-        show Johnny serious2 at right
+        show Johnny confused at right
         hide Andrew
         show Andrew confused at left
-        Johnny "But that’s how it is…{w} And you know why?"
+        Johnny "But that’s how it is, man…"
+        hide Andrew
+        show Andrew nervous1 at left
+        Johnny "And you know why?"
         hide Johnny
         show Johnny angry1 at right
         hide Andrew
         show Andrew nervous1 at left
         Johnny "Because we’re MEN,{w} and that’s what MEN do."
-        Johnny "We don't search for love or appreciation...{w} We take {b}care{/b} of the people we care about."
+        hide Andrew
+        show Andrew at left
+        Johnny "We don't search for love or appreciation...{w} We take {b}care{/b} of the people {b}we care{/b} about."
         hide Johnny
         show Johnny angry2 at right
         Johnny "End of story."
+        pause 0.5
+        play music "audio/music/Radiohead — Exit Music.wav" fadein 1.5
+        pause 2.0
         hide Andrew
         show Andrew sigh2 at left
         Andrew "Heh…{w} Believe me, you don’t get the situation..."
         hide Johnny
         show Johnny angry1 at right
         hide Andrew
-        show Andrew confused at left
-        Johnny "You think so?{w} Well… Maybe I do."
-        Johnny "My sister was a complicated woman too."
+        show Andrew at left
+        pause 2.0
         hide Johnny
-        show Johnny serious1 at right
-        Johnny "We never got to understand each other...{w} but that's ok.{w} Like I said, it was never necessary."
-        "Suddenly, the realization hit me.{w} The environment had changed in an unexpected way."
+        show Johnny angry1 at right
+        Johnny "Perhaps... "
         hide Johnny
         show Johnny confused at right
-        "I found myself quite involved in this conversation, way more than I would liked to."
-        hide Andrew
-        show Andrew at left
-        "I realized that… I was in danger of speaking too much."
-        "So, in an attempt to get back in character, I cough and I recovered my facade."
+        extend "Perhaps it's just my prejudices speaking..."
+        pause 1.5
         hide Johnny
-        show Johnny smile2 at right
-        Johnny "Anyway… that’s beside the point."
+        show Johnny sigh at right
+        Johnny "My sister...{w} Well, she was a complicated woman too."
+        hide Johnny
+        show Johnny serious1 at right
+        Johnny "We never got to understand each other..."
+        hide Johnny
+        show Johnny confused at right
+        hide Andrew
+        show Andrew worried1 at left
+        Johnny "Still,{w} can't avoid thinking about her in my daily basis."
+        pause 1.0
+        hide Andrew
+        show Andrew smug1 at left
+        Andrew "Heh,{w} she's probably way more tolerable than Ashley."
         hide Johnny
         show Johnny chat1 at right
+        Johnny "Hey, don't say that. "
+        hide Johnny
+        show Johnny smug2 at right
+        extend "I'll punch you in the nose if you say another word, hahahaha."
+        hide Andrew
+        show Andrew smug2 at left
+        hide Johnny
+        show Johnny smile2 at right
+        pause 1.5
+        hide Johnny
+        show Johnny at right
+        pause 1.5
+        Johnny "She..."
+        hide Andrew
+        show Andrew confused2 at left
+        pause 1.5
+        hide Johnny
+        show Johnny sigh at right
+        Johnny "She's an angel..."
+        pause 2.0
+        hide Johnny
+        show Johnny at right
+        Johnny "A-Anyway…{w} that’s beside the point."
         Johnny "The girl downsides told me you have the car-keys,{w} is that right?"
         hide Johnny
-        show Johnny serious3 at right
+        show Johnny serious1 at right
         hide Andrew
         show Andrew sigh at left
         "He let out a sonorous sigh before taking the keys out of his pocket."
         hide Andrew
         show Andrew angry1 at left
         Andrew "Yeah… You can have them."
-        Andrew "The car is out of gas anyway so... here it goes."
+        Andrew "The car is out of gas anyway, so...{w} here it goes."
         show keys at center
         play sound "audio/sfx/item_got.ogg"
+        pause 1.0
         "{i}Jonathan has picked up the car-keys! (finally){/i}"
         hide keys with dissolve
         pause 0.5
@@ -2005,6 +2272,7 @@ label main_route2:
         Johnny "Please don’t answer…"
         scene black with fade
         "A close one…{w} and not the kind of close I like."
+        pause 1.0
         jump main_route3
 
     ############################# End Andrew's choices
@@ -2014,49 +2282,84 @@ label main_route3:
     pause 2.0
     play music "audio/music/Delay.wav" fadein 1.0
     pause 2.0
-    "So, the job was done."
-    "As a final celebration for my success, I went down to the bar and ordered something pretty to drink."
-    "Off course,{w} this wasn’t just for the sake of it."
-    "I wanted to see how this two characters interact with each other."
+    "I went down to the bar,{w} ordered something pretty to drink and took a seat."
+    "Now,{w} it was time to wait."
     pause 1.5
-    "After a while, Andrew went stairs down to sit beside his sister."
-    show Ashley think at right with dissolve
-    show Andrew at left with dissolve
-    "Their looks fell over me on more than one occasion."
-    "I saw them whispering among themselves under the soft sound of the music plying.{w} Off course, there was no way to know whay they were talking about, but I have the feeling that I was a recurring theme."
-    "I gift a little smile as I saw them slowly walking out of the bar.{w} Got no answer in exchange."
-    "They took a quick peek inside the vehicle before keep moving towards the darkness, where their silhouettes disappeared among the shadows."
+    scene club1 with fade
+    show Ashley mad at right
+    show Andrew at left with easeinleft
+    "Andrew went stairs down to meet his sister."
+    hide Andrew
+    show Andrew angry1 at left
+    hide Ashley
+    show Ashley at right
+    "Couldn't ignore how their looks fell over me on more than one occasion."
+    hide Andrew
+    show Andrew chat1 at left
+    hide Ashley
+    show Ashley think at right
+    "They talk with their tone hiding under the soft sound of the music playing."
+    hide Andrew
+    show Andrew serious1 at left
+    hide Ashley
+    show Ashley worried2 at right
+    "Off course, there wasn't a way to know what they were saying,{w} but got the feeling that I was a recurring theme."
+    hide Andrew
+    show Andrew chat1 at left
+    hide Ashley
+    show Ashley at right
     scene black with fade
+    pause 1.5
+    play sound "audio/sfx/blingy_sp.ogg"
+    pause 1.0
+    items "I gift a little smile as they slowly walked out of the bar.{w} Got no answer in exchange."
+    pause 0.5
+    "They took a quick peek inside the vehicle before moving towards the darkness,{w} where their silhouettes disappeared among the shadows."
+    pause 1.0
+    show Johnny R at center with fade
+    pause 1.0
     "As for me,{w} I stayed there for a little more,{w} trying to imagine what kind of events could have led those two to this particular situation."
     "Maybe something simple..."
     "Maybe something I wasn't able to even think about..."
     stop music fadeout 2.0
-    pause 2.0
+    pause 1.0
+    hide Johnny
+    show Johnny sigh R at center
+    pause 1.0
     "And that's about it..."
+    scene black with fade
+    pause 2.0
     play music "audio/music/Cruel Summer Start.wav"
     queue music "audio/music/Cruel Summer Tense.wav" loop
     pause 5.0
     scene table with fade
     "Entry number one:"
     pause 1.0
-    "During the development of my investigation of the stolen Málaga,{w} I came across a series of unusual events."
-    "The death body,{w} the couple of siblings,{w} the death certificates,{w} the police department somehow involved..."
-    "I'm aware that it could be just my imagination... again...{w} that there's the chance of everything to be just a REALLY intricated string of coincidences."
-    "But still...{w} I have that strange feeling that everything is somehow related.{w} The tiny protruding tip of a large iceberg emerging from the bottom of the sea."
-    "I have... very little connections at the moment,{w} just a few dots that keep ringing on my head."
-    "Call it…{w} {b}my intuition{/b}, if you want."
-    "But—{nw}"
+    "During the development the stolen Málaga's investigation,{w} I came across a series of unusual events."
+    "A death body,{w} a couple of siblings,{w} a death certificates,{w} and a policeman with a strange attitude..."
+    "Isolated events,{w} whose origin may not be necessarily related."
+    pause 2.0
+    "However, once again my mind forces me to shuffle beyond the obvious..."
+    "I have that strange feeling again.{w} That feeling of being in front of something dark and dangerous."
+    "The tiny protruding tip of a large iceberg emerging from the bottom of the sea."
+    pause 2.0
+    "During my trip back home,{w} I was able to come up with a couple of connections,{w} just a few dots that kept ringing on my head."
+    "I also—{nw}"
     play sound "audio/sfx/mumbling1.wav" volume 0.4
     pause 3.0
     stop sound
     play sound "audio/sfx/static.wav" volume 0.3 fadein 1.0
     Johnny "..."
     stop sound fadeout 1.0
-    "I kept thinking about those two after our first meet."
-    "It’s strange,{w} usually I don’t feel this level of interest with my clients,{w} much less with random people I found on a club."
-    "But this duo…{w} There’s something really appealing about them."
+    "I also kept thinking about those two after our first meet."
+    Johnny "Andrew...{w} and Ashley..."
+    "It’s strange,{w} usually I don’t feel this level of interest with my clients,{w} much less with potential suspects."
+    "But this duo…{w} There’s something really interesting about them."
     "A {b}spark{/b}, to call it anything.{w} Something different from everyone else."
-    "Perhaps I’m just searching for excuses to talk with them again.{w} That’s a possibility too…"
+    pause 1.5
+    Johnny "Those eyes...{w} Those pretty,{w} green and pink eyes..."
+    pause 1.5
+    "Perhaps I’m just chasing ghosts again...{w} That’s a possibility too."
     "But then again—{nw}"
     stop music fadeout 1.0
     play sound "audio/sfx/mumbling2.wav" volume 0.4
@@ -2067,81 +2370,63 @@ label main_route3:
     play music "audio/music/Cruel Summer ost.wav" fadein 1.5
     scene black with fade
     play sound "audio/sfx/item_got.ogg"
-    "{i}Jonathan has picked up his shovel...{/i}"
+    items "Jonathan has picked up his shovel..."
     play sound "audio/sfx/Steps wood.wav"
     pause 3.0
     play sound "audio/sfx/Wooden door open.wav"
     pause 3.0
     play sound "audio/sfx/mumbling3.wav" loop
     pause 1.0
-    "As the door opened, I was blasted with the mumblings of that police officer."
-    "Leather ropes restrained his hands and legs,{w} drool and blood dripped from the gag on his mouth,{w} and his teary eyes watched with paralyzing horror as I appeared under the frame."
-    scene JohnnyF1 with fade
-    if "PoliDisdain" in locals():
-        Johnny "What’s wrong officer?"
-        Johnny "Scared of the parasite that lives from the misery of the people?"
-        pause 1.5
-        Johnny "That’s funny…{w} You seemed a lot more confident back then on the city.{w} But I guess it isn't as simple when you're not surrounded by the filth of {b}your{/b} kind."
+    "As the door opened, I was blasted with the mumblings of the man dressed in a police suit."
+    "Leather ropes restrained his hands and legs,{w} drool and blood dripped from the gag on his mouth."
+    "The reflection of fear, a paralyzing horror was reflected in his eyes the moment we exchanged glances."
+
+    if "PoliDemureness" in locals():
+        Johnny "I think we've talked enough, officer."
+        scene JohnnyF1 with fade
+        Johnny "If I can call you that..."
+        pause 1.0
+        Johnny "You know?{w} I was hoping to play with you a little more.{w} At least for a couple of days, since you were soo kind to me earlier."
+        Johnny "I really...{w} REALLY hate liars.{w} I swear they bring out the worst of me."
         scene black
         play sound "audio/sfx/shovel hit1.wav"
         pause 1.0
-        Johnny "But,{w} my friend,{w} that's the thing..."
+        Johnny "But let's not start with anecdotes.{w} I have something more important to take care of."
         play sound "audio/sfx/bng sfx/1.wav"
-        pause 1.0
-        Johnny "Here,{w} in the tranquility of {b}my{/b} forest,{w} {b}MY{/b} domains..."
-        Johnny "...with the animals, the silence, the lack of rules and condescending looks..."
-        play sound "audio/sfx/bng sfx/2.wav"
-        pause 1.0
-        Johnny "Here..."
-        Johnny "People often show their true selves.{w} And this...{w} pathetic, scared little thing..."
-        Johnny "This is your true self, my friend."
+        pause 1.5
+        Johnny "Something big!"
+        Johnny "And I don't want to be distracted by other {b}minor{/b} stuff.{w} Don't expect you to understand tho."
+        Johnny "So let's try not to enjoy this, hm?"
+        stop music fadeout 2.0
         play sound "audio/sfx/bng sfx/3.wav"
-        pause 2.3
-        Johnny "Or it was...{w} more likely."
-        Johnny "Oh well,{w} guess I'll have to clean this up."
-        Johnny "More things to do... just what I needed."
-
+        pause 3.5
+        Johnny "And maybe...{w} try not to make this so dirty..."
+        Johnny "Uh...{w} this will take a while to clean up."
+        Johnny "Oh well,{w} work for later."
     else:
-        if "PoliDemureness" in locals():
-            Johnny "Well officer…{w} Seems like you gave me everything you had."
-            pause 1.0
-            Johnny "I was hoping to play with you a little more.{w} At least for a couple of days, since you were soo kind to me earlier."
-            Johnny "I’m very good keeping people entertained, you know?{w} Once interrogated a guy for almost a month."
-            Johnny "It was interesting.{w} I thought he would go crazy in less than a week, but he put up a good fight."
-            scene black
-            play sound "audio/sfx/shovel hit1.wav"
-            pause 1.0
-            Johnny "But let's not start telling anecdotes.{w} Something new just came up..."
-            play sound "audio/sfx/bng sfx/1.wav"
-            pause 1.0
-            Johnny "Something big!"
-            Johnny "And I don't want to be distracted by other {b}minor{/b} stuff.{w} Don't expect you to understand tho."
-            Johnny "So let's try not to enjoy this, hm?"
-            play sound "audio/sfx/bng sfx/3.wav"
-            pause 2.3
-            Johnny "And maybe...{w} not to make this so dirty this time..."
-            Johnny "Uh... this will take a while to clean up."
-            Johnny "Oh well,{w} work for later."
-        else:
-            Johnny "Hey officer~"
-            Johnny "Quite the night we’re having today, huh?"
-            Johnny "Moon is shining,{w} very little bugs,{w} a great time to take a walk!"
-            Johnny "Or to write your thoughts..."
-            scene black with fade
-            play sound "audio/sfx/shovel hit1.wav"
-            pause 1.5
-            Johnny "You see, officer...{w} I am a very reasonable person when you're good with me.{w} And while I must say that you haven't been an angel, you answered all my questions to my satisfaction."
-            Johnny "But interrupting me when I'm writing?"
-            play sound "audio/sfx/bng sfx/1.wav"
-            pause 2.0
-            Johnny "That is a lack of respect to my person...{w} And I {b}really really REALLY{/b} hate when people disrespects me."
-            Johnny "So, I'm going to finish this interview as quickly as possible."
-            Johnny "Only then I'll be able to be peace... and enjoy the rest of the night."
-            play sound "audio/sfx/bng sfx/3.wav"
-            pause 2.3
-            Johnny "uuhh...{w} You splashed on my hands..."
-            Johnny "Disgusting...{w} You can't even die cleanly."
-            Johnny "You see? That's why you're dead!{w} Because you are disgusting."
+        Johnny "Hey officer~"
+        scene JohnnyF1 with fade
+        Johnny "Quite the night we’re having today, huh?"
+        Johnny "Moon is shining,{w} very little bugs,{w} a great time to take a walk!"
+        Johnny "Or to write your thoughts..."
+        scene black
+        play sound "audio/sfx/shovel hit1.wav"
+        pause 1.5
+        Johnny "You see, officer...{w} I am a very reasonable person when you're good with me.{w} And while I must say you haven't been an angel, you did answer all my questions."
+        Johnny "But interrupting my writing?"
+        play sound "audio/sfx/bng sfx/1.wav"
+        pause 2.0
+        Johnny "That is a lack of respect to my person...{w} That's very bad officer, someone should teach you to respect others.."
+        play sound "audio/sfx/bng sfx/2.wav"
+        pause 1.8
+        Johnny "Just for that,{w} I'm going to end this interview as quickly as possible."
+        Johnny "Because my time is {b}not{/b} for disrespectful people."
+        stop music fadeout 2.0
+        play sound "audio/sfx/bng sfx/3.wav"
+        pause 3.5
+        Johnny "uuhh...{w} You splashed on my hands..."
+        Johnny "Disgusting...{w} You can't even die cleanly."
+        Johnny "You see? That's why you're dead!{w} Because you are disgusting."
 
 
     pause 1.0
@@ -2149,120 +2434,306 @@ label main_route3:
     pause 3.0
     scene table with fade
     Johnny "Now...{w} What was I saying?"
-    Johnny "Oh yeah,{w} the siblings."
-    "I’m gonna start a new case just for them."
-    "Call it... {w} a personal project."
+    pause 2.0
+    Johnny "Oh, yeah!"
+    pause 1.5
+    "I’m gonna start a new case."
+    "Something private,{w} a personal project."
+    play music "audio/music/Tow Truck.wav" fadein 4.0
     "I have the feeling that it will be my biggest work yet."
     scene club_night with fade
-    stop music fadeout 1.0
     pause 1.0
     "And I have the perfect name for it..."
-    scene black with fade
-    pause 1.0
-    play music "audio/music/Cruel Summer end.wav"
+
     pause 2.0
-    scene end1 with fade
-    pause 23.0
-    scene black with fade
-    pause 2.7
-    stop music fadeout 1.0
+    scene end1 with Dissolve(2.0)
+    pause 2.0
+    menu:
+        "Continue with the story? (Remember to save if not.)"
+
+        "Yes.":
+            stop music fadeout 1.5
+            scene black with Dissolve(1.5)
+            pause 2.5
+        "No.":
+            stop music fadeout 1.5
+            scene black with Dissolve(1.5)
+            pause 2.5
+            return
+
 
     ####################### 1° Encounter
-
-    pause 2.5
+label yes_l:
+    pause 1.0
     play music "audio/music/The Thing - What Appears to be Normal.wav" fadein 2.0
     pause 3.0
-    Andrew "You’ve been quite silent since we get out of that club."
-    Andrew "What's happening?{w} Did the bartender catch you stealing his tips?"
-    Ashley "Hah!{w} He wish. He was too busy looking at that girl’s ass for even notice I was there."
-    Ashley "It was a perfect move, if I can say so~"
-    Andrew "Then what?{w} Stop acting as if wouldn't be obvious when you have something in mind."
-    scene M_Room with fade
-    show Andrew at left
-    show Ashley mad at right
+    Andrew "You’ve been pretty quiet."
+    pause 1.0
     Ashley "..."
-    Ashley "That guy…{w} the detective.{w} Did you notice something off on him?"
+    pause 2.0
+    scene M_Room with fade
+    show Andrew angry2 at left
+    show Ashley mad at right
+    Andrew "Come on, just say it..."
+    hide Andrew
+    show Andrew at left
+    Andrew "What's happening?{w} Did the bartender catch you stealing his tips?"
     hide Ashley
-    show Ashley at right
-    Ashley "Something…{w} I don’t know, weird?"
+    show Ashley smug3 at right
+    Ashley "Heh,{w} yeah sure."
+    hide Ashley
+    show Ashley smug2 at right
+    extend " He was too busy looking at that girl’s ass to even notice."
+    hide Ashley
+    show Ashley worried2 at right
+    hide Andrew
+    show Andrew angry1 at left
+    Ashley "It was a perfect move, if I can say so~"
     hide Andrew
     show Andrew chat1 at left
-    Andrew "Duh, he IS weird."
-    hide Andrew
-    show Andrew angry2 at left
-    Andrew "He was just an asshole with 80's delusions."
-    hide Andrew
-    show Andrew angry1 at left
-    Andrew "Now we don't even have a vehicle because of him..."
     hide Ashley
-    show Ashley ewww at right
-    Ashley "You expect me to believe that’s everything that bothers you?{w} Seriously Andy?"
+    show Ashley worried1 at right
+    Andrew "Then what?{w} Stop acting like it wouldn't be obvious when something's bothering you."
+    hide Andrew
     hide Ashley
-    show Ashley mad3 at right
-    hide Andrew
-    show Andrew worried1 at left
-    Ashley "You’re gonna tell me that, {b}YOU{/b} in particular, aren't feeling a little uneasy by the fact that he let us go like that?{w} Without questions…{w} without warnings…"
-    pause 2.0
-    Andrew "..."
-    hide Andrew
-    show Andrew serious1 at left
-    Andrew "He scared me...{w} but not in a normal way."
+    show Andrew at left
+    show Ashley mad at right
+    pause 1.0
+    Ashley "..."
+    pause 1.0
+    Ashley "That guy…{w} the detective."
+    hide Ashley
+    show Ashley think at right
+    extend " Did you notice something off on him?"
     hide Ashley
     show Ashley at right
+    Ashley "Something, I don’t know...{w} weird?"
+    hide Andrew
+    show Andrew chat1 at left
+    Andrew "Duh!{w} He IS weird."
+    hide Andrew
+    show Andrew angry2 at left
+    Andrew "He's a guy that believes himself an 80s character."
     hide Andrew
     show Andrew angry1 at left
-    pause 1.5
+    Andrew "We spent all the gas trying to escape from him..."
+    hide Andrew
+    show Andrew at left
+    extend " Now we don't even have a vehicle."
+    hide Ashley
+    show Ashley mad3 at right
+    Ashley "You expect me to believe you haven't even thought about it?{w} Seriously Andy?"
+
+    if DualAff > 0:
+        jump res1
+    else:
+        if AshleyAff > 0:
+            jump res2
+        else:
+            jump res3
+
+
+    label res1:
+        hide Ashley
+        show Ashley ewww at right
+        hide Andrew
+        show Andrew worried1 at left
+        Ashley "You’re gonna tell me that, {b}YOU{/b} in particular, aren't but a little uneasy by the fact that he let us go like that?"
+        hide Ashley
+        show Ashley mad3 at right
+        Ashley "Without questions…{w} without warnings…{w} just taking the stupid car?"
+        pause 2.0
+        Andrew "..."
+        hide Andrew
+        show Andrew serious1 at left
+        Andrew "He..."
+        hide Ashley
+        show Ashley think at right
+        extend " He really scared me, ok?"
+        hide Andrew
+        show Andrew at left
+        Andrew "And not in a normal way."
+        pause 1.5
+        hide Andrew
+        show Andrew angry1 at left
+        pause 1.5
+        Andrew "I made him mad and..."
+        extend " he almost jumped on my neck."
+        hide Ashley
+        show Ashley pout1 at right
+        hide Andrew
+        show Andrew at left
+        Ashley "Awwww little Andy didn't want to throw hands with the big mean detective?"
+        hide Ashley
+        show Ashley smug1 at right
+        hide Andrew
+        show Andrew superangry at left
+        Andrew "Can you be serious for a second?!"
+        hide Ashley
+        show Ashley smug2 at right
+        hide Andrew
+        show Andrew facepalm at left
+        Ashley "Never!{w} And I really don't know what you're complaining about."
+        hide Ashley
+        show Ashley smug3 at right
+        hide Andrew
+        show Andrew angry2 at left
+        Ashley "He was very kind to me."
+        hide Ashley
+        show Ashley pout1 at right
+        hide Andrew
+        show Andrew facepalm at left
+        extend " Perhaps that's the problem, Aaaaaaaaandy?"
+        Ashley "Were you spying our little chatty-chat?"
+        hide Andrew
+        show Andrew at left
+        hide Ashley
+        show Ashley smug1 at right
+        Andrew "You're impossible."
+        jump main_route5
+
+    label res2:
+        hide Ashley
+        show Ashley ewww at right
+        hide Andrew
+        show Andrew chat1 at left
+        Andrew "Well that's because I would prefer not to think about him."
+        hide Andrew
+        show Andrew angry2 at left
+        Andrew "He just showed up and annoyed me until I gave up the fucking keys..."
+        hide Andrew
+        show Andrew chat1 at left
+        hide Ashley
+        show Ashley mad3 at right
+        Andrew "And how come up that you're the worried one this time?{w} What did he tell you?"
+        hide Ashley
+        show Ashley angry1 at right
+        hide Andrew
+        show Andrew at left
+        Ashley "We just talked,{w} he made some questions and I answered."
+        hide Andrew
+        show Andrew angry1 at left
+        hide Ashley
+        show Ashley at right
+        Andrew "Ok,{w} and?"
+        hide Andrew
+        show Andrew at left
+        pause 1.5
+        hide Ashley
+        show Ashley mad at right
+        pause 1.5
+        Ashley "Well..."
+        hide Ashley
+        show Ashley worried1 at right
+        Ashley "He was nice...{w} strangely nice..."
+        pause 2.0
+        hide Ashley
+        show Ashley ewww at right
+        hide Andrew
+        show Andrew chat1 at left
+        Andrew "And that's all?{w} That's what left you so shocked?"
+        hide Ashley
+        show Ashley mad3 at right
+        hide Andrew
+        show Andrew angry1 at left
+        Andrew "Though I shouldn't be surprised.{w} It's not every day you find someone who can put up with your garbage."
+        hide Ashley
+        show Ashley mad2 at right
+        hide Andrew
+        show Andrew facepalm at left
+        Ashley "Well at least someone can without being constantly bitching about."
+        hide Ashley
+        show Ashley ewww at right
+        hide Andrew
+        show Andrew angry2 at left
+        Andrew "Yeah, whatever you say..."
+        hide Ashley
+        show Ashley mad at right
+        hide Andrew
+        show Andrew angry1 at left
+        jump main_route5
+
+    label res3:
+        hide Andrew
+        show Andrew chat1 at left
+        Andrew "And why would I?"
+        extend " Yeah, it is suspicious, but you really think a guy like him could be into something else?"
+        hide Ashley
+        show Ashley at right
+        hide Andrew
+        show Andrew angry2 at left
+        Andrew "He probably was just a jerk who wanted to go back home and watch his old flashy movies."
+        hide Andrew
+        show Andrew angry1 at left
+        pause 2.0
+        hide Andrew
+        show Andrew worried1 at left
+        Andrew "..."
+        pause 2.0
+        Ashley "That totally sounded like an excuse, you know?"
+        pause 1.5
+        hide Andrew
+        show Andrew at left
+        Andrew "Look, I know it sound strange coming from me, but I really think he isn't dangerous."
+        hide Andrew
+        show Andrew angry1 at left
+        hide Ashley
+        show Ashley think at right
+        Andrew "We don't need to keep talking about this, if you don't feel like it."
+        hide Ashley
+        show Ashley at right
+        Andrew "It's not like we're short of problems if you want to hear me complain about something..."
+        hide Andrew
+        show Andrew confused2 at left
+        hide Ashley
+        show Ashley worried1 at right
+        Ashley "No...{w} No, I think I'm not in the mood right now..."
+        jump main_route5
+
+
+label main_route5:
+    pause 2.0
+    hide Andrew
+    show Andrew worried1 at left
     hide Ashley
     show Ashley worried1 at right
     pause 1.5
-    Andrew "His eyes,{w} his gaze,{w} his whole presence…"
-    Andrew "He didn’t show up, but it felt… really oppressive."
-    Andrew "As if he were…"
-    hide Ashley
-    show Ashley at right
-    hide Andrew
-    show Andrew at left
-    Ashley "…watching through you. Yeah, I noticed."
-    hide Ashley
-    show Ashley smug1 at right
-    Ashley "Not like it's very complicated, Andy dear."
-    hide Andrew
-    show Andrew facepalm at left
-    pause 1.0
-    Andrew "Can you be serious? PLEASE?"
-    hide Ashley
-    show Ashley mocking1 at right
-    Ashley "Yeah yeah, I’m just messing a little."
-    hide Ashley
-    show Ashley at right
-    Ashley "But... He did got me a little nervous tho..."
-    hide Andrew
-    show Andrew at left
-    hide Ashley
-    show Ashley mad at right
-    Ashley "Still, it didn't felt like he wanted to hurt us."
-    Ashley "More like..."
-    pause 2.0
-    hide Andrew
-    show Andrew confused at left
-    Andrew "He was curious?{w} Like some kind of strange fixation?"
-    Ashley "..."
-    pause 1.0
-    scene black with fade
-    Ashley "Do you think we’re gonna see him again?"
+    Andrew "Do you think we’re gonna see him again?"
     stop music fadeout 2.0
     pause 1.5
-    Andrew "I don’t know,{w} but…"
-    Ashley "But we have the way to know it."
-    Ashley "Well…{w} something like that."
+    Ashley "I...{w} I don’t know."
+    hide Andrew
+    show Andrew confused2 at left
+    hide Ashley
+    show Ashley smug1 at right
+    Ashley "But..."
+    extend " we do have a way to find out."
+    hide Andrew
+    show Andrew at left
+    hide Ashley
+    show Ashley smug3 at right
+    Ashley "Well,{w} something like that."
     pause 1.0
+    hide Andrew
+    show Andrew chat1 at left
     Andrew "Uh…{w} does it mean more soup for dinner?"
-    play sound "audio/sfx/blingy_sp.ogg"
-    Ashley "A lot more soap for dinner~"
-    Ashley "And you'll love it, you heard me?"
-    pause 1.0
+    hide Andrew
+    show Andrew facepalm at left
+    hide Ashley
+    show Ashley excited at right
+    Ashley "Yes!{w} A lot more soap for dinner!"
+    hide Ashley
+    show Ashley angry1 at right
+    Ashley "And you're gonna be a good boy and love it, understood?"
+    scene black with fade
     Andrew "I have a terrible feeling about this..."
-    Ashley "Yeah, like... with everything else."
+    if DualAff > 0:
+        Ashley "Yeah, like... with everything else."
+    else:
+        if AshleyAff > 0:
+            Ashley "That's the spirit! haha~"
+        else:
+            Ashley "Oh,{w} now you do..."
 
     pause 3.0
     play sound "audio/sfx/typing.wav"
@@ -2270,166 +2741,223 @@ label main_route3:
     pause 3.0
     scene black with fade
 
-    "I had that strange dream again."
-    play sound "audio/sfx/static.wav" fadein 2.0 loop volume 0.6
+    items "I had that weird dream again."
+    play music "audio/sfx/static.wav" fadein 2.0 volume 0.6
     pause 3.0
-    "I was on that old, cold, nasty house."
-    "The air was as dense as smoke,{w} with a jarring atmosphere that didn’t let me archive peace at any moment."
-    "At the same time, however, I was tempted by a constant feelings of closeness that tried to distract my mind from the latent danger."
-    "But danger of what?"
-    "I've been here {b}many{/b} times, and even if I know what is gonna happen next, I can't avoid this damn sensation."
+    items "I was on that old, nasty house."
+    items "The air was as dense as smoke and the atmosphere jarring and cold."
+    items "It was impossible to achieve any kind of calm in a place like this."
+    items "It was like being in an abandoned place,{w} a land where you would swear to be alone,{w} but maintaining the certainty that you're not."
+    items "And yet,{w} I was tempted by a constant feelings of closeness that tried to distract my mind from the unseen danger."
+    pause 1.5
+    items "But danger of what?{w} Where and how big?"
+    items "I've been there {b}many{/b} times, and even if I know what's around corner, I can't avoid that damn sensation."
     scene dream1 with fade
-    "I was sitting at the table.{w} There was a plate in front of me, but the food was nowhere to be seeing."
-    "But even so, I could still smell its scent."
-    "It was hefty and unpleasant — toxic,{w} unhealthy,{w} like the putrid stench that emanates from stagnant pipes of the city's streets."
-    "And there was...{w} an echo...{w} people around me."
-    stop sound fadeout 1.0
-    pause 1.0
+    items "I was sitting at the table.{w} There was a plate in front of me, but the food was nowhere to be seeing."
+    items "But even so, I could smell its scent."
+    items "It was hefty and unpleasant{w} — toxic,{w} unhealthy,{w} like the putrid stench that emanates from the stagnant pipes at city's streets."
+    stop music fadeout 1.5
+    items "And then, after moments of quiet tension...{w} an echo was heard..."
+    pause 2.0
     play music "audio/sfx/Humming.wav"
     pause 3.0
-    "It was the voice of a woman,{w} with a voice so relaxing, so perfect that could only exist in the non-existent confines of my mind."
-    "She was humming a beautiful song, "
+    items "It was the voice of a woman,{w} with a voice so relaxing, so perfect that could only exist in the non-existent confines of my mind."
+    items "She was humming a beautiful song, "
     play sound "audio/sfx/Coughing.wav" loop volume 0.1
+    pause 1.5
     extend "and alongside with it, the incessant symphony of deep and painful coughs."
-    "I knew they were somewhere around me, hiding between the shadows and the intoxicating miasma."
-    "But...{w} Why giving me to the labor of searching for them?{w} It wasn't as if I was going to find them anyway."
+    items "They were somewhere around,{w} hiding between the malicious shadows and the intoxicating miasma."
+    items "But...{w} Why giving me to the labor of searching for them?{w} Like I was going to find them anyway."
+    items "No, there was no point on that."
     pause 1.5
-    "Instead, I stood in my place enjoying the mesmerizing tone of that song."
-    "It was... {w} it was perfect.{w} Would've stayed there forever if someone had given me the opportunity."
-    "Apathy reigned over me,{w} the inability to feel any type of happiness, sadness or worry for those besides the lady."
-    "I had ears only for her... {w} for that precious voice..."
+    items "Instead,{w} I stood in place to enjoy the mesmerizing tone of the song."
+    items "It was... {w} {b}perfect{/b}."
+    items "If you gave me the chance,{w} I would've stay there forever just to hear that wonderful voice until my last breath."
     pause 1.5
-    "And then...{w} as quick as it began..."
+    items "Apathy reigned over me,{w} the inability to feel any type of happiness, sadness or worry for anyone besides the lady."
+    items "I had ears only for her... {w} for that precious and unknown being..."
+    pause 1.5
+    items "And then...{w} as quick as it began..."
     stop music fadeout 1.0
     pause 1.5
-    "It stopped."
+    items "It stopped."
     stop sound fadeout 1.0
     pause 1.0
     play sound "audio/sfx/Body Fall.wav"
     pause 2.0
-    "And rumble was heard twice before the arrival of complete silence.{w} And loneliness was everything that was left now."
+    items "And a rumble was heard twice before the arrival of silence."
+    pause 1.0
+    items "The presences that I could feel from the very beginning had completely vanished."
     scene black with fade
-    pause 1.0
-    play music "audio/sfx/static.wav" fadein 2.0 loop
-    "No more colors,{w} no more sound…{w} the end of everything."
-    "Except by the fact that...{w}"
+    items "And with them,{w} both the color and the sound were swallowed by the darkness,{w} leaving nothing but a complete and absolute black canvas."
+    items "Nothing left."
     pause 1.5
-    "I was still there."
-    "Somewhere...{w} somehow..."
+    items "Except off course for...{w} me."
+    play music "audio/sfx/static.wav" fadein 2.0
+    pause 1.5
+    items "I was still there."
+    items "Somewhere...{w} somehow...{w} sometime..."
     pause 1.0
-    "I was there."
+    items "Existing..."
+    pause 1.5
+    extend " and maybe not even that."
     stop music fadeout 1.0
-    pause 2.0
-    "I've been having this same dumb dream for years now..."
+    pause 3.0
     play music "audio/music/Provoker - Dark Angel.wav"
+    "I've been having this same dumb dream for years now..."
     pause 1.0
     "It doesn't bother me anymore.{w} Actually, it never did."
-    "It's just a stupid dream.{w} It's useless, just there to try to scaring me."
-    "Heh... scaring me. Think about that."
-    "The only thing that annoys me is the fact that, once I wake up from their disgusting clutches, I am no longer able to fall asleep again."
-    "So...{w} with all the pain of the world for another early-start of the morning..."
-    pause 1.5
-    "I went out for a walk."
+    "It's just a stupid dream,{w} just there to try to scaring me over and over again."
+    "Heh... scaring me."
+    "Think about that."
     pause 1.5
     scene Forest1 with fade
-    pause 1.5
-    "I love the smell the forest in the morning.{w} It’s clean, fresh, intoxicating."
-    "People generally don't come to these parts.{w} They think it’s dangerous,{w} that they’ll get face to face with some freak, will get lost or attacked by an animal."
+    "The only thing that annoys me is the fact that,{w} once I wake up from their disgusting clutches,{w} I am no longer able to fall asleep again."
+    "So...{w} with all the pain of the world for another early-start of the morning..."
+    "I went out for a walk."
     scene Forest3 with fade
-    Johnny "Hah! Poor idiots."
-    "Much better for me.{w} It may be a bit lonely, but I prefer it before having all those annoying voices disturbing the surroundings."
-    "All those complaints,{w} that stench coming from those...{w} insufferable mediocres."
-    scene Forest2 with fade
-    "Hating them is something easy to learn.{w} What's not, is having to leave this peace to venture into their concrete jungle."
-    "That circus filled with clowns and two legged animals..."
     pause 1.0
-    "Sadly… I do need their garbage to survive."
-    "To coexist with their... filth."
+    "I love the smell the forest in the morning.{w} It’s clean, fresh, intoxicating."
+    "People generally don't come to these parts.{w} They think it’s dangerous."
+    "That they’ll be face to face with some freak, get lost or attacked by an animal."
+    Johnny "Hah! Poor idiots."
+    scene Forest2 with fade
+    "Much better for me.{w} It may be a bit lonely, but I prefer it before having all those annoying voices disturbing."
+    "Hating them is something easy to learn.{w} What's not, is having to leave this peace to venture into that concrete jungle."
+    "That {b}circus{/b} filled with clowns and two legged animals..."
+    pause 1.5
+    "Uh...{w} but I'm starting over again..."
     scene Forest4 with fade
-    "But that's how it is...{w} What's the point on trying to fight it anyway?"
+    "It is how it is...{w} What's the point on trying to fight it anyway?"
     pause 1.0
     "Things like that lead me to think...{w} to dream...{w} to remember..."
     stop music fadeout 2.0
     pause 3.0
     "..."
-    "Whatever."
-    "I made a small summary of my progress on the Graves Case."
-    play music "audio/music/Delay.wav" fadein 1.0
+    "Whatever.{w} That's not the point."
+    pause 1.5
+    scene black with fade
+    "So...{w} I made a small summary of my discoveries regarding the Graves Case."
     play sound "audio/sfx/paper.wav"
     show Pol9 with Dissolve(0.5)
+    pause 0.5
+    play music "audio/music/Delay.wav" fadein 1.0
     pause 1.0
-    "First of all,{w} I couldn't get much information from my last night's visitor."
-    "The police forces at the station seems to be hiding something, but the information is protected by the high command."
-    "I’m gonna need something more than just {b}Human Resources{/b} if I want to put my hands on that…"
-    "Don’t know if it’s worth it either."
-    hide Pol9 with Dissolve(0.5)
-    "Second point,{w} the stuff I took from the siblings."
+    "First of all,{w} the supposed official."
+    "Couldn't get much information out of him,{w} but his belongings gave me plenty to think about."
+    "First of all,{w} his badge didn't belong to an officer on service."
+    "It's an old model, one that was changed a few months ago.{w} However,{w} due to the resemblance to the new version,{w} it could very well be used to fool clueless civilians."
+    scene Forest4 with fade
+    pause 1.0
+    "This points to two things."
+    "The first thing is the obvious...{w} someone wanted to keep the murder out of it.{w} This wasn't something planned at all."
+    "If this is the case,{w} should consider the possibility that police stations are compromised."
+    "Not like they're trustworthy anyway..."
+    scene black with fade
+    "Now,{w} the second thing would be..."
+    pause 0.5
+    stop music fadeout 1.5
+    play sound "audio/sfx/paper.wav"
+    show Pol11 with Dissolve(0.5)
+    pause 1.0
+    "My main concern."
+    play music "audio/music/Ennio Morricone - The Thing.wav"
+    pause 1.5
+    "I found this book inside his pants.{w} It's compact, a bit smaller than a handbook."
+    "I read a few pages before going to bed.{w} It seems to be some kind of instruction book or the strange bible of some cult."
+    "It is fascinating, but beyond its symbology I doubt there is anything that can be useful."
+    "Still...{w} I'll keep it close just in case."
+    scene Forest4 with fade
+    "And with this,{w} the theory about something bigger than just a car-rob gains strenght."
+    "I don't know if I should be happy about that...{w} but it's at least exciting."
+    stop music fadeout 1.5
+    pause 2.0
+    "And then we have the stuff I took from the siblings."
+    scene black with fade
+    pause 1.0
     play sound "audio/sfx/paper.wav"
     show butcher with Dissolve(0.5)
     pause 1.0
-    "The butcher cleaver…{w} It has something strange on it."
-    "Its smell's…{w} odd,{w} to put it simple."
-    "Whatever they used it for, they didn't wash it properly.{w} It's like, when you eat fish and leave the cutlery dirty."
-    "It may look, clean but the aroma persist on the metal."
+    "The butcher cleaver, for a start."
+    play music "audio/music/Delay.wav" fadein 1.0
+    "I found something very peculiar on it too."
+    "It has a rather…{w} {b}odd{/b} smell stuck to it."
+    "Whatever it was used for, they didn't wash it properly.{w} It's like, when you eat fish and leave the cutlery dirty.{w} The stench simply stays there, penetrating like a parasite..."
+    "Good thing is that...{w} if there's a smell,{w} then there's also residue on the blade."
+    scene Forest4 with fade
     "I have a partner who can help with this.{w} I'll stop by to see him later."
-    hide butcher with Dissolve(0.5)
+    scene black with fade
     pause 1.0
     play sound "audio/sfx/paper.wav"
     show notepad with Dissolve(0.5)
     pause 1.0
     "My greatest interest,{w} however,{w} is the notepad."
-    "While yes,{w} the death certificates where a great finding,{w} the numbers written of its pages are way more useful at the moment."
-    "Numbers…{w} and names too."
-    "I could get great places to begin my research thanks to this.{w} But the best of all, and my main objective right now, was for sure…"
-    stop music fadeout 1.0
-    scene black with fade
-    pause 1.5
-    play music "audio/music/Get On My Knees by Brian Deady.wav"
-    Johnny "Mommy and daddy’s house~"
-    pause 3.0
-    "Hands to work then."
-    "The day has begun."
-    pause 2.0
-    scene drive with fade
     pause 1.0
-    "I drove towards thenorthern area of the city while preparing to met with my my partner."
-    "His name was Lars, and he was an old reliable when it comes to analyzing evidence."
-    "Off course, I can’t say we understand each other,{w} but when work is involve?{w} Then that bastard is a compliant."
+    "While yes,{w} the death certificates where a great finding,{w} the numbers written of its pages are way more useful at the moment."
+    "Numbers…{w} with names."
+    "With that,{w} we have a couple of places to start investigating."
+    stop music fadeout 1.5
+    pause 1.5
+    "And clearly, the first two names I plan to address are..."
+    play music "audio/music/Get On My Knees by Brian Deady.wav"
+    scene black with fade
+    pause 2.0
+    Johnny "Mommy and daddy~"
+    pause 1.0
+    scene Forest5 with fade
+    pause 1.0
+    Johnny "Hands to work then."
+    Johnny "The day has begun."
+    scene black
+    play sound "audio/sfx/car turning on.wav"
+    pause 3.0
+    scene drive with fade
+    stop sound fadeout 1.0
+    pause 1.0
+    "I drove towards thenorthern area of the city."
+    "His name was Lars.{w} He was an old reliable when it comes to analyzing evidence."
+    "Off course, I can’t say we understand each other,{w} but when the work is involve?{w} Then that bastard is a compliant."
     scene LabOut with fade
     pause 1.0
     "The biochemical laboratory waited with its usual quietness.{w} It is rare to find people in this area, and if it happens they are generally not in the mood to even exchange glances with you."
     "That's the exact reason I like to come here."
     scene black with fade
-    stop music fadeout 1.0
-    Johnny "It was time to ask for a favor."
+    stop music fadeout 1.5
     pause 1.5
+    Johnny "It's time to retrieve a favor"
+    pause 1.5
+    play music "audio/music/Bully - Walk Theme.wav"
     scene Lab1 with fade
-    play music "audio/music/Magnum Force.wav" fadein 1.0
     show Lars 1 right at right
     pause 0.5
     Lars "..."
     pause 0.5
-    show Johnny chat1 R at left with moveinleft
+    show Johnny smile2 R at left with easeinleft
     Johnny "Hey pal~"
-    Johnny "How's the crime doing?"
+    show Johnny chat1 R at left
+    Johnny "How's the crime going?"
     pause 0.5
     hide Johnny
     show Johnny serious3 R at left
     hide Lars
-    show Lars 3 at right
-    "As always, I didn’t receive a warm smile as a welcome."
-    Lars "Paddle...{w} Let me guess,{w} you’re out of HF already?"
+    show Lars 7 at right
+    "As always, I was received by Lar's kind and warm smile."
+    show Johnny smile2 R at left
+    Lars "Paddle...{w} Let me guess,"
+    hide Lars
+    show Lars 2 at right
+    extend " you’re out of HF already?"
     hide Johnny
     show Johnny chat1 R at left
-    hide Lars
-    show Lars 4 at right
     Johnny "These have been very productive weeks."
+    show Lars 3 at right
     hide Johnny
     show Johnny R at left
     extend " I would’ve paid you a visit, but…{w} you know."
+    show Lars 3 at right
     Johnny "This job is killing me..."
     hide Johnny
-    show Johnny smug1 R at left
+    show Johnny smile2 R at left
     extend " and not just me~"
     hide Lars
     show Lars 2 at right
@@ -2437,17 +2965,22 @@ label main_route3:
     hide Johnny
     show Johnny R at left
     hide Lars
-    show Lars 1 at right
-    Lars"Even if that’s not enough to stop you, I can at least make you do some exercise."
-    Johnny "I do plenty of exercises, thank you very much."
+    show Lars 7 at right
+    Lars"And even if that’s not enough to stop you, I can at least make you do some exercise."
+    hide Johnny
+    show Johnny serious1 R at left
+    Johnny "I do plenty of exercise, thank you very much..."
     hide Johnny
     show Johnny confused R at left
-    Johnny "Just… not in the conventional way, but I keep myself in check."
+    extend " Just…{w} not in the conventional way..."
+    hide Johnny
+    show Johnny serious1 R at left
+    extend " But I do keep myself in check."
     hide Johnny
     show Johnny serious1 R at left
     hide Lars
     show Lars 3 at right
-    Lars "And since you clearly don’t need to do more of that,{w} how about going to a therapist instead?"
+    Lars "Correct, and since you {b}clearly{/b} don’t need it, how about going to a therapist instead?"
     hide Johnny
     show Johnny serious2 R at left
     hide Lars
@@ -2463,32 +2996,23 @@ label main_route3:
     hide Lars
     show Lars 3 at right
     Lars "All right, you have a point there."
-    hide Lars
-    show Lars 5 right at right
-    Lars "On the other side,{w} Don't you think you may be attracting unwanted attention?"
-    hide Lars
-    show Lars 2 right at right
-    hide Johnny
-    show Johnny serious1 R at left
-    Lars "{b}Working{/b} that much could be raising the bar too high."
-    hide Lars
-    show Lars 1 right at right
-    hide Johnny
-    show Johnny chat1 R at left
-    Johnny "The bar is in a perfect place if that’s what you’re asking."
     hide Johnny
     show Johnny serious2 R at left
     Johnny "Now, changing the subject…"
     play sound "audio/sfx/item_got.ogg"
     items "Jonathan paid 1500 bucks."
-    Johnny "For the last liter, and an extra..."
+    hide Johnny
+    show Johnny R at left
+    Johnny "For the last liter, and some extra..."
     hide Lars
-    show Lars 3 at right
+    show Lars 4 at right
     Lars "An extra?"
+    hide Johnny
+    show Johnny smug1 R at left
     "Old fox immediately took the message."
     hide Lars
-    show Lars 1 at right
-    Lars "What is it?{w} I’m not in the mood for games, Paddle.{w} It better be important."
+    show Lars 7 at right
+    Lars "What is it?{w} I’m not in the mood for games, Paddle.{w} Better be important."
     "I took the cleaver out of my jacket and placed it on his working table."
     hide Lars
     show Lars 4 at right
@@ -2501,30 +3025,40 @@ label main_route3:
     hide Lars
     show Lars 6 right at right
     hide Johnny
-    show Johnny smug1 R at left
-    Lars "That’s disgusting…{w} and very unprofessional."
+    show Johnny serious3 R at left
+    Lars "Yuck!{w} That’s disgusting!"
+    hide Lars
+    show Lars 7 at right
+    extend" And very unprofessional..."
+    Lars "What are you, 5?"
     hide Johnny
     show Johnny R at left
-    Lars "You bring an old, stinking blade without the slightest care in the world, and expect me to look at it and tell you if anyone has been chopped with it?"
+    Lars "You bring that...{w} old, stinky blade without the slightest care in the world,{w} and expect me to look at it and tell you if anyone has been chopped with it?"
     Lars "Do I look like a genius to you?"
     hide Lars
     show Lars 1 at right
-    extend " Because is so, I’m not the wish-fulfilling type."
+    extend " Because is so, I’m surely not the wish-fulfilling type."
     hide Johnny
     show Johnny serious1 R at left
     Johnny "I expect you to do your job.{w} Use your instruments, play with your tools or do whatever you do with {b}that{/b} machine."
     hide Lars
-    show Lars 2 at right
+    show Lars 7 at right
     hide Johnny
-    show Johnny smile1 R at left
+    show Johnny confused R at left
     stop music
     Lars "That’s a microwave…"
     pause 1.5
+    hide Johnny
+    show Johnny smile1 R at left
+    hide Lars
+    show Lars 2 at right
     Johnny "Yeah..."
-    play music "audio/music/Magnum Force.wav" fadein 1.0
+    play music "audio/music/Bully - Walk Theme.wav" fadein 1.0
     hide Johnny
     show Johnny serious2 R at left
-    Johnny "I just want to know if you can find residues of meat or blood in it."
+    Johnny "The point is, I just want to know if there's residues of human flesh or blood in it."
+    hide Johnny
+    show Johnny R at left
     Johnny "Come on, give me a hand on this."
     pause 1.5
     hide Lars
@@ -2534,12 +3068,14 @@ label main_route3:
     show Johnny serious1 R at left
     Johnny "Free?"
     hide Johnny
-    show Johnny angry1 R at left
+    show Johnny serious2 R at left
     extend " Do I have to remind you the {b}small inconvenient{/b} with your dealer?"
     hide Lars
     show Lars 2 at right
     extend " The one you strongly asked me to intervene in?"
     Johnny "You still own me that favor."
+    hide Johnny
+    show Johnny serious1 R at left
     pause 2.0
     Lars "..."
     hide Lars
@@ -2552,16 +3088,20 @@ label main_route3:
     hide Lars
     show Lars 1 right at right
     Johnny "I have time.{w} Can you do it?"
-    pause 1.0
+    pause 2.0
+    hide Johnny
+    show Johnny R at left
     Johnny "Please?"
-    pause 1.0
+    pause 2.0
     hide Lars
     show Lars 2 at right
+    hide Johnny
+    show Johnny confused R at left
     Lars "If I can?{w} Hah!"
     hide Johnny
     show Johnny smile2 R at left
     hide Lars
-    show Lars 1 at right
+    show Lars 7 at right
     Lars "But after that I don't owe you anything."
     hide Johnny
     show Johnny smug1 R at left
@@ -2572,17 +3112,17 @@ label main_route3:
     Lars "So…{w} if that’s everything you need, I would be happy to return to my solitude."
     hide Johnny
     show Johnny serious2 R at left
-    Johnny "Actually,{w} there’s something I wanted to ask."
+    Johnny "Actually,{w} there’s something else I wanted to ask."
     hide Johnny
     show Johnny serious1 R at left
-    play music "audio/music/Cruel Summer Tense.wav"
     Johnny "Have you heard about the building [[REDACTED]?{w} The one that caught fire not long ago."
+    play music "audio/music/Cruel Summer Tense.wav" fadein 1.5
     pause 1.5
     Lars "..."
     pause 1.0
     hide Lars
     show Lars 1 at right
-    Lars "Don’t tell me you’re investigating that."
+    Lars "Don’t tell me you’re interested on that."
     hide Johnny
     show Johnny R at left
     Johnny "What do you know?"
@@ -2592,11 +3132,11 @@ label main_route3:
     Lars "Look…{w} No matter how much the authorities, the media or the people involved try to deny it.{w} There’s some serious bullshit around it."
     hide Lars
     show Lars 2 right at right
-    Lars "There is very little information about the quarantine buildings, but it's rumored that...{w} {b}THAT{/b} one in particular…{w} suffered a leak."
+    Lars "You won't be able to get much official information about the quarantine buildings, but it's rumored that...{w} one of them...{w} suffered a {b}leak{/b}."
     hide Johnny
-    show Johnny serious1 R at left
+    show Johnny confused R at left
     Johnny "A leak..."
-    Johnny "Someone escaped?"
+    Johnny "You mean someone escaped?"
     hide Lars
     show Lars 1 right at right
     Lars "Exactly."
@@ -2614,22 +3154,47 @@ label main_route3:
     show Johnny R at left
     Lars "Listen, I’ve been on the wrong side of the street for a long time,{w} way more than you."
     Lars "When I smell something dirty, it’s because there {b}IS{/b} something dirty."
+    hide Lars
+    show Lars 2 right at right
     hide Johnny
     show Johnny serious1 R at left
-    "I can't argue against that logic."
+    Lars "Don't you think it's strange that a pandemic suddenly emerged in a few buildings?{w} Or the fact that they shoot anyone who approaches the doors?"
+    Lars "Or perhaps we should point out the fact that there is no record of any of the alleged victims."
+    hide Lars
+    show Lars 4 right at right
+    Lars"I confirmed that myself."
     hide Johnny
     show Johnny serious2 R at left
     hide Lars
-    show Lars 1 at right
-    Lars "And I'll tell you one last thing..."
-    Lars "If you're really convinced in going down that road, you need to know something."
-    Lars "It may be a little more dangerous than what you’re used to."
+    show Lars 7 at right
+    Johnny "I see what you're going for."
     hide Johnny
-    show Johnny smug1 R at left
-    Johnny "You know that only encourages me, right?"
+    show Johnny chat1 R at left
+    extend " So the pandemic is nothing but a smokescreen?"
+    hide Johnny
+    show Johnny smile2 R at left
     hide Lars
     show Lars 2 at right
-    Lars "Yeah, but I don’t wanna have to search for a new associated.{w} So you better keep an eye on that little butt of yours, ok?"
+    Johnny "You know,{w} under normal circumstances I would say that the years begin to take their toll on your little head."
+    pause 1.5
+    hide Johnny
+    show Johnny sigh R at left
+    Johnny "But right now..."
+    pause 1.5
+    hide Johnny
+    show Johnny R at left
+    Lars "And I'll tell you one last thing..."
+    Lars "If you're really convinced on going down that road..."
+    hide Lars
+    show Lars 1 at right
+    Lars "You may like to know that it'll be a little more dangerous than you’re used to."
+    hide Johnny
+    show Johnny smug1 R at left
+    Johnny "And you may like to know that it only encourages me~"
+    hide Lars
+    show Lars 2 at right
+    Lars "Yeah, I supposed to..."
+    Lars "Still, I don’t wanna have to look for a new associated.{w} So please keep an eye on that butt of yours, ok?"
     hide Lars
     show Lars 4 at right
     hide Johnny
@@ -2641,40 +3206,57 @@ label main_route3:
     show Lars 6 right at right
     Lars "Then get out of here and give it a good use!"
     scene black with fade
-    "The pieces kept moving..."
-    "It seemed like there was going to have some troubles on the road.{w} The sense of urgency is something that adds to the thrill, so I had no hurries."
-    "What if it is a little more dangerous?"
-    "For someone like me,{w} someone smart,{w} strong,{w} astute,{w} how bad could it be?"
-
+    stop music fadeout 1.5
+    "The pieces kept moving."
+    "Good,{w} that's very good..."
+    pause 1.5
     play sound "audio/sfx/item_got.ogg"
     show HF
     pause 1.0
     "{i}Jonathan has picked up HF! (hydrofluoric acid){/i}"
     scene black with fade
     pause 1.0
-    "So,{w} I took the barrel of acid and moved out of the building."
+    "So,{w} I took the barrel and moved away."
     stop music fadeout 1.0
-    "I was planning my next stop when I was surprised with the arrival of…{w} {b}something new.{/b}"
-    "A new face, to be more specific."
+    "I started thinking about my next stop as I got closer to the exit."
     play music "audio/music/Ennio Morricone - The Thing.wav"
-    pause 1.0
-    scene CarsonEntrance with fade
-    "The vision of a man standing next to my beloved vehicle came to me along with the feeling of insertion.{w} A abnormal chill at the back of my head."
-    "He was standing blankly at the window,{w} looking at insides of the car with intentions beyond the idea of appreciate its beauty."
-    scene JvC with fade
+    play sound "audio/sfx/paper.wav"
+    pause 0.5
+    show JvC2 with Dissolve(1.0)
+    "However, my intentions to leave the place were frustrated by the arrival of...{w} someone...{w} a new face..."
+    play sound "audio/sfx/paper.wav"
+    show JvC1 with Dissolve(1.0)
+    pause 0.5
+    "The vision of a man standing right next to my beloved vehicle came to me."
+    "He was staring blankly at the window,{w} looking at insides with intentions beyond the mere idea of appreciating its beauty."
     "When our eyes met,{w} I immediately knew that this unfortunate bastard wouldn't cause nothing but trouble."
-    "And without more choices but facing the inevitable, I approached him for confrontation."
+    play sound "audio/sfx/paper.wav"
+    show JvC3 with Dissolve(1.0)
+    pause 0.5
+    "And without more choices but facing the inevitable, I approached him for the confrontation."
     scene black with fade
     pause 1.0
-    scene car0 with fade
-    UnCarson "A nice model, partner.{w} You can easily tell it was made on the glory of our beloved country."
-    "His voice and smile were prideful,{w} lacking of harmful intentions,{w} but the suspicion on his eyes revealed something different."
     scene car1 with fade
+    show Carson 1 at right
+    show Johnny R at left with easeinleft
+    pause 1.0
+    show Carson 4 at right
+    pause 1.5
+    show Carson 5 at right
+    show Johnny serious1 R at left
+    UnCarson "A nice model, partner.{w} You can easily tell it was made on the glory of our beloved country."
+    show Carson 1 at right
+    show Johnny serious2 R at left
+    "His voice was prideful,{w} lacking of harmful intentions."
+    "The suspicion on his eyes,{w} however,{w} revealed something different."
     show Johnny R at left
     show Carson 2 at right
-    Johnny "Can I help you?{w} Brother?"
+    Johnny "Can I help you, Brother?"
     hide Carson
     show Carson 4 at right
+    "His gaze went down to the chemicals before returning to me."
+    hide Carson
+    show Carson 5 at right
     UnCarson "That’s a nice barrel you have there…"
     hide Carson
     show Carson 1 at right
@@ -2683,7 +3265,10 @@ label main_route3:
     show Johnny chat1 R at left
     hide Carson
     show Carson 5 at right
-    Johnny "We can say so.{w} I have a couple of bad weeds back in home.{w} They’re a whole problem, but this beauty just burns them like nothing."
+    Johnny "We can say so.{w} I have a couple of bad weeds back in home."
+    hide Johnny
+    show Johnny smile2 R at left
+    extend " They’re a whole problem, but this beauty just burns them like nothing."
     hide Johnny
     show Johnny serious1 R at left
     Johnny "The sad part is that, no matter how much you try to get rid of them, they always find their way back."
@@ -2691,31 +3276,38 @@ label main_route3:
     show Carson 1 at right
     hide Johnny
     show Johnny serious2 R at left
-    UnCarson "I can’t be more on agreement with that, {b}Mr. Paddle{/b}."
-    UnCarson "A clean garden is a pride for our beloved country.{w} Its beauty demonstrates the purity of this land,{w} and the commitment of its people."
-    Johnny "Uh…{w} Yeah…"
-    hide Johnny
-    show Johnny chat1 R at left
-    Johnny "I couldn’t avoid to notice that you know me."
-    hide Johnny
-    show Johnny smile2 R at left
-    extend "The pleasure is all yours,{w} I assume presentations aren’t necessary."
-    hide Carson
-    show Carson 4 at right
+    UnCarson "I can’t be more in agreement with that statement, {b}Mr. Paddle{/b}."
     hide Johnny
     show Johnny confused R at left
-    "He extended his presentation card without giving me a chance to reject."
+    UnCarson "A clean garden is a pride for our beloved country.{w} Its beauty demonstrates the purity of this land,{w} and the commitment of its people."
+    Johnny "Uh…{w} Yeah…"
+    pause 1.0
+    hide Johnny
+    show Johnny sigh R at left
+    pause 1.0
+    hide Johnny
+    show Johnny chat1 R at left
+    Johnny "Couldn’t avoid to notice that you know me."
+    hide Johnny
+    show Johnny smile2 R at left
+    extend " The pleasure is all yours,{w} I assume presentations aren’t necessary."
+    hide Johnny
+    show Johnny confused R at left
     hide Carson
     show Carson 1 at right
-    Carson "Carson Hasstle,{w} just a noble instrument of this gorgeous society."
+    Carson "It's Carson,{w} Carson Hasstle."
+    Carson "Just a noble instrument of this gorgeous society,{w} or a P.I. for short."
     hide Johnny
     show Johnny serious1 R at left
     Johnny "P.I?"
     hide Johnny
     show Johnny chat1 R at left
-    Johnny "Oh, what a surprise…{w} What brings you to my city?{w} I can tell that you’re another dream-chaser, I respect that."
     hide Carson
     show Carson 2 at right
+    Johnny "Oh, what a surprise. Then, we are two already."
+    hide Johnny
+    show Johnny smile2 R at left
+    Johnny "What brings you to my city, Carson?{w} I can tell that you’re another dream-chaser like me,{w} I respect that."
     hide Johnny
     show Johnny serious1 R at left
     "I didn't take my eyes off of him for even an instant...{w} and he did the same."
@@ -2731,23 +3323,24 @@ label main_route3:
     show Johnny confused R at left
     stop music fadeout 1.5
     Carson "Which takes me back to…"
-    hide Johnny
-    show Johnny serious1 R at left
-    "He pointed at the rear window of the car.{w} I...{w} I may have stained it with my fingertips when I was moving the officer last night..."
-    play music "audio/music/Cruel Summer ost.wav" fadein 1.5
-    hide Johnny
+    scene black with fade
+    play audio "audio/sfx/Squeaky Glass.wav"
+    pause 1.5
+    show Pol12
+    play audio "audio/sfx/paper.wav"
+    pause 1.0
+    "He touched the rear window of my car..."
+    "He touched...{w} the glass...{w} with his hands..."
+    hide Pol12 with Dissolve(1.0)
+    play music "audio/music/Cruel Summer ost.wav" fadein 3.0
+    "His dirty,{w} disgusting,{w} putrid hands..."
+    Carson "You should take care of this.{w} It's pretty dirty you see?"
+    scene car1 with fade
+    show Carson 2 at right
     show Johnny angry1 R at left
-    hide Carson
-    show Carson 1 at right
-    "The drops of blood were barely noticeable."
-    "You would need to have seen them a couple of times before to actually notice."
     pause 1.0
-    Carson "You should take care of that."
-    pause 1.0
-    Johnny "Yeah…{w} I was a little busy lately...{w}"
-    hide Johnny
-    show Johnny chat1 R at left
-    Johnny "You see, I have something bit within hands, and I can’t lose much time on cat-laundries."
+    Johnny "Yeah…{w} I'm a little busy right now..."
+    Johnny "I have this pretty-big job and...{w} I can’t lose much time on cat-laundries."
     hide Johnny
     show Johnny angry2 R at left
     hide Carson
@@ -2756,7 +3349,7 @@ label main_route3:
     Carson "I like your kind, Mr. Paddle.{w} I really do…"
     hide Carson
     show Carson 4 at right
-    Carson "The problem is that,{w} when you spend so much time on them,{w} you tend to make some mistakes in the present..."
+    Carson "The problem when you spend that much time thinking on the future is...{w} that you tend to make some mistakes in the present."
     hide Carson
     show Carson 1 at right
     hide Johnny
@@ -2767,32 +3360,32 @@ label main_route3:
     pause 1.0
     hide Johnny
     show Johnny chat1 R at left
-    Johnny "I’m afraid I don’t, Carson.{w} Because I NEVER make mistakes."
+    Johnny "I’m afraid I don’t, Carson."
+    hide Johnny
+    show Johnny serious2 R at left
+    extend " Because I NEVER make mistakes."
     hide Johnny
     show Johnny serious1 R at left
     hide Carson
     show Carson 5 at right
-    Johnny "And I would love to stay here and chit-chat about the national construction,{w} but I need to move on."
+    Johnny "And I would love to stay here and chit-chat all day about the national constitution,{w} but I need to move on."
     hide Carson
     show Carson 3 at right
     Carson "I see...{w} So I'm not entertaining you any longer.{w} And since we are at it,{w} I’m in the same road right now."
-    scene car0 with fade
-    Carson "Hopefully we’ll meet again, Mr. Paddle…{w} You seem like a reasonable guy,{w} and I would {b}really{/b} enjoy a second talk."
     stop music fadeout 1.5
     scene black with fade
-    "In an instant,{w} his tone turned shady and way more serious that it was a moment ago."
+    pause 1.5
+    Carson "Hopefully we’ll meet again, Mr. Paddle…{w} You seem like a reasonable guy."
+    pause 1.5
     Carson "Are you?{w} A reasonable guy?"
-    pause 0.5
+    pause 1.5
+    Johnny "I am...{w} when the situation calls for it, off course."
+    pause 1.5
     play sound "audio/sfx/Steps stone.wav"
-    pause 2.5
-    "For your sake, it will be better if that second talk never happen..."
-
-    pause 0.5
-    play music "audio/sfx/car turning on.wav"
     pause 2.0
-    "Who the hell does he think he is?"
+    "Who the hell he think he is?"
     play music "audio/music/Cruel Summer tense.wav"
-    "Such a nerves he had to even think about coming to my territory,{w} to look into my car,{w} to see me with those…{w} those donkey eyes…"
+    "Such nerves to even think about coming to my territory,{w} to touch my car,{w} to see me with those…{w} those donkey eyes…"
     "He probably thought he was worth more than a rusted penny."
     "Wanted to play mysterious and all elegant, ha!"
     pause 1.5
@@ -2800,39 +3393,47 @@ label main_route3:
     "That would be worth to watch…"
     pause 2.0
     "Still…{w} Got to admit that left me a little uneasy."
-    "I don't like that... not at all."
+    "I didn't like it...{w} not at all."
+    pause 1.5
     "Did he see through me?{w} It surely seemed like that, but..."
     pause 1.0
-    "Can you believe that?{w} I didn’t even realized until…{w} until I stopped to write this…"
+    "Can you believe that?{w} I didn’t even realize until…{w} until I stopped to write this…"
     "Huh…"
-    pause 1.5
-    "Anyway...{w} better not lose our time with that for now."
-    "There will be a special moment for Mr. Blondecai.{w} I'm really sure of that."
     stop music fadeout 1.5
-    "But for now,{w} I must move on."
+    pause 1.5
+    "Anyway..."
+    pause 1.5
+    "Better not losing time with that for now."
+    "There will be a special moment for Mr. Blondy."
+    pause 2.0
+    "I'm sure of that."
+    "But for now,{w} let's just move on."
+    play sound "audio/sfx/car turning on.wav"
     pause 3.0
     play music "audio/music/Bananarama - Cruel Summer.wav"
     pause 2.0
     scene city1 with fade
     "I drove towards the residential area of the city,{w} a small neighbor filled with hundreds of ugly and noisy houses."
     "This kinds of places are very annoying,{w} always so full of unbearable old people, dirty children and neglected animals."
-    "Sadly, it's also where the majority of messed up things happen.{w} Not so surprising, to be honest."
+    "The great majority of messed up things use to happen here,{w} and that's not surprising, to be honest."
     "Who wouldn’t become crazy when living in a place like this?"
     "I wouldn’t last a single day without putting an axe on the head of my neighbor."
-    pause 1.5
-    "…"
-    "I don’t even have an axe, there’s the problem."
-    scene car2 with fade
-    "Anyway."
-    "With the help of the names wrote on the notebook,{w} the number,{w} and a little chat with the neighbors,{w} I managed to reach my desired destination."
-    "It's amazing how easily you can track a person."
-    "Perfect for a psycho or someone like me…"
-    pause 1.5
-    "...a little redundant?{w} Yeah, maybe.{w} But I’m not making judgements here."
     scene black with fade
-    "To my surprise,{w} the moment I made visual contact with the residence, I noticed the presence of a third party."
+    "I don’t even have an axe, that’s the problem."
+    scene car2 with fade
+    pause 1.5
+    "With help of the names wrote on the notebook,{w} the numbers,{w} and a little chat with the people around here,{w} I managed to reach my destination."
+    "It's amazing how easily you can track a person.{w} Perfect for a psycho or someone like me…"
+    scene black with fade
+    pause 1.0
+    "...a little redundant?{w} Yeah, maybe.{w} But I’m not making judgements."
+    pause 1.0
+    stop music fadeout 1.5
+    "And,{w} to my surprise,{w} the moment I made visual contact with the residence,{w} I noticed the presence of someone else in the area."
+    "A women,{w} to be more specific."
+    play music "audio/music/Bully - Walk Theme.wav"
+    pause 2.0
     scene Jul with fade
-    "I saw a women standing right in the front door.{w}"
     "Long straight hair,{w} dressing fresh but with strangely thick arm sleeves."
     "Her figure had a strange feeling of…{w} innocence, I suppose?{w} Her posture didn't help her at all, that's for sure."
     "She looked like the kind of person who would be first on some serial killer's list."
@@ -2841,17 +3442,20 @@ label main_route3:
     pause 2.0
     "This was my first encounter with her."
     "Her yellow eyes pointed at me the moment I stood out of the car, and her delicate fingers crossed within each other with palpable nerves."
-    "From that mere gleam, I could assume she wasn’t related with the siblings.{w} Not directly at least."
     scene HouseOut with fade
     show Johnny chat1 R at left
     show Julia at right
     Johnny "Morning, miss."
-    Johnny "Is this the house of the Graves family?{w} I would need to have a little talk with them."
+    show Johnny smug2 R at left
+    Johnny "Is this the residence of the Graves family?{w} I would need to have a little talk with them."
     hide Johnny
     hide Julia
     show Johnny smile1 R at left
+    show Julia down at right
+    UnJulia "Eh?"
     show Julia chat2 at right
-    UnJulia "Eh?{w} Y-Yes, Miss and Mr Graves lives here…"
+    extend " Y-Yes, Mrs. and Mr. Graves lives here…"
+    show Johnny confused R at left
     UnJulia "But they’ve been pretty absent lately, so I don't know if..."
     hide Johnny
     hide Julia
@@ -2866,11 +3470,12 @@ label main_route3:
     extend "a couple of days, actually."
     hide Johnny
     show Johnny serious2 R at left
-    "A couple of days, huh?"
-    "Something’s telling me that I know where the shoots are going."
+    "A couple of days...{w} That's not a good sign."
+    show Johnny sigh R at left
     hide Julia
     show Julia sad at right
-    UnJulia "Maybe it's just that they don't want to talk to me...{w} I wouldn't blame them..."
+    UnJulia "Maybe it's just...{w} that they don't want to talk to me..."
+    UnJulia "I wouldn't blame them..."
     hide Johnny
     show Johnny smile1 R at left
     Johnny "Yeah, probably.{w} Excuse me one second..."
@@ -2884,11 +3489,14 @@ label main_route3:
     UnJulia "I shouldn't even be here..."
     Johnny "Keep talking, dear!{w} I'm listening."
     play sound "audio/sfx/item_got.ogg"
-    items "{i}Jonathan has picked up Human Resources (his shovel) from the back into the car!{/i}"
-    Johnny "Mind telling me your name, miss?"
+    items "{i}Jonathan has picked up Human Resources!{/i}"
+    play sound "audio/sfx/item_got.ogg"
+    items "{i}Jonathan has picked up plastic bags!{/i}"
+    pause 1.5
+    Johnny "Mind telling me your name again, miss?"
     hide Julia
     show Julia chat2 at right
-    UnJulia "Oh, it’s Julia. Julia [[REDACTED].{w} I'm sorry I didn't mention it."
+    UnJulia "Oh, it’s Julia. Julia [[REDACTED].{w} I'm sorry, I didn't mention it."
     hide Julia
     show Julia down at right
     "I picked the name almost immediately.{w} She appeared on the notebook’s list."
@@ -2931,7 +3539,7 @@ label main_route3:
     hide Johnny
     show Johnny smile1 R at center
     pause 3.0
-    play music "audio/music/The Thing - What Appears to be Normal.wav"
+    play music "audio/music/The Thing - The Norwegian Camp.wav"
     Johnny "Huh... {w}No answers.{w} Who would have guessed?"
     hide Johnny
     show Johnny serious1 R at center
@@ -2949,16 +3557,21 @@ label main_route3:
     Johnny "Cover your nose, dear."
     hide Johnny
     show Johnny smile2 at center
-    Julia "What's that smell?"
+    Julia "What is that?!"
     hide Johnny
     show Johnny chat1 at center
     Johnny "The smell of the {b}adventure{/b}, off course."
     hide Johnny
-    show Johnny R at center
-    extend " And here is where my work begins."
+    show Johnny at center
+    extend " And this seems to be a pretty nasty one..."
+    pause 2.0
+    hide Johnny
+    show Johnny serious3 at center
     Johnny "You coming?"
     hide Julia
     show Julia giggle R at left
+    hide Johnny
+    show Johnny smile2 at center
     Julia "W-What?!{w} You can’t be serious!"
     hide Julia
     show Julia nervous R at left
@@ -2967,9 +3580,9 @@ label main_route3:
     Johnny "No, I’m actually pretty serious.{w} I've come for answers, and I ain't going anywhere without them."
     hide Johnny
     show Johnny chat1 at center
-    Johnny "So, what do you say, cutie?{w} You come in for a ride or run away like a little rabbit?"
+    Johnny "So, what do you say, cutie?{w} Will you come in for a ride or run away like a little rabbit?"
     hide Johnny
-    show Johnny serious2 at center
+    show Johnny smug1 at center
     hide Julia
     show Julia angry R at left
     Julia "Don't call me that!"
@@ -2980,13 +3593,13 @@ label main_route3:
     pause 2.0
     Julia "We can’t just get inside Mrs. Graves house without their permission..."
     hide Johnny
-    show Johnny smug2 at center
+    show Johnny smile2 at center
     hide Julia
     show Julia R at left
     "That was adorable."
     hide Julia
     show Julia sad R at left
-    "I tried my best to suppress a chuckle, but it wasn’t hard for her to notice."
+    "I tried my best to not laugh, but it wasn’t hard for her to notice."
     Julia "Don’t laugh, I’m being serious..."
     hide Julia
     show Julia nervous R at left
@@ -2999,9 +3612,10 @@ label main_route3:
     Johnny "The names {nw}"
     hide Julia
     show Julia sad R at left
-    extend "{b}Ashley{/b} and {b}Andrew{/b} are somehow familiar to you?"
-    "At that moment, her heart skipped a beat.{w} A wave of discomfort washed her whole body, as if the mere mention of their names brought with it a storm of emotions."
+    extend "{b}Andrew{/b} and {b}Ashley{/b} are somehow familiar to you?"
+    "At that moment, her heart skipped a beat.{w} A wave of discomfort washed her, as if the mere mention of their names brought with it a storm of emotions."
     Julia "..."
+    pause 1.5
     Julia "We had some story..."
     hide Johnny
     show Johnny serious2 at center
@@ -3014,27 +3628,31 @@ label main_route3:
     Julia "I was Andrew’s girlfriend."
     hide Johnny
     show Johnny smug1 at center
-    "Look what a cute little thing we found here…"
+    "Look what a cute little thing we just found here~"
     hide Johnny
     show Johnny chat1 at center
     Johnny "I see…{w} the emo-boy."
-    Johnny "I respect that, could never say no to a cold one neither."
+    hide Johnny
+    show Johnny smug2 at center
+    Johnny "You never say no to a cold one, huh?{w} I respect that."
     hide Johnny
     show Johnny serious1 at center
     hide Julia
     show Julia down R at left
-    "Her eyes looked away."
-    "Her expression changed without giving further explanations.{w} The nerves were substituted by a strong sense of sadness, regret, maybe even doubt."
+    "Her eyes looked away.{w} The nerves were substituted by a strong sense of sadness, regret, maybe even doubt."
     hide Julia
     show Julia sad R at left
     "But that wasn’t the only."
-    "There was a lot of repressed feelings in those eyes…{w} yeah, I could sense them.{w}"
+    "There was a lot of repressed feelings in those eyes…{w} yeah, I could see it."
     hide Julia
     show Julia serious1 R at left
-    "Fear, anger, desperation, loneliness…{w} betrayal."
-    "That expression was a known one...{w} a very known I would say."
+    "Fear,{w} anger,{w} desperation,{w} loneliness…"
+    "{b}Betrayal{/b}."
     hide Johnny
-    show Johnny angry1 at center
+    show Johnny smug1 at center
+    "That expression was a known one...{w} a very well known, I would say."
+    hide Johnny
+    show Johnny confused at center
     Johnny "They hurt you."
     hide Julia
     show Julia down R at left
@@ -3042,6 +3660,8 @@ label main_route3:
     pause 1.5
     hide Julia
     show Julia R at left
+    hide Johnny
+    show Johnny at center
     Julia "It's complicated...{w} Would rather not talk about it."
     hide Julia
     show Julia sad at left
@@ -3060,11 +3680,14 @@ label main_route3:
     "What if she..."
     pause 2.0
     hide Johnny
+    show Johnny serious1 at center
+    "No..."
+    pause 1.5
+    hide Johnny
     show Johnny angry2 at center
-    "No...{w}"
     "No, that’s a dumb idea..."
     "How to trust someone like her?"
-    "Someone weak,{w} so naive,{w} so stupid,{w} so easy to…"
+    "Someone weak,{w} naive,{w} of short minded and so easy to…"
     stop music fadeout 1.0
 
     ###################################### JULIA CHOICES
@@ -3073,11 +3696,14 @@ label main_route3:
         "..."
 
         "Honesty":
+            $ JuliaAff+=1
             jump Honesty
         "Fraudulence":
+            $ JuliaAff-=1
             jump Fraudulence
 
     label Honesty:
+        pause 3.0
         hide Johnny
         show Johnny sigh at center
         Johnny "Listen…"
@@ -3109,7 +3735,9 @@ label main_route3:
         hide Johnny
         show Johnny serious1 at center
         Johnny "The building burned down, there’s nothing but ashes there."
-        Johnny "But your boyfriend and her sister are alive.{w} I know because I spoke with them…{w} {b}in person{/b}."
+        hide Johnny
+        show Johnny sigh at center
+        Johnny "But both Andrew and Ashley are alive.{w} I know because I spoke with them yesterday."
         hide Julia
         show Julia down R at left
         "This time,{w} a different look appeared."
@@ -3120,7 +3748,10 @@ label main_route3:
         show Johnny serious2 at center
         hide Julia
         show Julia serious1 R at left
-        "However, the confusion and fear were still there."
+        "However, the confusion and fear were still there.{w} And as soon as they came, such emotions disappeared."
+        hide Johnny
+        show Johnny at center
+        pause 2.0
         Julia "I can’t believe this..."
         hide Julia
         show Julia nervous R at left
@@ -3128,14 +3759,16 @@ label main_route3:
         hide Julia
         show Julia sad R at left
         pause 1.5
-        Julia "I-I want to talk to him."
+        Julia "I-If he's alive...{w} I want to talk to him."
+        hide Julia
+        show Julia nervous R at left
         Julia "How can I—{nw}"
         hide Johnny
         show Johnny angry1 at center
         hide Julia
         show Julia R at left
         Johnny "No."
-        "The moment that thought left her lips, I knew I had to stop her."
+        "I knew I had to stop that thought before it was even born."
         hide Johnny
         show Johnny angry2 at center
         Johnny "I can’t let you put a step near him.{w} You could compromise everything."
@@ -3154,15 +3787,20 @@ label main_route3:
         hide Johnny
         show Johnny sigh at center
         Johnny"I guess you could help me investigate the house."
-        Johnny "Who knows…{w} maybe we could find something."
-        hide Johnny
-        show Johnny serious2 at center
+        Johnny "And maybe...{w} we could find some answers."
         hide Julia
         show Julia sad R at left
+        pause 2.0
+        hide Johnny
+        show Johnny serious2 at center
+        Johnny "And?{w} Aren't you gonna say anything?"
         Julia "..."
+        pause 2.0
         hide Julia
         show Julia R at left
         Julia "No..."
+        hide Johnny
+        show Johnny at center
         hide Julia
         show Julia chat1 R at left
         extend" I-I can’t believe that, not without proofs!"
@@ -3170,15 +3808,17 @@ label main_route3:
         show Julia R at left
         hide Johnny
         show Johnny sigh at center
-        Johnny "That's also something I can't give you. And you don’t need to believe it if you don't want."
+        Johnny "That's also something I can't give you."
         hide Johnny
         show Johnny at center
+        Johnny "And you don’t need to believe it if you don't want to."
         Johnny "But that’s the truth, deary.{w} Take it or leave it."
         hide Julia
         show Julia sad R at left
         Julia "..."
+        pause 2.0
         Julia "Are you gonna arrest him?"
-        Julia "I-I don’t want anything to happen to Andrew…"
+        Julia "I-I don’t want anything bad to happen to Andrew…"
         hide Johnny
         show Johnny sigh at center
         "Dear god…"
@@ -3193,7 +3833,7 @@ label main_route3:
         extend " but I do have a couple of theories about it."
         hide Julia
         show Julia R at left
-        Johnny "Still, that doesn’t necessarily point him as the villain of the story."
+        Johnny "Still, that doesn’t necessarily make him the villain of the story.{w} They are just assumptions."
         hide Julia
         show Julia serious1 R at left
         pause 1.0
@@ -3209,8 +3849,7 @@ label main_route3:
         "She thought about it for a long moment.{w} The contemplation of the scenario made her lost in the idea."
         hide Johnny
         show Johnny angry1 at center
-        "I should’ve lied to her.{w} This could’ve been much easier,{w} but for some…{w} bullshit reason I wasn’t able to allow myself."
-        "I don’t know what happened to me…"
+        "I should’ve lied to her.{w} This could’ve been much easier..."
         hide Johnny
         show Johnny sigh at center
         "Uuuuhh..."
@@ -3239,21 +3878,21 @@ label main_route3:
         show Johnny confused at center
         hide Julia
         show Julia happy R at left
-        "There weren’t doubts not any kind of nerves on her voice."
+        "Suddenly, there wasn't any doubts or nerves on her face."
         hide Johnny
         show Johnny serious1 at center
-        "She was just… completely decided to help."
+        "She was just…{w} decided to help.{w} As if something was pushing her down a path of blind faith."
         pause 1.5
         "Why?"
         stop music fadeout 1.0
         scene black with fade
         Johnny "All right…{w} Let's start searching."
-        Johnny "And if someone appears, not a single word."
+        Johnny "And if someone appears,{w} you'll not say a single word to anyone besides me."
         Johnny "Got it?"
         Julia "Yes, detective..."
         Johnny "Johnny is fine, deary…"
         play sound "audio/sfx/whip.wav"
-        pause 0.7
+        pause 1.0
         Johnny "Handsome Johnny~"
         Julia "Y-Yeah, I-I think Johnny it’s fine…"
         Johnny "You ain’t funny."
@@ -3297,22 +3936,25 @@ label main_route3:
         Johnny "Sadly, she also had this little {b}personality{/b} problem."
         Johnny "We could be making up an instant and next she would try to choke me to death."
         hide Johnny
-        show Johnny angry1 at center
+        show Johnny smug2 at center
         Johnny "Was your boy something like that?"
         hide Julia
         show Julia nervous R at left
         Julia "N-No!{w} Off course not!"
         hide Julia
         show Julia angry R at left
-        Julia "He had other problems..."
+        Julia "He had other problems!"
         hide Julia
         show Julia down R at left
         hide Johnny
         show Johnny serious1 at center
-        extend " like anyone else..."
+        extend " Like...{w} anyone else..."
         hide Julia
-        show Julia angry R at left
+        show Julia scream R at left
         Julia "But he wouldn't hurt a fly!"
+        hide Julia
+        show Julia nervous R at left
+        pause 2.0
         hide Julia
         show Julia sad R at left
         pause 2.0
@@ -3323,33 +3965,35 @@ label main_route3:
         hide Julia
         show Julia R at left
         hide Johnny
-        show Johnny chat1 at center
-        Johnny "Anyway, that’s aside."
-        hide Johnny
-        show Johnny serious1 at center
+        show Johnny confused at center
         Johnny "I understand the pain you’re dealing with right now.{w} I’ve seen a lot of people losing their love ones, and I’ve lost mine too."
-        Johnny "Said this, you have to know that I am being completely honest when I say..."
-        hide Johnny
-        show Johnny angry1 at center
-        extend " I am truly sorry."
+        Johnny "You must to know I am being completely honest when I say..."
+        extend " that I am truly sorry for you."
         hide Julia
         show Julia down R at left
         pause 1.5
         hide Johnny
         show Johnny serious2 at center
         Julia "T-Thank you…{w} I appreciate your condolences."
+        hide Johnny
+        show Johnny at center
         hide Julia
         show Julia sad R at left
+        stop music fadeout 2.0
         Julia "From the deep of my heart,{w} I really hope there was something I could do."
+        pause 1.5
+        hide Johnny
+        show Johnny smug1 at center
+        pause 1.5
         hide Julia
         show Julia R at left
         hide Johnny
-        show Johnny at center
-        Johnny "There is something, actually."
-        "I lowered my tone while getting a little closer."
+        show Johnny sigh at center
+        Johnny "Maybe I shouldn't be telling you this, but..."
         hide Johnny
         show Johnny serious1 at center
-        Johnny "But before anything,{w} I want to know if I can trust you."
+        pause 1.5
+        Johnny "Before saying anything,{w} I want to know if I can trust you."
         hide Johnny
         show Johnny angry1 at center
         extend " That you’re not going to say a {b}single word{/b} from what I'm going to tell you."
@@ -3360,11 +4004,21 @@ label main_route3:
         show Julia chat2 R at left
         Julia "I..."
         hide Julia
+        show Julia R at left
+        extend " What do you..."
+        hide Julia
         show Julia down R at left
-        pause 1.5
+        pause 2.0
+        hide Johnny
+        show Johnny at center
         Julia "Yes."
         Julia "I swear I won't say a single word."
-        pause 0.5
+        hide Johnny
+        show Johnny smug1 at center
+        "Ah,{w} the infamous curiosity strikes again."
+        pause 1.0
+        hide Johnny
+        show Johnny at center
         Johnny "Ok."
         hide Johnny
         show Johnny serious1 at center
@@ -3372,6 +4026,8 @@ label main_route3:
         pause 1.0
         Johnny "Andrew and Ashley didn’t die from an accident."
         stop music
+        hide Johnny
+        show Johnny sigh at center
         Johnny "They were killed."
         pause 1.0
         hide Julia
@@ -3393,6 +4049,7 @@ label main_route3:
         Johnny "I'm sorry for what I'm about to say but... {w}They were on a terrible,{w} {b}terrible{/b} state…"
         hide Julia
         show Julia sad R at left
+        pause 2.0
         hide Johnny
         show Johnny serious1 at center
         Johnny "I also found a couple of things on their belongings.{w} Among them,{w} a {b}notepad{/b} with telephone numbers."
@@ -3410,19 +4067,35 @@ label main_route3:
         show Johnny at center
         hide Julia
         show Julia R at left
-        Johnny "Calm down, please..."
+        Johnny "Calm down, please... "
+        hide Johnny
+        show Johnny sigh at center
+        hide Julia
+        show Julia sad R at left
+        extend "Lower your tone.{w} Someone could be hearing..."
         pause 1.0
+        hide Johnny
+        show Johnny serious1 at center
         Johnny "The police know, but...{w} They're compromised."
+        hide Julia
+        show Julia R at left
         Julia "W-What do you mean by that?"
         hide Johnny
         show Johnny angry1 at center
-        Johnny "You need to know something, Julia.{w} This is way bigger than you think."
+        Johnny "That's the thing, Julia."
+        hide Johnny
+        show Johnny angry2 at center
+        Johnny "All this matter,{w} the quarantined buildings,{w} the murders,{w} your boyfriend...{w} is all part of something way bigger."
+        hide Johnny
+        show Johnny sigh at center
+        hide Julia
+        show Julia R at left
         Johnny "I can't explain it to you right now, but there's a lot moving in the background."
         hide Johnny
         show Johnny serious1 at center
         hide Julia
         show Julia nervous R at left
-        Johnny "And sadly,{w} Andrew and Ashley got caught in the middle."
+        Johnny "Sadly,{w} Andrew and Ashley got caught in the middle,{w} and were disappeared along with many others."
         hide Julia
         show Julia sad R at left
         "This answers destroyed her.{w} I could feel the pain flowing though her veins — the sadness and repentance on her eyes."
@@ -3458,16 +4131,17 @@ label main_route3:
         "Perfect, "
         hide Johnny
         show Johnny smug1 at center
-        extend "just where I wanted her."
+        extend "just the way I wanted."
         scene black with fade
-        "She was angry,{w} blinded by her emotions."
+        "She was angry,{w} blinded emotions too strong to be contained."
         "Her blood boiled with resentment.{w} She wanted revenge, and who was I to deny such a thing to a spiteful girl?"
         "I would have to move the pieces a little bit, but…{w} I saw myself able to maintain this."
         pause 1.0
-        Johnny "All right then, miss Julia. You have my word… We’re gonna put those bastards down."
+        Johnny "All right then, miss Julia.{w} You have my word…{w} We’re gonna put those bastards down."
         pause 1.0
         Julia "T-Thank you... Mr. Paddle..."
         Johnny "Please,{w} call me Johnny."
+        stop music fadeout 1.5
         jump main_route4
 
     ###################################### JULIA CHOICES END
@@ -3505,9 +4179,10 @@ label main_route3:
     show Julia down R at left
     hide Johnny
     show Johnny chat1 at right
-    Johnny "Come on, you'll notice immediately."
+    Johnny "Come on, you'll get it immediately."
     hide Johnny
     show Johnny at right
+    pause 1.0
     hide Julia
     show Julia chat1 R at left
     Julia "Mr. Paddle…"
@@ -3516,17 +4191,19 @@ label main_route3:
     Julia "I-I mean, Johnny."
     hide Julia
     show Julia chat1 R at left
-    Julia "Mr. and Miss. Graves are a very peculiar kind of…"
+    Julia "Mr. and Mrs. Graves are a very peculiar kind of…"
     hide Julia
     show Julia R at left
-    pause 1.0
+    pause 1.5
+    hide Johnny
+    show Johnny confused at right
     Julia "D-Did you just said blood and bones?"
     hide Johnny
     show Johnny serious1 at right
-    Johnny "Well yeah,{w} documents, blood, passports, bones and out of place stuff."
+    Johnny "Well yes,{w} documents, blood, passports, bones and out of place stuff."
     hide Johnny
     show Johnny at right
-    Johnny "I thought I was clear."
+    Johnny "Thought I was clear."
     hide Julia
     show Julia chat2 R at left
     Julia "B-B-But are you implying that Mr. and Miss. Graves may be…"
@@ -3534,10 +4211,16 @@ label main_route3:
     show Julia R at left
     hide Johnny
     show Johnny chat1 at right
-    Johnny "At the doors of Saint Peter?{w} Well, it’s a possibility."
+    Johnny "At the doors of Saint Peter?"
     hide Johnny
-    show Johnny serious2 at right
-    Johnny "I don’t see them here,{w} and you said they haven’t answered the door in days,{w} so I think there’s a good chance for that."
+    show Johnny smile2 at right
+    extend " Well, it’s a possibility."
+    hide Johnny
+    show Johnny at right
+    Johnny "I don’t see them here,{w} and you said they haven’t answered the door in days,{w} so..."
+    hide Julia
+    show Julia down R at left
+    Johnny "We can assume there’s a good chance for that."
     hide Johnny
     show Johnny chat1 at right
     hide Julia
@@ -3558,6 +4241,8 @@ label main_route3:
     hide Julia
     show Julia sad R at left
     Johnny "uuuhh…{w} fine."
+    hide Johnny
+    show Johnny serious1 at right
     Johnny "Just call me and I’ll touch what needs to be touched."
     hide Julia
     show Julia scream R at left
@@ -3569,33 +4254,739 @@ label main_route3:
     Johnny "How do you want me to say it?"
     hide Johnny
     show Johnny serious1 at right
-    Johnny "Just…{w} Walk around and scream if you see something."
+    Johnny "Just…{w} Walk around and scream if you find something."
     hide Julia
     show Julia sad R at left
     Julia "Oh jeez…"
+    pause 0.5
     hide Julia
     show Julia at left
     hide Julia with moveoutleft
-    extend "I don’t like any of this…"
+    pause 1.0
+    Julia "I don’t like any of this…"
     hide Johnny
     show Johnny sigh at right
     "She may not be as useful as I thought…"
     "Action clearly aren’t her strength."
     hide Johnny
     show Johnny at right
-    "Anyway.{w} Let’s hope Miss Lettuce doesn’t faint because of a mouse, and begin to work."
-    ""
+    "Anyway.{w} Let’s hope Miss Lettuce doesn’t faint for a mouse, and let's start to work."
+    scene black with fade
+    play sound "audio/sfx/Steps wood.wav"
+    items "So, I took a walk through the place."
+    "Everything seemed normal at first.{w} Didn't find much beyond the origin of that not-so-great fragrance."
+    "The basement was flooded,{w} completely submerged under a layer of nauseating water."
+    "The fragrance was way stronger there.{w} It reminded me to that piece of chicken I forget on the fridge last month."
+    "Damn that was disgusting…"
+    "Off course,{w} wasn't about to swim inside that filth,{w} so I wrote it down as a possible clue and just passed by."
+    play sound "audio/sfx/Steps wood.wav"
+    pause 2.0
+    "I also found a {b}“really messy place”{/b}, to call it something.{w} It seemed like the foundations for what could've been a bathroom."
+    "A lot of bricks and materials scattered on the floor,{w} an uninstalled toilet,{w} closed pipelines (thank you)..."
+    "The only thing that caught my attention there was a whole on the window."
+    "It was large enough for a person to just squeeze inside,{w} and the fact that there was a plank pointing at it from outside didn't demystify my most obvious theory."
+    play sound "audio/sfx/Steps wood.wav"
+    pause 2.0
+    "The other two rooms were just a kitchen and the parent’s room,{w} also lacked of clues or useful information."
+    "Nothing."
+    stop music fadeout 1.5
+    "No papers,{w} no photos,{w} no letters or numbers to call."
+    "It was just {b}empty{/b}."
+    pause 1.5
+    Johnny "Empty..."
+    pause 1.0
+    "And then,{w} it hit me."
+    pause 1.0
+    play music "audio/music/Cruel Summer Tense.wav"
+    "A question came out,{w} and this brought with it another, which in turn was followed by one more..."
+    "Where did the siblings sleep?"
+    show Ashley at left with fade
+    extend " Where are their photos?"
+    show Andrew at right with fade
+    extend " Why didn't they even keep their phone numbers?"
+    "Where are the memories of a life?"
+    pause 1.5
+    "Why does it looks like they were avoiding them?"
+    pause 1.0
+    stop music
+    scene HouseIn2
+    show Johnny sigh R at right
+    show Julia R at left
+    Julia "..."
+    Julia "Johnny?"
+    hide Johnny
+    show Johnny confused at right
+    "I was detached from my thoughts by the gentle call of Julia."
+    hide Johnny
+    show Johnny at right
+    Johnny "Oh, sorry,{w} I was having an internal monologue."
+    hide Julia
+    show Julia down R at left
+    Julia "..."
+    pause 1.5
+    Julia "Right…"
+    play music "audio/music/Delay.wav"
+    hide Julia
+    show Julia chat1 R at left
+    hide Johnny
+    show Johnny serious1 at right
+    Julia "I-I just finished looking around the house."
+    hide Julia
+    show Julia nervous R at left
+    Julia "I almost fell into the lake on the basement."
+    hide Julia
+    show Julia scream R at left
+    Julia "God it was disgusting!"
+    hide Julia
+    show Julia R at left
+    extend " I'll be smelling that water for days now."
+    hide Johnny
+    show Johnny chat1 at right
+    Johnny "I've had worse things in my nose, honey."
+    hide Johnny
+    show Johnny at right
+    extend " And I regret most of them..."
+    hide Johnny
+    show Johnny serious2 at right
+    Johnny "Anyway, did you found anything?"
+    hide Johnny
+    show Johnny at right
+    Julia "I’m afraid not."
+    hide Johnny
+    show Johnny serious1 at right
+    hide Julia
+    show Julia serious1 R at left
+    extend " B-But maybe that's a good thing."
+    Julia "It indicates that Mrs. And Mr. Graves haven’t been here for a while..."
+    hide Johnny
+    show Johnny sigh at right
+    Johnny "Huh..."
+    hide Johnny
+    show Johnny confused at right
+    Johnny " Ok, that's something, I guess."
+    hide Julia
+    show Julia R at left
+    hide Johnny
+    show Johnny at right
+    Johnny "I just came out with something else."
+    hide Johnny
+    show Johnny sigh at right
+    extend " Nothing related with the parents."
+    hide Johnny
+    show Johnny confused at right
+    Johnny "Doesn’t this house seems a little {b}small{/b} for a family of four?"
+    hide Johnny
+    show Johnny serious1 at right
+    hide Julia
+    show Julia down R at left
+    Johnny "I mean,{w} there aren't even enough beds, unless the siblings share one."
+    hide Johnny
+    show Johnny confused at right
+    Julia "Of four?"
+    hide Julia
+    show Julia R at left
+    Julia "Oh, no, Andrew and his sister didn't live with their parents."
+    hide Julia
+    show Julia chat2 R at left
+    Julia "They made them move out because…"
+    hide Julia
+    show Julia down R at left
+    pause 1.0
+    Julia "well..."
+    pause 1.0
+    hide Julia
+    show Julia chat2 R at left
+    hide Johnny
+    show Johnny serious1 at right
+    Julia "I don’t really know why, now that you mention it."
+    hide Johnny
+    show Johnny sigh at right
+    hide Julia
+    show Julia down R at left
+    "Great, more holes…"
+    Johnny "Ok..."
+    hide Julia
+    show Julia R at left
+    hide Johnny
+    show Johnny serious1 at right
+    extend " Let’s get to the beginning.{w} When did that happened?"
+    hide Julia
+    show Julia down R at left
+    Julia "I would say..."
+    hide Julia
+    show Julia chat1 R at left
+    extend" a couple of weeks before the quarantine started."
+    hide Julia
+    show Julia down R at left
+    Julia "I think it was something abrupt because he didn't tell me until they were in the new apartment."
+    hide Johnny
+    show Johnny confused at right
+    pause 1.5
+    hide Julia
+    show Julia nervous R at left
+    Johnny "Or maybe he just wanted to keep the secret from you, girl…"
+    hide Julia
+    show Julia R at left
+    Julia "What?"
+    hide Julia
+    show Julia angry R at left
+    extend " Don’t say that! Why would he do that?"
+
+    if JuliaAff > 0:
+        hide Julia
+        show Julia serious1 R at left
+        hide Johnny
+        show Johnny serious2 at right
+        Johnny "Well, maybe he didn’t want to bother you."
+        hide Johnny
+        show Johnny sigh at right
+        extend " It sounds like a complicated situation and blah blah blah..."
+        hide Johnny
+        show Johnny chat1 at right
+        hide Julia
+        show Julia R at left
+        Johnny "OR..."
+        hide Johnny
+        show Johnny serious1 at right
+        extend " there’s a part of this story we don’t know yet."
+        hide Julia
+        show Julia serious1 R at left
+        pause 1.5
+        hide Julia
+        show Julia nervous R at left
+        Julia "B-But what reasons could he have to lie?"
+        hide Johnny
+        show Johnny at right
+        Johnny "Again, have a couple of theories, but give me some time to refine them."
+        hide Johnny
+        show Johnny serious1 at right
+        hide Julia
+        show Julia R at left
+        Johnny "What we need to do now is to find their parents."
+        hide Johnny
+        show Johnny sigh at right
+        extend " Maybe they will be able to clear up some doubts."
+        hide Julia
+        show Julia chat1 R at left
+        hide Johnny
+        show Johnny serious1 at right
+        Julia "I-I can work on that!"
+        hide Julia
+        show Julia serious1 R at left
+        Julia "I may not be an expert, but I know how to use internet and—{nw}"
+        hide Julia
+        show Julia R at left
+        hide Johnny
+        show Johnny confused at right
+        Johnny "I don’t think internet will help us now, deary."
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "Best thing you can do now is staying out of the fire."
+        play sound "audio/sfx/Whip.wav"
+        hide Johnny
+        show Johnny P at right
+        pause 1.0
+        Johnny "And let the professionals work~"
+        stop music fadeout 2.0
+        hide Julia
+        show Julia scream R at left
+        Julia "But I can help too!"
+        hide Johnny
+        show Johnny confused at right
+        hide Julia
+        show Julia nervous R at left
+        Julia "I know I’m not a detective, nor have any idea how to deal with dirty stuff as you probably do, but…"
+        hide Julia
+        show Julia sad R at left
+        hide Johnny
+        show Johnny at right
+        pause 2.0
+        Julia "This is an incomplete page for me."
+        play music "audio/music/Radiohead — Exit Music.wav"
+        hide Johnny
+        show Johnny serious1 at right
+        pause 2.0
+        Julia "I've been coming to this place for days..."
+        Julia "A part of me just wanted Mrs. Graves to open that door and..."
+        hide Johnny
+        show Johnny confused at right
+        extend" to yell at me as much as she wanted."
+        pause 1.5
+        hide Julia
+        show Julia R at left
+        Julia "But then you showed up with the idea that Andrew is not only alive but in grave danger."
+        pause 1.5
+        hide Julia
+        show Julia down R at left
+        Julia "I can’t accept that,{w} not yet…"
+        hide Julia
+        show Julia nervous R at left
+        hide Johnny
+        show Johnny at right
+        extend " but I want to know what's happening."
+        hide Julia
+        show Julia chat1 R at left
+        Julia "And I'm willing to get my hands dirty if that's what it takes."
+        hide Julia
+        show Julia scream R at left
+        Julia "So please, let me help with this!"
+        hide Julia
+        show Julia R at left
+        hide Johnny
+        show Johnny smile2 at right
+        "That was adorable.{w} Little girl was being moved by her emotions."
+        "She couldn't even handle the idea of seeing a death body, and still wanted to get deeper into this?"
+        hide Johnny
+        show Johnny serious2 at right
+        "What a joke…"
+        "She wasn’t but being a reactionary."
+        scene black with fade
+        "Without thinking,{w} without considering the dangers,{w} just walking blindly towards nothingness."
+        "Dumb girl...{w} Just a poor, dumb girl."
+        pause 3.0
+        Johnny "Uhh..."
+        pause 1.5
+        "And yet...{w} there I was for second time,{w} putting a stick in my own wheel."
+        play sound "audio/sfx/paper.wav"
+        pause 1.5
+        "Yes...{w} I gave her my presentation card."
+        pause 0.5
+        Johnny "Stay out of danger.{w} Call me only if you find something.{w} The line could be pinched, so let's find a meeting point..."
+        show Julia with fade
+        pause 1.0
+        play sound "audio/sfx/blingy_sp.ogg"
+        hide Julia
+        show Julia smile
+        pause 1.2
+        "Her eyes lit up like the ones of a child when she heard that."
+        Julia "Yes!{w} I’ll do my best, Mr. P..."
+        hide Julia
+        show Julia giggle
+        Julia "I mean, Johnny."
+        hide Julia
+        show Julia smile
+        Johnny "Yeah, yeah..."
+        Johnny "Leave me alone now, please…"
+        scene black with fade
+        "Her silhouette rushed to the end of the living-room before disappearing on the broken entrance."
+        "I was left with nothing but the silence and the weight of my thoughts."
+        pause 1.5
+        scene HouseIn2 with fade
+        show Johnny
+        "What was even that?"
+        hide Johnny
+        show Johnny sigh
+        "Did I just…{w} compromise an entire case?{w} Just like that?{w} Really, Paddle?"
+        "What is wrong with me?{w} That dumb girl will probably spread the voice across the whole city now."
+        hide Johnny
+        show Johnny angry1
+        "Everyone will know what I’m into, and all because I couldn’t lie to…"
+        hide Johnny
+        show Johnny angry2
+        extend " those damn eyes."
+        pause 1.5
+        hide Johnny
+        show Johnny sigh
+        Johnny "Uhh…{w} great job, Paddle…{w} great job…"
+        scene black with fade
+        stop music fadeout 2.0
+        pause 2.0
+        Johnny "She was very similar to…"
+        pause 2.0
+        Johnny "huh…{w} nevermind."
+
+    else:
+        hide Johnny
+        show Johnny at right
+        hide Julia
+        show Julia R at left
+        Johnny "Well I don’t want you to make conclusions,{w} but there's a big chance he's been lying to you."
+        hide Julia
+        show Julia down R at left
+        Julia "N-No..."
+        hide Julia
+        show Julia nervous R at left
+        Julia "W-What are you saying?{w} Why would he do that?"
+        hide Johnny
+        show Johnny serious1 at right
+        Johnny "Have my own theories,{w} but I think that’s something you should ask yourself."
+        hide Johnny
+        show Johnny serious2 at right
+        Johnny "Why do you think he could’ve lied?"
+        hide Julia
+        show Julia angry R at left
+        hide Johnny
+        show Johnny at right
+        stop music fadeout 1.5
+        Julia "I don’t think so!"
+        hide Julia
+        show Julia nervous R at left
+        pause 2.0
+        hide Julia
+        show Julia sad R at left
+        pause 2.0
+        hide Julia
+        show Julia down R at left
+        Julia "…"
+        Julia "But…"
+        hide Julia
+        show Julia R at left
+        extend " he used to hide things from me..."
+        hide Julia
+        show Julia down R at left
+        Julia "To make a lot of excuses…"
+        hide Julia
+        show Julia serious1 R at left
+        hide Johnny
+        show Johnny confused at right
+        extend " to put his sister on everything…"
+        pause 2.0
+        Johnny "Hello?"
+        hide Julia
+        show Julia R at left
+        Julia "Oh, sorry."
+        hide Johnny
+        show Johnny smile2 at right
+        hide Julia
+        show Julia down R at left
+        Julia "I just…"
+        pause 1.5
+        hide Johnny
+        show Johnny smug2 at right
+        hide Julia
+        show Julia nervous R at left
+        Johnny "You think his sister had something to do with all this, don’t you?"
+        play music "audio/music/Ennio Morricone - The Thing.wav"
+        pause 1.5
+        hide Julia
+        show Julia down at left
+        hide Johnny
+        show Johnny smug1 at right
+        Julia "..."
+        Julia "Again,{w} I-I don’t think he had been lying to me."
+        pause 2.0
+        hide Julia
+        show Julia at left
+        Julia "But if…"
+        hide Julia
+        show Julia serious1 at left
+        extend " {b}Ashley{/b}…{w} was involved on this…"
+        hide Julia
+        show Julia R at left
+        extend " then I don’t know what to expect."
+        "There's a weak spot here."
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "Sounds like you two have some story."
+        hide Johnny
+        show Johnny smug2 at right
+        Johnny "Wanna pull something out of your chest?"
+        hide Johnny
+        show Johnny smug1 at right
+        hide Julia
+        show Julia down R at left
+        Johnny "Some... {b}old wounds{/b} perhaps?"
+        hide Johnny
+        show Johnny smug1 at right
+        "For several moments, I received nothing but silence."
+        hide Johnny
+        show Johnny at right
+        "I wasn’t able to read her eyes this time.{w} Her expression was blank,{w} doubtful,{w} as if she were rewinding the same scenario over and over again."
+        pause 2.0
+        Julia "No."
+        pause 1.5
+        Julia "I don’t want to."
+        pause 1.0
+        hide Johnny
+        show Johnny smug1 at right
+        "But then again,{w} her silence said more than enough."
+        pause 0.5
+        hide Johnny
+        show Johnny chat1 at right
+        Johnny "As you like, dear.{w} In that case I think that’s enough."
+        hide Julia
+        show Julia nervous R at left
+        hide Johnny
+        show Johnny smile2 at right
+        Johnny "For now, I want you out of this house.{w} I’ll stay here and fix everything so nobody will rise their suspicions."
+        hide Julia
+        show Julia sad R at left
+        pause 1.5
+        hide Johnny
+        show Johnny confused at right
+        Julia "I would like to stay in contact."
+        hide Julia
+        show Julia R at left
+        extend " I want to make some research by my own."
+        hide Johnny
+        show Johnny smile1 at right
+        Johnny "Heh...{w} That may be quite dangerous, darling.{w} This is far from your—{nw}"
+        hide Johnny
+        show Johnny confused at right
+        hide Julia
+        show Julia scream R at left
+        Julia "PLEASE!"
+        hide Julia
+        show Julia R at left
+        extend " Please…"
+        hide Julia
+        show Julia sad R at left
+        extend " just…{w} let me do this."
+        hide Julia
+        show Julia nervous R at left
+        extend " For Andrew."
+        hide Johnny
+        show Johnny smile2 at right
+        "She was making things easier than expected."
+        hide Johnny
+        show Johnny smug1 at right
+        extend" I just wanted to make her beg a little, but it seems like the little girl had made a decision."
+        scene black with fade
+        "I extended my presentation card as an invitation."
+        Johnny "Welcome aboard, miss Jennifer~"
+        Johnny "I'm counting on you to stay out of danger and to call me only {b}and only me{/b} if something remotely strange appears."
+        Julia "I-It's... Julia."
+        Julia "And thank you, Mr. Paddle."
+
+    pause 2.0
+    stop music fadeout 2.0
+    pause 3.0
+    "Got this point,{w} I had the house to myself."
+    play music "audio/music/The Thing - The Norwegian Camp.wav"
+    "There wasn't much more to do now,{w} but still wanted to see what kind of useful staff I could take."
+    "And to begin with…"
+    play sound "audio/sfx/item_got.ogg"
+    show photo
+    pause 1.0
+    "{i}Jonathan has picked up a familiar photo!{/i}"
+    Johnny "Look what a nice little family.{w} Surely nothing bad could come out of them."
+    play sound "audio/sfx/Steps wood.wav"
+    scene black with fade
+    pause 2.0
+    items "Headed outside,{w} this time using the backdoor."
+    play sound "audio/sfx/Door Kick Down Break.wav"
+    pause 1.5
+    scene V_Patch with fade
+    show Johnny R at left with easeinleft
+    "Before my eyes, a small orchard spread out in all its glory."
+    hide Johnny
+    show Johnny confused R at left
+    "I saw a good number of vegetables and fruits,{w} much fresher than in those rotten market places."
+    hide Johnny
+    show Johnny sigh R at left
+    "I’ve always been a fan of farming,{w} but with a job as demanding as mine it would be impossible to take care of the poor little plants."
+    scene black with fade
+    Johnny "Good thing these babies are spacious."
+    play sound "audio/sfx/paper.wav"
+    items "I took a plastic bag from my jacked and began to harvest."
+    scene black with fade
+    play sound "audio/sfx/harvesting.wav"
+    pause 3.0
+    "And then…{w} as my hands deliberately stole the precious vegetable from the earth,{w} I started to notice something."
+    pause 1.5
+    "There was a little lump within the dirt, something hide that was slyly standing out from the rest."
+    play sound "audio/sfx/digging.wav"
+    pause 1.5
+    items "I scratched the surface noticing something hard hiding, so I dug my fingers into it to try pulling it out."
+    pause 1.5
+    items "It was bigger than I thought,{w} too light and too strange to be just a rock."
+    stop sound fadeout 1.5
+    pause 1.7
+    Johnny "..."
+    Johnny "What do we have here?"
+    "With every second I admired it, my brain schemed more and more ideas until..."
+    Johnny "Huh..."
+    pause 1.5
+    "I discovered not only what my hands were holding,{w} but that there was more than just one of them under the dirt."
+    stop music
+    play sound "audio/sfx/item_got.ogg"
+    show bones
+    pause 1.0
+    "{i}Jonathan has picked up scorched human bones!{/i}"
+    pause 2.0
+    scene black with fade
+    pause 1.5
+    Johnny "So…{w} this is where Mr. and Mrs. Graves have been hiding."
+    pause 2.0
+    Johnny "Looks I'm not the only with skeletons in my closet."
+    pause 3.0
+    play music "audio/music/Karen Aoki - Faith.wav"
+    pause 1.5
+    scene Ash1 with fade
+    pause 2.0
+    scene Ash2
+    pause 2.0
+    scene M_Room with fade
+    pause 0.5
+    show Ashley tired at right
+    Ashley "Uuuuh…{w} I’m not getting use to this…"
+    show Ashley at right
+    show Andrew confused2 at left with easeinleft
+    Andrew "Oh! Look who woke up."
+    show Ashley giggle1 at right
+    Ashley "Andy!"
+    show Ashley mad2 at right
+    show Andrew at left
+    extend " Did somebody see you?"
+    show Ashley at right
+    show Andrew angry2 at left
+    Andrew "I’m fine…{w} thanks for asking."
+    show Andrew serious1 at left
+    Andrew "And yes,{w} I threw the bones with…"
+    show Andrew angry1 at left
+    pause 1.5
+    show Andrew serious1 at left
+    Andrew "Mom and dad’s skulls…"
+    show Andrew angry1 at left
+    show Ashley mad at right
+    pause 2.0
+    show Ashley worried1 at right
+    Ashley "You’re still thinking about that, don’t you?"
+    show Andrew confused2 at left
+    show Ashley at right
+    Andrew "What?"
+    show Ashley mad at right
+    show Andrew chat1 at left
+    extend " Oh, you mean how we sold mom and dad’s soul to a demon to then eat their bodies in a half-made soup?"
+    show Andrew at left
+    show Ashley angry1 at right
+    Ashley "I did the best with what I had at hand!"
+    show Andrew facepalm at left
+    show Ashley mad3 at right
+    Ashley "That old cheapskate didn't even have condiments in her cupboard."
+    show Andrew angry1 at left
+    show Ashley at right
+    Andrew "Whatever..."
+    show Andrew at left
+    extend" that’s not the everything on my mind lately if that's what bothers you."
+    show Ashley smug1 at right
+    play sound "audio/sfx/blingy_sp.ogg"
+    pause 1.0
+    Ashley "You're welcome~"
+    show Ashley smug3 at right
+    show Andrew angry2 at left
+    Ashley "What would you do without me, dear Andy?"
+    show Andrew what at left
+    show Ashley smug1 at right
+    Andrew "I would probably be a doctor by now."
+    show Andrew confused2 at left
+    show Ashley smug2 at right
+    Ashley "Chopping living people,{w} chopping death people,{w} what’s the difference anyway?"
+    show Ashley smug1 at right
+    pause 1.5
+    show Ashley worried1 at right
+    show Andrew confused at left
+    pause 1.5
+    show Andrew sigh at left
+    Andrew "Oh no…{w} that face again."
+    show Andrew at left
+    Andrew "What did the dream tell you this time?"
+    show Andrew angry2 at left
+    extend " And please tell me we're not making a threesome..."
+    show Andrew at left
+    pause 1.5
+    Ashley "..."
+    show Ashley worried3 at right
+    Ashley "Well…{w} remember the detective?{w} Turns out he was on the dream..."
+    show Andrew facepalm at left
+    Andrew "Just what we needed..."
+    show Andrew at left
+    Andrew "Ok, what else?"
+    play sound "audio/sfx/Door knocking sound effect.wav"
+    show Ashley at right
+    show Andrew worried1 at left
+    pause 2.1
+    Ashley "..."
+    Andrew "..."
+    pause 1.5
+    show Andrew nervous1 at left
+    show Ashley think at right
+    play sound "audio/sfx/Door knocking sound effect.wav"
+    Who "Come on, open up.{w} I know you two are in there."
+    show Andrew nervous2 at left
+    Andrew "Shit!{w} Who is he?"
+    show Ashley at right
+    Ashley "Lower the voice, genius.{w} He can hear you."
+    show Andrew nervous1 at left
+    Andrew "But what do we do?"
+    show Andrew nervous2 at left
+    show Ashley excited at right
+    Ashley "Relax, fancy pants.{w} I have a plan…"
+    scene black with fade
+    pause 1.0
+    Ashley "Call the detective."
+    Andrew "What?"
+    Ashley "Just call him, damnit!"
+    play sound "audio/sfx/Door knocking sound effect.wav"
+    pause 2.5
+    scene club_night with fade
+    pause 1.0
+    "Entry number two:"
+    scene table with fade
+    pause 0.5
+    "I got some advances on the Graves Case.{w} Ain’t much, but enough to start putting some pieces together."
+    "We got some new players on this little game of ours."
+    "That girl, Julia..."
+    "She’s…{w} not a person of actions,{w} but her connection with Andrew may give me some good advances."
+    "Even if I don’t want to admit it, she could be an important piece on this game."
+    "The other one is that blondie."
+    "What was his name again?{w} Carson, yeah, that one..."
+    pause 1.5
+    "Now,{w} I’m not saying that he’s a problem or anything."
+    "I mean,{w} imagine that,{w} a random Bob comes to my city and managed to make the hair stand on end."
+    "What a bad joke."
+    pause 1.5
+    "But…{w} he does apply some pressure over my shoulders."
+    stop music fadeout 3.0
+    scene black
+    play sound "audio/sfx/phone ring.wav"
+    pause 9.0
+    "Who is it now?"
+    pause 0.5
+    Johnny "Hello?{w} Johnny Paddle,{w} P.I."
+    pause 1.5
+    Who "..."
+    pause 1.5
+    Who "Quit it."
+    pause 1.0
+    play music "audio/sfx/phone off the hook tone - sound effect.wav"
+    pause 2.0
+    scene club_night with fade
+    pause 1.0
+    Johnny "What?{w} Hello?{w} Who's there?!"
+    pause 3.0
+    scene end2 with Dissolve(1.0)
+    pause 3.0
+    stop music fadeout 1.0
+    scene black with fade
+    pause 3.0
+    "Hello!{w} I'm Ares, creator of this fan-made."
+    "Working on this first version of the game was quite an adventure.{w} Since this is the first game I've developed, it's very likely to have some error or problems."
+    "I'm still learning,{w} to program, to draw, and even to manipulate audio.{w} Still, I have all the intention of taking this project forward."
+    "Thank you very much for giving me a little of your time!"
+    "And if you are really enjoying Johnny's story, I would really appreciate it if you could buy me a coffee."
+    "I'm not especially proud to ask that,{w} but neither jobs nor money are abundant in my house so... it's a bit of a request for help."
+    "But no one is obliged to comply, hahahaha"
+    pause 1.5
+    "And again, thank you very much for playing <3"
+
 
 
     menu:
         "..."
 
-        "Salir?":
+        "Continue":
+            jump main_route6
+        "Exit?":
             return
-        "Salir!":
+        "Exit!":
             return
-
 
     # This ends the game.
+
+    label main_route6:
+        scene seriously
+        Andrew "CAN'T YOU JUST GET SERIOUS FOR A MOMENT?"
+
 
     return
